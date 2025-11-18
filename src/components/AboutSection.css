@@ -1,0 +1,186 @@
+.about-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.8rem;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.about-content h2 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  margin: 0.5rem 0;
+}
+
+.about-content p {
+  line-height: 1.7;
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.about-metrics {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.metric {
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  background: rgba(59, 130, 246, 0.08);
+  min-width: 140px;
+  flex: 1;
+}
+
+.metric-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.metric-label {
+  font-size: 0.95rem;
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.about-visual {
+  position: relative;
+  padding: 3rem;
+  border-radius: 2rem;
+  background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.15), transparent 60%),
+    radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.15), transparent 50%);
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.4;
+}
+
+.orb-one {
+  top: -40px;
+  right: -40px;
+  background: #60a5fa;
+}
+
+.orb-two {
+  bottom: -60px;
+  left: -20px;
+  background: #22d3ee;
+}
+
+.about-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #22c55e, #15803d);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-card li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-weight: 500;
+  color: rgba(15, 23, 42, 0.8);
+}
+
+.about-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+}
+
+.card-footer {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.app.dark .about-content p,
+.app.dark .metric-label,
+.app.dark .card-footer,
+.app.dark .about-card li {
+  color: rgba(248, 250, 252, 0.75);
+}
+
+.app.dark .metric {
+  background: rgba(96, 165, 250, 0.15);
+}
+
+.app.dark .metric-value {
+  color: #60a5fa;
+}
+
+.app.dark .about-card {
+  background: rgba(0, 0, 0, 0.85);
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+.app.dark .about-section {
+  color: #fafafa;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-metrics {
+    flex-direction: column;
+  }
+}
+

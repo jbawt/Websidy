@@ -1,0 +1,153 @@
+.logo-svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 125px;
+  position: relative;
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
+}
+
+.logo-svg-container:hover .logo-svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Main W path styling */
+.logo-main-path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: drawPath 2s ease-out forwards;
+  transition: all 0.3s ease;
+}
+
+.app.light .logo-main-path {
+  stroke: url(#logoGradient);
+}
+
+.app.dark .logo-main-path {
+  stroke: url(#logoGradientDark);
+}
+
+.logo-svg-container:hover .logo-main-path {
+  stroke-width: 10;
+  filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.6));
+}
+
+/* Circle animations */
+.logo-circle {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawCircle 1.5s ease-out forwards;
+  opacity: 0.6;
+}
+
+.circle-1 {
+  animation-delay: 0.5s;
+}
+
+.circle-2 {
+  animation-delay: 0.8s;
+}
+
+.app.light .logo-circle {
+  stroke: rgba(59, 130, 246, 0.5);
+}
+
+.app.dark .logo-circle {
+  stroke: rgba(96, 165, 250, 0.5);
+}
+
+/* Line animations */
+.logo-line {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: drawLine 1.2s ease-out forwards;
+}
+
+.line-1 {
+  animation-delay: 1.2s;
+}
+
+.line-2 {
+  animation-delay: 1.4s;
+}
+
+.line-3 {
+  animation-delay: 1.6s;
+}
+
+.app.light .logo-line {
+  stroke: rgba(59, 130, 246, 0.7);
+}
+
+.app.dark .logo-line {
+  stroke: rgba(96, 165, 250, 0.7);
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+  0%, 100% {
+    stop-color: #3b82f6;
+  }
+  50% {
+    stop-color: #1e40af;
+  }
+}
+
+.app.light #logoGradient stop {
+  animation: gradientShift 3s ease infinite;
+}
+
+.app.dark #logoGradientDark stop {
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Drawing animations */
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCircle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Pulse effect */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.logo-svg {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-svg-container {
+    height: 100px;
+    width: 100px;
+  }
+}
+
