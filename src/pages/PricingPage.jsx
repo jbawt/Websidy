@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import PricingCalculator from '../components/PricingCalculator'
 import './PricingPage.css'
 
 function PricingPage() {
   const theme = useSelector((state) => state.theme.mode)
+  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false)
 
   return (
     <div className={`pricing-page ${theme}`}>
@@ -18,6 +20,12 @@ function PricingPage() {
               No hidden fees, no surprises. Our pricing is straightforward and designed to scale with
               your business needs. Choose the services that work for you.
             </p>
+            <button
+              className="pricing-calculator-button"
+              onClick={() => setIsCalculatorOpen(true)}
+            >
+              Calculate Your Price
+            </button>
           </div>
           <div className="pricing-hero-visual">
             <svg viewBox="0 0 400 400" className="pricing-hero-svg">
@@ -261,6 +269,10 @@ function PricingPage() {
           </div>
         </section>
       </div>
+      <PricingCalculator
+        isOpen={isCalculatorOpen}
+        onClose={() => setIsCalculatorOpen(false)}
+      />
     </div>
   )
 }
