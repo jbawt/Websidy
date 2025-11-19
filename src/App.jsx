@@ -15,7 +15,7 @@ function App() {
   const theme = useSelector((state) => state.theme.mode)
 
   return (
-    <Router>
+    <Router basename="/Websidy">
       <ScrollToTop />
       <div className={`app ${theme}`}>
         <Navbar />
