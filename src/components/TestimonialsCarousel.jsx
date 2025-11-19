@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import './TestimonialsCarousel.css'
 
@@ -165,6 +166,13 @@ function TestimonialsCarousel() {
               aria-label={`Go to testimonial ${index + 1}`}
             />
           ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="testimonials-cta">
+          <Link to="/gallery" className="testimonials-cta-button">
+            View Our Work
+          </Link>
         </div>
       </div>
     </section>
