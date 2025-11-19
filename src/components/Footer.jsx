@@ -78,6 +78,10 @@ function Footer() {
 
         {/* Main Footer Content */}
         <div className="footer-content">
+         <div className="footer-section footer-copyright">
+            <p className="copyright">© 2025 Websidy.</p>
+          </div>
+
           <nav className="footer-section footer-nav">
             <ul className="footer-nav-list">
               <li>
@@ -101,16 +105,17 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/gallery" className="footer-link">
+                  Gallery
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="footer-link">
                   Contact
                 </Link>
               </li>
             </ul>
           </nav>
-
-          <div className="footer-section footer-copyright">
-            <p className="copyright">© 2025 Websidy. All rights reserved.</p>
-          </div>
 
           <div className="footer-section footer-social">
             <div className="social-links">
