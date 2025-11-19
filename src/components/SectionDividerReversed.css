@@ -1,0 +1,154 @@
+.section-divider-reversed {
+  width: 100%;
+  margin: 4rem 0;
+  padding: clamp(3rem, 4vw, 4.5rem) clamp(1.5rem, 8vw, 5rem);
+  border-radius: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(14, 165, 233, 0.12));
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-divider-reversed::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  pointer-events: none;
+}
+
+.divider-visual-reversed {
+  position: relative;
+  order: 1;
+}
+
+.divider-content-reversed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  order: 2;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.divider-eyebrow-reversed {
+  font-size: 0.8rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.divider-content-reversed h3 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.divider-content-reversed p {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.divider-svg-reversed {
+  width: 100%;
+  height: auto;
+}
+
+.divider-wave-reversed {
+  opacity: 0.8;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawWaveReversed 4s ease forwards;
+}
+
+.divider-wave-reversed.slow {
+  animation-duration: 6s;
+}
+
+.divider-wave-reversed.fast {
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+}
+
+.divider-particles-reversed circle {
+  fill: url(#dividerGradientReversed);
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.7));
+  animation: floatReversed 4.5s ease-in-out infinite;
+}
+
+.divider-particles-reversed circle:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.divider-particles-reversed circle:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.divider-particles-reversed circle:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.app.dark .section-divider-reversed {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7));
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+.app.dark .section-divider-reversed::after {
+  border-color: rgba(248, 250, 252, 0.05);
+}
+
+.app.dark .divider-content-reversed h3,
+.app.dark .divider-content-reversed p {
+  color: rgba(248, 250, 252, 0.85);
+}
+
+.app.dark .divider-eyebrow-reversed {
+  color: #60a5fa;
+}
+
+@keyframes drawWaveReversed {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes floatReversed {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-divider-reversed {
+    grid-template-columns: 1fr;
+    padding: 2.75rem 1.5rem;
+  }
+
+  .divider-visual-reversed {
+    order: 1;
+  }
+
+  .divider-content-reversed {
+    order: 2;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-divider-reversed {
+    padding: 2.75rem 1.5rem;
+  }
+}
+
