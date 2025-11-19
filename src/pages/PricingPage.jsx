@@ -247,36 +247,18 @@ function PricingPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="pricing-faq-section">
-          <h2>Frequently Asked Questions</h2>
-          <div className="faq-grid">
-            <div className="faq-item">
-              <h3>Do you offer payment plans?</h3>
-              <p>Yes! We offer flexible payment plans for website projects over $2,000. Contact us to discuss options.</p>
-            </div>
-            <div className="faq-item">
-              <h3>What's included in the base package?</h3>
-              <p>The base package includes 3 pages (Home, About, Contact), responsive design, SEO optimization, and content integration.</p>
-            </div>
-            <div className="faq-item">
-              <h3>Can I cancel hosting anytime?</h3>
-              <p>Yes, you can cancel your hosting subscription at any time. No long-term contracts required.</p>
-            </div>
-            <div className="faq-item">
-              <h3>Do you provide ongoing support?</h3>
-              <p>Yes! All hosting plans include support, and we offer maintenance packages for website updates and changes.</p>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="pricing-cta-section">
           <h2>Ready to Get Started?</h2>
           <p>Let's discuss your project and find the perfect package for your needs.</p>
-          <Link to="/contact" className="pricing-cta-button">
-            Get in Touch
-          </Link>
+          <div className="pricing-cta-buttons">
+            <Link to="/contact" className="pricing-cta-button">
+              Get in Touch
+            </Link>
+            <Link to="/faq" className="pricing-cta-button pricing-cta-button-secondary">
+              View FAQ
+            </Link>
+          </div>
         </section>
       </div>
     </div>

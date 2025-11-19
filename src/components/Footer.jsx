@@ -105,6 +105,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/faq" className="footer-link">
+                  FAQ
+                </Link>
+              </li>
+              <li>
                 <Link to="/gallery" className="footer-link">
                   Gallery
                 </Link>

@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import PricingPage from './pages/PricingPage'
 import GalleryPage from './pages/GalleryPage'
+import FAQPage from './pages/FAQPage'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import './App.css'
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/faq" element={<FAQPage />} />
         </Routes>
         <Footer />
       </div>
