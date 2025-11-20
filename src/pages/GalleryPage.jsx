@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import GalleryModal from '../components/GalleryModal'
 import './GalleryPage.css'
 
 function GalleryPage() {
   const theme = useSelector((state) => state.theme.mode)
+  const [selectedProject, setSelectedProject] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const projects = [
     {
@@ -66,7 +69,14 @@ function GalleryPage() {
         <section className="gallery-projects-section">
           <div className="projects-grid">
             {projects.map((project) => (
-              <div key={project.id} className={`project-card ${project.featured ? 'featured' : ''}`}>
+              <div
+                key={project.id}
+                className={`project-card ${project.featured ? 'featured' : ''}`}
+                onClick={() => {
+                  setSelectedProject(project)
+                  setIsModalOpen(true)
+                }}
+              >
                 {project.featured && (
                   <div className="featured-badge">Featured</div>
                 )}
@@ -80,40 +90,26 @@ function GalleryPage() {
                       sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                     />
                     <div className="project-overlay">
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link"
+                      <button
+                        className="project-view-button"
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setSelectedProject(project)
+                          setIsModalOpen(true)
+                        }}
                       >
                         <svg viewBox="0 0 24 24" fill="none" className="link-icon">
                           <path
-                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
                             stroke="currentColor"
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
-                          <polyline
-                            points="15 3 21 3 21 9"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <line
-                            x1="10"
-                            y1="14"
-                            x2="21"
-                            y2="3"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
+                          <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" />
                         </svg>
-                        <span>Visit Site</span>
-                      </a>
+                        <span>View Details</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -154,6 +150,14 @@ function GalleryPage() {
           </div>
         </section>
       </div>
+      <GalleryModal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false)
+          setSelectedProject(null)
+        }}
+        project={selectedProject}
+      />
     </div>
   )
 }

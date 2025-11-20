@@ -61,6 +61,7 @@ function Navbar() {
           <Link to="/gallery" className="nav-link" onClick={handleLinkClick}>Gallery</Link>
           <Link to="/about" className="nav-link" onClick={handleLinkClick}>About</Link>
           <Link to="/faq" className="nav-link" onClick={handleLinkClick}>FAQ</Link>
+          <Link to="/tools" className="nav-link" onClick={handleLinkClick}>Tools</Link>
           <Link to="/contact" className="nav-link" onClick={handleLinkClick}>Contact</Link>
           <button onClick={handleToggleTheme} className="theme-toggle" aria-label="Toggle theme">
             {theme === 'light' ? (

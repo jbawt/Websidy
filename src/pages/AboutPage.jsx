@@ -136,90 +136,209 @@ function AboutPage() {
         </section>
 
         {/* Process Section */}
-        <section className="about-process-section">
+      </div>
+      <section className="about-process-section">
+        <div className="about-process-container">
           <div className="about-process-header">
             <span className="process-eyebrow">How We Work</span>
             <h2>Our Process</h2>
-            <p>From initial concept to launch, we follow a proven process that ensures quality results.</p>
+            <p>From initial concept to launch, we follow a proven process that ensures quality results. Each phase is designed to bring you closer to your digital goals with clarity and confidence.</p>
           </div>
-          <div className="process-steps">
-            <div className="process-step">
-              <div className="step-number">01</div>
-              <div className="step-visual">
-                <svg viewBox="0 0 100 100">
-                  <defs>
-                    <linearGradient id="stepGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <circle cx="50" cy="50" r="40" fill="none" stroke="url(#stepGradient1)" strokeWidth="3" />
-                  <path d="M 30 50 L 45 65 L 70 35" stroke="url(#stepGradient1)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </svg>
+          <div className="process-flow-wrapper">
+            <div className="process-steps-flow">
+              <div className="process-step-card">
+                <div className="step-number-badge">01</div>
+                <div className="step-icon-container">
+                  <div className="step-icon-wrapper">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="aboutStepGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#3b82f6" />
+                          <stop offset="100%" stopColor="#1e40af" />
+                        </linearGradient>
+                      </defs>
+                      <circle cx="50" cy="50" r="40" fill="none" stroke="url(#aboutStepGradient1)" strokeWidth="3" />
+                      <path d="M 30 50 L 45 65 L 70 35" stroke="url(#aboutStepGradient1)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="step-content-wrapper">
+                  <h3>Discovery & Strategy</h3>
+                  <p className="step-description">
+                    We start by understanding your vision, goals, and target audience to craft a tailored strategy. This foundational phase includes in-depth workshops, competitive analysis, and stakeholder interviews.
+                  </p>
+                  <ul className="step-features">
+                    <li>Brand strategy workshops</li>
+                    <li>Target audience research</li>
+                    <li>Competitive analysis</li>
+                    <li>Project roadmap creation</li>
+                  </ul>
+                </div>
               </div>
-              <h3>Discovery</h3>
-              <p>We start by understanding your business, goals, and target audience to create a strategy that works.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">02</div>
-              <div className="step-visual">
-                <svg viewBox="0 0 100 100">
-                  <defs>
-                    <linearGradient id="stepGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <rect x="20" y="20" width="60" height="60" rx="5" fill="none" stroke="url(#stepGradient2)" strokeWidth="3" />
-                  <rect x="30" y="30" width="20" height="15" fill="url(#stepGradient2)" opacity="0.5" />
-                  <rect x="55" y="30" width="15" height="15" fill="url(#stepGradient2)" opacity="0.3" />
-                  <rect x="30" y="50" width="40" height="8" fill="url(#stepGradient2)" opacity="0.4" />
-                </svg>
-              </div>
-              <h3>Design</h3>
-              <p>Our team creates beautiful, user-friendly designs that align with your brand and convert visitors.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">03</div>
-              <div className="step-visual">
-                <svg viewBox="0 0 100 100">
-                  <defs>
-                    <linearGradient id="stepGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M 50 20 L 70 40 L 50 60 L 30 40 Z" fill="url(#stepGradient3)" opacity="0.6" />
-                  <circle cx="50" cy="50" r="8" fill="url(#stepGradient3)" />
-                  <path d="M 50 60 L 50 80" stroke="url(#stepGradient3)" strokeWidth="3" strokeLinecap="round" />
-                </svg>
-              </div>
-              <h3>Development</h3>
-              <p>We build fast, responsive websites using modern technologies and best practices.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">04</div>
-              <div className="step-visual">
-                <svg viewBox="0 0 100 100">
-                  <defs>
-                    <linearGradient id="stepGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <circle cx="50" cy="50" r="35" fill="none" stroke="url(#stepGradient4)" strokeWidth="3" />
-                  <path d="M 50 20 L 50 50 L 70 70" stroke="url(#stepGradient4)" strokeWidth="3" strokeLinecap="round" />
-                  <circle cx="50" cy="50" r="5" fill="url(#stepGradient4)" />
-                </svg>
-              </div>
-              <h3>Launch & Support</h3>
-              <p>We handle deployment, provide training, and offer ongoing support to ensure your success.</p>
-            </div>
-          </div>
-        </section>
 
-        {/* Stats Section */}
-        <section className="about-stats-section">
+              <div className="process-connector-line">
+                <svg viewBox="0 0 100 40" className="connector-svg">
+                  <defs>
+                    <linearGradient id="aboutConnectorGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="50%" stopColor="#1e40af" />
+                      <stop offset="100%" stopColor="#0ea5e9" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M 0 20 Q 25 10 50 20 T 100 20"
+                    fill="none"
+                    stroke="url(#aboutConnectorGradient1)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    className="connector-path"
+                  />
+                  <circle cx="50" cy="20" r="4" fill="url(#aboutConnectorGradient1)" className="connector-dot" />
+                </svg>
+              </div>
+
+              <div className="process-step-card">
+                <div className="step-number-badge">02</div>
+                <div className="step-icon-container">
+                  <div className="step-icon-wrapper">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="aboutStepGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#3b82f6" />
+                          <stop offset="100%" stopColor="#1e40af" />
+                        </linearGradient>
+                      </defs>
+                      <rect x="20" y="20" width="60" height="60" rx="5" fill="none" stroke="url(#aboutStepGradient2)" strokeWidth="3" />
+                      <rect x="30" y="30" width="20" height="15" fill="url(#aboutStepGradient2)" opacity="0.5" />
+                      <rect x="55" y="30" width="15" height="15" fill="url(#aboutStepGradient2)" opacity="0.3" />
+                      <rect x="30" y="50" width="40" height="8" fill="url(#aboutStepGradient2)" opacity="0.4" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="step-content-wrapper">
+                  <h3>Design & Prototyping</h3>
+                  <p className="step-description">
+                    We bring your ideas to life with wireframes, mockups, and interactive prototypes for your feedback. Our design process focuses on user experience, brand consistency, and conversion optimization.
+                  </p>
+                  <ul className="step-features">
+                    <li>Wireframe creation</li>
+                    <li>High-fidelity mockups</li>
+                    <li>Interactive prototypes</li>
+                    <li>Design system development</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="process-connector-line">
+                <svg viewBox="0 0 100 40" className="connector-svg">
+                  <defs>
+                    <linearGradient id="aboutConnectorGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="50%" stopColor="#1e40af" />
+                      <stop offset="100%" stopColor="#0ea5e9" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M 0 20 Q 25 10 50 20 T 100 20"
+                    fill="none"
+                    stroke="url(#aboutConnectorGradient2)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    className="connector-path"
+                  />
+                  <circle cx="50" cy="20" r="4" fill="url(#aboutConnectorGradient2)" className="connector-dot" />
+                </svg>
+              </div>
+
+              <div className="process-step-card">
+                <div className="step-number-badge">03</div>
+                <div className="step-icon-container">
+                  <div className="step-icon-wrapper">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="aboutStepGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#3b82f6" />
+                          <stop offset="100%" stopColor="#1e40af" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M 50 20 L 70 40 L 50 60 L 30 40 Z" fill="url(#aboutStepGradient3)" opacity="0.6" />
+                      <circle cx="50" cy="50" r="8" fill="url(#aboutStepGradient3)" />
+                      <path d="M 50 60 L 50 80" stroke="url(#aboutStepGradient3)" strokeWidth="3" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="step-content-wrapper">
+                  <h3>Development & Testing</h3>
+                  <p className="step-description">
+                    Our developers build a robust, responsive, and SEO-friendly website, rigorously tested for performance. We use modern technologies and follow best practices to ensure your site is fast, secure, and scalable.
+                  </p>
+                  <ul className="step-features">
+                    <li>Responsive development</li>
+                    <li>Performance optimization</li>
+                    <li>Cross-browser testing</li>
+                    <li>SEO implementation</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="process-connector-line">
+                <svg viewBox="0 0 100 40" className="connector-svg">
+                  <defs>
+                    <linearGradient id="aboutConnectorGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="50%" stopColor="#1e40af" />
+                      <stop offset="100%" stopColor="#0ea5e9" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M 0 20 Q 25 10 50 20 T 100 20"
+                    fill="none"
+                    stroke="url(#aboutConnectorGradient3)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    className="connector-path"
+                  />
+                  <circle cx="50" cy="20" r="4" fill="url(#aboutConnectorGradient3)" className="connector-dot" />
+                </svg>
+              </div>
+
+              <div className="process-step-card">
+                <div className="step-number-badge">04</div>
+                <div className="step-icon-container">
+                  <div className="step-icon-wrapper">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="aboutStepGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#3b82f6" />
+                          <stop offset="100%" stopColor="#1e40af" />
+                        </linearGradient>
+                      </defs>
+                      <circle cx="50" cy="50" r="35" fill="none" stroke="url(#aboutStepGradient4)" strokeWidth="3" />
+                      <path d="M 50 20 L 50 50 L 70 70" stroke="url(#aboutStepGradient4)" strokeWidth="3" strokeLinecap="round" />
+                      <circle cx="50" cy="50" r="5" fill="url(#aboutStepGradient4)" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="step-content-wrapper">
+                  <h3>Launch & Support</h3>
+                  <p className="step-description">
+                    We deploy your site, provide comprehensive training, and offer ongoing support to ensure long-term success. Our handoff process includes documentation, training sessions, and access to maintenance plans.
+                  </p>
+                  <ul className="step-features">
+                    <li>Site deployment</li>
+                    <li>Team training sessions</li>
+                    <li>Documentation & handoff</li>
+                    <li>Ongoing maintenance options</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Stats Section */}
+      <section className="about-stats-section">
+        <div className="about-stats-container">
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-icon">
@@ -289,8 +408,8 @@ function AboutPage() {
               <div className="stat-label">Client Satisfaction</div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   )
 }

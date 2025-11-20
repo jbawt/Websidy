@@ -110,6 +110,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/tools" className="footer-link">
+                  Tools
+                </Link>
+              </li>
+              <li>
                 <Link to="/gallery" className="footer-link">
                   Gallery
                 </Link>
