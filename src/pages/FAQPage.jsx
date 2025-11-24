@@ -89,7 +89,7 @@ function FAQPage() {
                 filter="url(#faqGlow)"
                 className="question-mark"
               />
-              <circle cx="200" cy="150" r="6" fill="url(#faqHeroGradient)" filter="url(#faqGlow)" />
+              <circle cx="200" cy="150" r="6" fill="url(#faqHeroGradient)" filter="url(#faqGlow)" className="question-mark-dot" />
 
               {/* Speech bubbles */}
               <ellipse cx="120" cy="200" rx="40" ry="30" fill="url(#faqHeroGradient)" opacity="0.3" className="speech-bubble" />
