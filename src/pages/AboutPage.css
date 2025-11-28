@@ -613,80 +613,65 @@
   }
 }
 
-@media (max-width: 1400px) {
-  .about-process-container {
-    max-width: 1400px;
-    padding: 0 1.5rem;
-  }
-
-  .process-step-card {
-    min-width: 260px;
-    max-width: 300px;
-    padding: 2.25rem 1.75rem;
-  }
-
-  .process-connector-line {
-    width: 60px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .process-step-card {
-    min-width: 240px;
-    max-width: 280px;
-    padding: 2rem 1.5rem;
-  }
-
-  .process-connector-line {
-    width: 50px;
-  }
-
-  .step-icon-wrapper {
-    width: 100px;
-    height: 100px;
-  }
-
-  .step-icon-wrapper svg {
-    width: 60px;
-    height: 60px;
-  }
-
-  .about-stats-container {
-    max-width: 1400px;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 968px) {
-  .about-process-container {
-    padding: 0 1rem;
+@media (max-width: 1750px) {
+  .process-flow-wrapper {
+    overflow-x: visible;
   }
 
   .process-steps-flow {
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+    flex-wrap: wrap;
   }
 
   .process-step-card {
-    min-width: 220px;
-    max-width: 260px;
-    padding: 1.75rem 1.25rem;
+    width: 100%;
+    max-width: 600px;
+    min-width: unset;
   }
 
   .process-connector-line {
-    width: 40px;
+    width: 60px;
+    height: 80px;
+    margin-top: 0;
+    transform: rotate(90deg);
   }
 
-  .about-stats-container {
-    max-width: 1200px;
+  .connector-svg {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 1750px) {
+  .process-flow-wrapper {
+    overflow-x: visible;
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+  .process-steps-flow {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+  }
+
+  .process-step-card {
+    width: 100%;
+    max-width: 600px;
+    min-width: unset;
+  }
+
+  .process-connector-line {
+    width: 60px;
+    height: 80px;
+    margin-top: 0;
+    transform: rotate(90deg);
+  }
+
+  .connector-svg {
+    transform: rotate(90deg);
   }
 }
 

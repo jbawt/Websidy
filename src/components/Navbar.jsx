@@ -76,7 +76,6 @@ function Navbar() {
         <Link to="/" className="navbar-logo">
           <Logo />
         </Link>
-        <Link to="/" className="logo-text">Websidy</Link>
         <button 
           className={`hamburger ${isMenuOpen ? 'active' : ''}`}
           onClick={handleToggleMenu}

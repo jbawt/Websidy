@@ -23,9 +23,10 @@
   margin: 0 auto;
   padding: 1rem 2rem;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
   position: relative;
+  gap: 3rem;
 }
 
 .navbar-logo {
@@ -37,68 +38,7 @@
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-}
-
-.logo-text {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #3b82f6 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 3s ease infinite;
-  position: relative;
-  transition: transform 0.3s ease;
-  justify-self: center;
-  grid-column: 2;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.logo-text::before {
-  content: 'Websidy';
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #3b82f6 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: blur(8px);
-  opacity: 0.5;
-  z-index: -1;
-  animation: gradient-shift 3s ease infinite;
-}
-
-.logo-text:hover {
-  transform: scale(1.05);
-}
-
-.app.dark .logo-text {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #60a5fa 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.app.dark .logo-text::before {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #60a5fa 100%);
-  background-size: 200% auto;
-  filter: blur(10px);
-  opacity: 0.4;
-}
-
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% center;
-  }
-  50% {
-    background-position: 100% center;
-  }
+  flex-shrink: 0;
 }
 
 .navbar-links {
@@ -106,7 +46,6 @@
   align-items: center;
   gap: 1.5rem;
   justify-self: end;
-  grid-column: 3;
 }
 
 .nav-link {
@@ -586,6 +525,7 @@
   .navbar-container {
     padding: 1rem;
     grid-template-columns: auto 1fr auto;
+    gap: 1rem;
     position: relative;
   }
 
