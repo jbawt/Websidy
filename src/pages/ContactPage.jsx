@@ -103,53 +103,263 @@ function ContactPage() {
           </div>
         </section>
 
-        {/* Contact Form Section */}
-        <section className="contact-form-section">
-          <div className="contact-form-wrapper">
-            <div className="form-visual-side">
-              <div className="form-visual-content">
-                <svg viewBox="0 0 300 300" className="form-svg">
+        {/* Additional Info Section */}
+        <section className="contact-info-section">
+          <div className="info-grid">
+            <div className="info-item">
+              <div className="info-item-icon">
+                <svg viewBox="0 0 64 64" fill="none">
                   <defs>
-                    <linearGradient id="formGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient id="infoGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#3b82f6" />
                       <stop offset="100%" stopColor="#1e40af" />
                     </linearGradient>
                   </defs>
-                  {/* Abstract communication design */}
-                  <circle cx="150" cy="100" r="40" fill="url(#formGradient)" opacity="0.3" className="pulse-circle" />
-                  <circle cx="150" cy="100" r="25" fill="url(#formGradient)" opacity="0.5" className="pulse-circle" style={{ animationDelay: '0.5s' }} />
-                  <circle cx="150" cy="100" r="10" fill="url(#formGradient)" className="pulse-circle" style={{ animationDelay: '1s' }} />
-                  {/* Connection nodes */}
-                  <circle cx="80" cy="200" r="15" fill="url(#formGradient)" opacity="0.6" />
-                  <circle cx="220" cy="200" r="15" fill="url(#formGradient)" opacity="0.6" />
-                  {/* Connecting paths */}
-                  <path d="M 150 140 L 95 185" stroke="url(#formGradient)" strokeWidth="3" opacity="0.5" />
-                  <path d="M 150 140 L 205 185" stroke="url(#formGradient)" strokeWidth="3" opacity="0.5" />
-                  {/* Data flow indicators */}
-                  <circle cx="60" cy="200" r="4" fill="url(#formGradient)" className="data-flow" />
-                  <circle cx="70" cy="200" r="4" fill="url(#formGradient)" className="data-flow" style={{ animationDelay: '0.2s' }} />
-                  <circle cx="240" cy="200" r="4" fill="url(#formGradient)" className="data-flow" />
-                  <circle cx="250" cy="200" r="4" fill="url(#formGradient)" className="data-flow" style={{ animationDelay: '0.2s' }} />
+                  <circle cx="32" cy="32" r="24" fill="none" stroke="url(#infoGradient1)" strokeWidth="3" />
+                  <circle cx="32" cy="32" r="8" fill="url(#infoGradient1)" />
                 </svg>
-                <div className="form-info-cards">
-                  <div className="info-card">
-                    <div className="info-icon">
-                      <svg viewBox="0 0 24 24" fill="none">
-                        <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="url(#formGradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
+              </div>
+              <h3>Quick Response</h3>
+              <p>We typically respond within 24 hours during business days.</p>
+            </div>
+            <div className="info-item">
+              <div className="info-item-icon">
+                <svg viewBox="0 0 64 64" fill="none">
+                  <defs>
+                    <linearGradient id="infoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="100%" stopColor="#1e40af" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="12" y="20" width="40" height="28" rx="4" fill="none" stroke="url(#infoGradient2)" strokeWidth="3" />
+                  <path d="M 20 20 L 20 12 L 44 12 L 44 20" stroke="url(#infoGradient2)" strokeWidth="3" strokeLinecap="round" />
+                  <line x1="20" y1="32" x2="44" y2="32" stroke="url(#infoGradient2)" strokeWidth="2" />
+                </svg>
+              </div>
+              <h3>Free Consultation</h3>
+              <p>Let's discuss your project and see how we can help.</p>
+            </div>
+            <div className="info-item">
+              <div className="info-item-icon">
+                <svg viewBox="0 0 64 64" fill="none">
+                  <defs>
+                    <linearGradient id="infoGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="100%" stopColor="#1e40af" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M 32 12 L 40 28 L 56 30 L 44 42 L 48 58 L 32 50 L 16 58 L 20 42 L 8 30 L 24 28 Z" fill="url(#infoGradient3)" opacity="0.6" />
+                </svg>
+              </div>
+              <h3>No Commitment</h3>
+              <p>Reach out with any questions—no strings attached.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form Section */}
+        <section className="contact-form-section">
+          <div className="contact-form-wrapper">
+            <div className="form-feedback-side">
+              <div className="feedback-demo-container-inline">
+                <div className="feedback-demo-header">
+                  <span className="feedback-demo-eyebrow">Our Approach</span>
+                  <h2>Your Feedback Shapes Our Work</h2>
+                  <p className="feedback-demo-description">
+                    We believe the best results come from collaboration. Click the design below to see how we
+                    incorporate your feedback into every project.
+                  </p>
+                </div>
+
+                <div 
+                  className={`feedback-demo-interactive ${feedbackStage > 0 ? `stage-${feedbackStage}` : ''}`}
+                  onClick={handleFeedbackDemo}
+                >
+                  {/* Design Mockup */}
+                  <div className="design-mockup">
+                    <div className="mockup-browser">
+                      <div className="browser-header">
+                        <div className="browser-dots">
+                          <span className="dot red"></span>
+                          <span className="dot yellow"></span>
+                          <span className="dot green"></span>
+                        </div>
+                        <div className="browser-url">yourwebsite.com</div>
+                      </div>
+                      <div className="browser-content">
+                        {/* Initial Design */}
+                        <div className={`design-version design-initial ${feedbackStage === 0 ? 'active' : ''}`}>
+                          <div className="design-header">
+                            <div className="design-logo-placeholder"></div>
+                            <nav className="design-nav">
+                              <div className="nav-item"></div>
+                              <div className="nav-item"></div>
+                              <div className="nav-item"></div>
+                            </nav>
+                          </div>
+                          <div className="design-hero">
+                            <div className="hero-text-line"></div>
+                            <div className="hero-text-line short"></div>
+                          </div>
+                          <div className="design-content">
+                            <div className="content-card"></div>
+                            <div className="content-card"></div>
+                            <div className="content-card"></div>
+                          </div>
+                        </div>
+
+                        {/* Broken/Feedback Design */}
+                        <div className={`design-version design-broken ${feedbackStage === 1 ? 'active' : ''}`}>
+                          <div className="design-header broken">
+                            <div className="design-logo-placeholder broken"></div>
+                            <nav className="design-nav broken">
+                              <div className="nav-item broken"></div>
+                              <div className="nav-item broken"></div>
+                              <div className="nav-item broken"></div>
+                            </nav>
+                          </div>
+                          <div className="design-hero broken">
+                            <div className="hero-text-line broken"></div>
+                            <div className="hero-text-line short broken"></div>
+                          </div>
+                          <div className="design-content broken">
+                            <div className="content-card broken"></div>
+                            <div className="content-card broken"></div>
+                            <div className="content-card broken"></div>
+                          </div>
+                        </div>
+
+                        {/* Revising Design */}
+                        <div className={`design-version design-revising ${feedbackStage === 2 ? 'active' : ''}`}>
+                          <div className="design-header revising">
+                            <div className="design-logo-placeholder revising"></div>
+                            <nav className="design-nav revising">
+                              <div className="nav-item revising"></div>
+                              <div className="nav-item revising"></div>
+                              <div className="nav-item revising"></div>
+                            </nav>
+                          </div>
+                          <div className="design-hero revising">
+                            <div className="hero-text-line revising"></div>
+                            <div className="hero-text-line short revising"></div>
+                          </div>
+                          <div className="design-content revising">
+                            <div className="content-card revising"></div>
+                            <div className="content-card revising"></div>
+                            <div className="content-card revising"></div>
+                          </div>
+                          <div className="revising-indicator">
+                            <div className="pulse-ring"></div>
+                            <div className="pulse-ring"></div>
+                            <div className="pulse-ring"></div>
+                          </div>
+                        </div>
+
+                        {/* Improved Design */}
+                        <div className={`design-version design-improved ${feedbackStage === 3 ? 'active' : ''}`}>
+                          <div className="design-header improved">
+                            <div className="design-logo-placeholder improved"></div>
+                            <nav className="design-nav improved">
+                              <div className="nav-item improved"></div>
+                              <div className="nav-item improved"></div>
+                              <div className="nav-item improved"></div>
+                            </nav>
+                          </div>
+                          <div className="design-hero improved">
+                            <div className="hero-text-line improved"></div>
+                            <div className="hero-text-line short improved"></div>
+                          </div>
+                          <div className="design-content improved">
+                            <div className="content-card improved"></div>
+                            <div className="content-card improved"></div>
+                            <div className="content-card improved"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <h3>Email Us</h3>
-                    <p>hello@websidy.com</p>
                   </div>
-                  <div className="info-card">
-                    <div className="info-icon">
-                      <svg viewBox="0 0 24 24" fill="none">
-                        <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" stroke="url(#formGradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
+
+                  {/* Feedback Timeline */}
+                  <div className="feedback-timeline">
+                    <div className={`timeline-step ${feedbackStage >= 0 ? 'active' : ''} ${feedbackStage === 0 ? 'current' : ''}`}>
+                      <div className="timeline-dot"></div>
+                      <div className="timeline-content">
+                        <h4>Initial Design</h4>
+                        <p>We create the first version</p>
+                      </div>
                     </div>
-                    <h3>Response Time</h3>
-                    <p>Within 24 hours</p>
+
+                    <div className={`timeline-step ${feedbackStage >= 1 ? 'active' : ''} ${feedbackStage === 1 ? 'current' : ''}`}>
+                      <div className="timeline-dot"></div>
+                      <div className="timeline-content">
+                        <h4>Your Feedback</h4>
+                        <p>You share your thoughts</p>
+                      </div>
+                      {feedbackStage === 1 && (
+                        <div className="feedback-bubble-timeline">
+                          <div className="feedback-avatar-small">
+                            <svg viewBox="0 0 24 24" fill="none">
+                              <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="2"/>
+                              <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21" stroke="currentColor" strokeWidth="2"/>
+                            </svg>
+                          </div>
+                          <div className="feedback-message">
+                            "Could we adjust the spacing and alignment? The layout feels a bit off."
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className={`timeline-step ${feedbackStage >= 2 ? 'active' : ''} ${feedbackStage === 2 ? 'current' : ''}`}>
+                      <div className="timeline-dot"></div>
+                      <div className="timeline-content">
+                        <h4>We Revise</h4>
+                        <p>We implement your feedback</p>
+                      </div>
+                      {feedbackStage === 2 && (
+                        <div className="revising-animation">
+                          <div className="sparkle"></div>
+                          <div className="sparkle"></div>
+                          <div className="sparkle"></div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className={`timeline-step ${feedbackStage >= 3 ? 'active' : ''} ${feedbackStage === 3 ? 'current' : ''}`}>
+                      <div className="timeline-dot"></div>
+                      <div className="timeline-content">
+                        <h4>Improved Result</h4>
+                        <p>Refined design ready for review</p>
+                      </div>
+                      {feedbackStage === 3 && (
+                        <div className="success-indicator">
+                          <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                            <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                      )}
+                    </div>
                   </div>
+
+                  {/* Click Hint */}
+                  {feedbackStage === 0 && !isAnimating && (
+                    <div className="click-hint">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2"/>
+                      </svg>
+                      <span>Click to see the feedback process</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="feedback-demo-message">
+                  <p>
+                    <strong>We listen. We adapt. We deliver.</strong> Your input is invaluable, and we're
+                    committed to making revisions until you're completely satisfied with the result.
+                  </p>
                 </div>
               </div>
             </div>
@@ -229,265 +439,6 @@ function ContactPage() {
                   </div>
                 )}
               </form>
-            </div>
-          </div>
-        </section>
-
-        {/* Interactive Feedback Demo Section */}
-        <section className="feedback-demo-section">
-          <div className="feedback-demo-container">
-            <div className="feedback-demo-header">
-              <span className="feedback-demo-eyebrow">Our Approach</span>
-              <h2>Your Feedback Shapes Our Work</h2>
-              <p className="feedback-demo-description">
-                We believe the best results come from collaboration. Click the design below to see how we
-                incorporate your feedback into every project.
-              </p>
-            </div>
-
-            <div 
-              className={`feedback-demo-interactive ${feedbackStage > 0 ? `stage-${feedbackStage}` : ''}`}
-              onClick={handleFeedbackDemo}
-            >
-              {/* Design Mockup */}
-              <div className="design-mockup">
-                <div className="mockup-browser">
-                  <div className="browser-header">
-                    <div className="browser-dots">
-                      <span className="dot red"></span>
-                      <span className="dot yellow"></span>
-                      <span className="dot green"></span>
-                    </div>
-                    <div className="browser-url">yourwebsite.com</div>
-                  </div>
-                  <div className="browser-content">
-                    {/* Initial Design */}
-                    <div className={`design-version design-initial ${feedbackStage === 0 ? 'active' : ''}`}>
-                      <div className="design-header">
-                        <div className="design-logo-placeholder"></div>
-                        <nav className="design-nav">
-                          <div className="nav-item"></div>
-                          <div className="nav-item"></div>
-                          <div className="nav-item"></div>
-                        </nav>
-                      </div>
-                      <div className="design-hero">
-                        <div className="hero-text-line"></div>
-                        <div className="hero-text-line short"></div>
-                      </div>
-                      <div className="design-content">
-                        <div className="content-card"></div>
-                        <div className="content-card"></div>
-                        <div className="content-card"></div>
-                      </div>
-                    </div>
-
-                    {/* Broken/Feedback Design */}
-                    <div className={`design-version design-broken ${feedbackStage === 1 ? 'active' : ''}`}>
-                      <div className="design-header broken">
-                        <div className="design-logo-placeholder broken"></div>
-                        <nav className="design-nav broken">
-                          <div className="nav-item broken"></div>
-                          <div className="nav-item broken"></div>
-                          <div className="nav-item broken"></div>
-                        </nav>
-                      </div>
-                      <div className="design-hero broken">
-                        <div className="hero-text-line broken"></div>
-                        <div className="hero-text-line short broken"></div>
-                      </div>
-                      <div className="design-content broken">
-                        <div className="content-card broken"></div>
-                        <div className="content-card broken"></div>
-                        <div className="content-card broken"></div>
-                      </div>
-                    </div>
-
-                    {/* Revising Design */}
-                    <div className={`design-version design-revising ${feedbackStage === 2 ? 'active' : ''}`}>
-                      <div className="design-header revising">
-                        <div className="design-logo-placeholder revising"></div>
-                        <nav className="design-nav revising">
-                          <div className="nav-item revising"></div>
-                          <div className="nav-item revising"></div>
-                          <div className="nav-item revising"></div>
-                        </nav>
-                      </div>
-                      <div className="design-hero revising">
-                        <div className="hero-text-line revising"></div>
-                        <div className="hero-text-line short revising"></div>
-                      </div>
-                      <div className="design-content revising">
-                        <div className="content-card revising"></div>
-                        <div className="content-card revising"></div>
-                        <div className="content-card revising"></div>
-                      </div>
-                      <div className="revising-indicator">
-                        <div className="pulse-ring"></div>
-                        <div className="pulse-ring"></div>
-                        <div className="pulse-ring"></div>
-                      </div>
-                    </div>
-
-                    {/* Improved Design */}
-                    <div className={`design-version design-improved ${feedbackStage === 3 ? 'active' : ''}`}>
-                      <div className="design-header improved">
-                        <div className="design-logo-placeholder improved"></div>
-                        <nav className="design-nav improved">
-                          <div className="nav-item improved"></div>
-                          <div className="nav-item improved"></div>
-                          <div className="nav-item improved"></div>
-                        </nav>
-                      </div>
-                      <div className="design-hero improved">
-                        <div className="hero-text-line improved"></div>
-                        <div className="hero-text-line short improved"></div>
-                      </div>
-                      <div className="design-content improved">
-                        <div className="content-card improved"></div>
-                        <div className="content-card improved"></div>
-                        <div className="content-card improved"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Feedback Timeline */}
-              <div className="feedback-timeline">
-                <div className={`timeline-step ${feedbackStage >= 0 ? 'active' : ''} ${feedbackStage === 0 ? 'current' : ''}`}>
-                  <div className="timeline-dot"></div>
-                  <div className="timeline-content">
-                    <h4>Initial Design</h4>
-                    <p>We create the first version</p>
-                  </div>
-                </div>
-
-                <div className={`timeline-step ${feedbackStage >= 1 ? 'active' : ''} ${feedbackStage === 1 ? 'current' : ''}`}>
-                  <div className="timeline-dot"></div>
-                  <div className="timeline-content">
-                    <h4>Your Feedback</h4>
-                    <p>You share your thoughts</p>
-                  </div>
-                  {feedbackStage === 1 && (
-                    <div className="feedback-bubble-timeline">
-                      <div className="feedback-avatar-small">
-                        <svg viewBox="0 0 24 24" fill="none">
-                          <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="2"/>
-                          <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21" stroke="currentColor" strokeWidth="2"/>
-                        </svg>
-                      </div>
-                      <div className="feedback-message">
-                        "Could we adjust the spacing and alignment? The layout feels a bit off."
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                <div className={`timeline-step ${feedbackStage >= 2 ? 'active' : ''} ${feedbackStage === 2 ? 'current' : ''}`}>
-                  <div className="timeline-dot"></div>
-                  <div className="timeline-content">
-                    <h4>We Revise</h4>
-                    <p>We implement your feedback</p>
-                  </div>
-                  {feedbackStage === 2 && (
-                    <div className="revising-animation">
-                      <div className="sparkle"></div>
-                      <div className="sparkle"></div>
-                      <div className="sparkle"></div>
-                    </div>
-                  )}
-                </div>
-
-                <div className={`timeline-step ${feedbackStage >= 3 ? 'active' : ''} ${feedbackStage === 3 ? 'current' : ''}`}>
-                  <div className="timeline-dot"></div>
-                  <div className="timeline-content">
-                    <h4>Improved Result</h4>
-                    <p>Refined design ready for review</p>
-                  </div>
-                  {feedbackStage === 3 && (
-                    <div className="success-indicator">
-                      <svg viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                        <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Click Hint */}
-              {feedbackStage === 0 && !isAnimating && (
-                <div className="click-hint">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2"/>
-                    <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2"/>
-                    <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2"/>
-                  </svg>
-                  <span>Click to see the feedback process</span>
-                </div>
-              )}
-            </div>
-
-            <div className="feedback-demo-message">
-              <p>
-                <strong>We listen. We adapt. We deliver.</strong> Your input is invaluable, and we're
-                committed to making revisions until you're completely satisfied with the result.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Additional Info Section */}
-        <section className="contact-info-section">
-          <div className="info-grid">
-            <div className="info-item">
-              <div className="info-item-icon">
-                <svg viewBox="0 0 64 64" fill="none">
-                  <defs>
-                    <linearGradient id="infoGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <circle cx="32" cy="32" r="24" fill="none" stroke="url(#infoGradient1)" strokeWidth="3" />
-                  <circle cx="32" cy="32" r="8" fill="url(#infoGradient1)" />
-                </svg>
-              </div>
-              <h3>Quick Response</h3>
-              <p>We typically respond within 24 hours during business days.</p>
-            </div>
-            <div className="info-item">
-              <div className="info-item-icon">
-                <svg viewBox="0 0 64 64" fill="none">
-                  <defs>
-                    <linearGradient id="infoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <rect x="12" y="20" width="40" height="28" rx="4" fill="none" stroke="url(#infoGradient2)" strokeWidth="3" />
-                  <path d="M 20 20 L 20 12 L 44 12 L 44 20" stroke="url(#infoGradient2)" strokeWidth="3" strokeLinecap="round" />
-                  <line x1="20" y1="32" x2="44" y2="32" stroke="url(#infoGradient2)" strokeWidth="2" />
-                </svg>
-              </div>
-              <h3>Free Consultation</h3>
-              <p>Let's discuss your project and see how we can help.</p>
-            </div>
-            <div className="info-item">
-              <div className="info-item-icon">
-                <svg viewBox="0 0 64 64" fill="none">
-                  <defs>
-                    <linearGradient id="infoGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M 32 12 L 40 28 L 56 30 L 44 42 L 48 58 L 32 50 L 16 58 L 20 42 L 8 30 L 24 28 Z" fill="url(#infoGradient3)" opacity="0.6" />
-                </svg>
-              </div>
-              <h3>No Commitment</h3>
-              <p>Reach out with any questions—no strings attached.</p>
             </div>
           </div>
         </section>
