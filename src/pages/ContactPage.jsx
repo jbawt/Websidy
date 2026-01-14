@@ -103,60 +103,6 @@ function ContactPage() {
           </div>
         </section>
 
-        {/* Additional Info Section */}
-        <section className="contact-info-section">
-          <div className="info-grid">
-            <div className="info-item">
-              <div className="info-item-icon">
-                <svg viewBox="0 0 64 64" fill="none">
-                  <defs>
-                    <linearGradient id="infoGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <circle cx="32" cy="32" r="24" fill="none" stroke="url(#infoGradient1)" strokeWidth="3" />
-                  <circle cx="32" cy="32" r="8" fill="url(#infoGradient1)" />
-                </svg>
-              </div>
-              <h3>Quick Response</h3>
-              <p>We typically respond within 24 hours during business days.</p>
-            </div>
-            <div className="info-item">
-              <div className="info-item-icon">
-                <svg viewBox="0 0 64 64" fill="none">
-                  <defs>
-                    <linearGradient id="infoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <rect x="12" y="20" width="40" height="28" rx="4" fill="none" stroke="url(#infoGradient2)" strokeWidth="3" />
-                  <path d="M 20 20 L 20 12 L 44 12 L 44 20" stroke="url(#infoGradient2)" strokeWidth="3" strokeLinecap="round" />
-                  <line x1="20" y1="32" x2="44" y2="32" stroke="url(#infoGradient2)" strokeWidth="2" />
-                </svg>
-              </div>
-              <h3>Free Consultation</h3>
-              <p>Let's discuss your project and see how we can help.</p>
-            </div>
-            <div className="info-item">
-              <div className="info-item-icon">
-                <svg viewBox="0 0 64 64" fill="none">
-                  <defs>
-                    <linearGradient id="infoGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M 32 12 L 40 28 L 56 30 L 44 42 L 48 58 L 32 50 L 16 58 L 20 42 L 8 30 L 24 28 Z" fill="url(#infoGradient3)" opacity="0.6" />
-                </svg>
-              </div>
-              <h3>No Commitment</h3>
-              <p>Reach out with any questions—no strings attached.</p>
-            </div>
-          </div>
-        </section>
-
         {/* Contact Form Section */}
         <section className="contact-form-section">
           <div className="contact-form-wrapper">

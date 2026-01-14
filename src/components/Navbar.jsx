@@ -89,7 +89,15 @@ function Navbar() {
           <Link to="/" className="nav-link" onClick={handleLinkClick}>
             <span>Home</span>
           </Link>
+
+          <Link to="/gallery" className="nav-link" onClick={handleLinkClick}>
+            <span>Portfolio</span>
+          </Link>
           
+          <Link to="/pricing" className="nav-link" onClick={handleLinkClick}>
+            <span>Pricing</span>
+          </Link>
+
           {/* Services Dropdown */}
           <div 
             className="nav-dropdown"
@@ -136,14 +144,6 @@ function Navbar() {
               </Link>
             </div>
           </div>
-
-          <Link to="/gallery" className="nav-link" onClick={handleLinkClick}>
-            <span>Portfolio</span>
-          </Link>
-          
-          <Link to="/pricing" className="nav-link" onClick={handleLinkClick}>
-            <span>Pricing</span>
-          </Link>
 
           {/* Resources Dropdown */}
           <div 
