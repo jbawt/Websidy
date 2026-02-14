@@ -170,7 +170,7 @@ function TestimonialsCarousel() {
 
         {/* CTA Button */}
         <div className="testimonials-cta">
-          <Link to="/gallery" className="testimonials-cta-button">
+          <Link to="/portfolio" className="testimonials-cta-button">
             View Our Work
           </Link>
         </div>
