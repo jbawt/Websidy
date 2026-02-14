@@ -96,7 +96,7 @@ function PricingPage() {
               </div>
               <div className="pricing-detail-card">
                 <h3>Additional Pages</h3>
-                <div className="pricing-amount">$200/page</div>
+                <div className="pricing-amount">$200<span className="pricing-period">/page</span></div>
                 <p className="pricing-includes">Each additional page includes:</p>
                 <ul className="pricing-features-list">
                   <li>Custom design</li>
@@ -104,6 +104,15 @@ function PricingPage() {
                   <li>SEO optimization</li>
                   <li>Responsive layout</li>
                   <li>Consistent branding</li>
+                </ul>
+              </div>
+              <div className="pricing-detail-card featured">
+                <h3>Hosting</h3>
+                <div className="pricing-amount">$50<span className="pricing-period">/month</span></div>
+                <ul className="pricing-features-list">
+                  <li>Managed hosting environment</li>
+                  <li>Secure deployment and uptime monitoring</li>
+                  <li>Single-team support for site + hosting</li>
                 </ul>
               </div>
             </div>
@@ -127,73 +136,6 @@ function PricingPage() {
                   <span className="addon-price">+$200</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Hosting Pricing */}
-        <section className="pricing-detail-section">
-          <div className="pricing-detail-header">
-            <div className="pricing-detail-icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="hostDetailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#3b82f6" />
-                    <stop offset="55%" stopColor="#ff6f61" />
-                    <stop offset="100%" stopColor="#1e40af" />
-                  </linearGradient>
-                </defs>
-                <rect x="12" y="20" width="40" height="32" rx="3" stroke="url(#hostDetailGradient)" strokeWidth="2.5" />
-                <line x1="12" y1="32" x2="52" y2="32" stroke="url(#hostDetailGradient)" strokeWidth="2" />
-                <line x1="12" y1="44" x2="52" y2="44" stroke="url(#hostDetailGradient)" strokeWidth="2" />
-                <circle cx="32" cy="14" r="4" fill="url(#hostDetailGradient)" />
-                <path d="M 28 14 L 32 10 L 36 14" stroke="url(#hostDetailGradient)" strokeWidth="2" fill="none" />
-              </svg>
-            </div>
-            <div className="pricing-detail-title">
-              <h2>Web Hosting & Maintenance</h2>
-              <p className="pricing-detail-subtitle">
-                Reliable hosting with ongoing support
-              </p>
-            </div>
-          </div>
-
-          <div className="pricing-detail-content">
-            <div className="pricing-detail-grid">
-              <div className="pricing-detail-card featured">
-                <div className="featured-badge">Best Value</div>
-                <h3>Monthly Plan</h3>
-                <div className="pricing-amount">$25<span className="pricing-period">/month</span></div>
-                <ul className="pricing-features-list">
-                  <li>Fast SSD hosting</li>
-                  <li>SSL certificate</li>
-                  <li>CDN included</li>
-                  <li>Daily backups</li>
-                  <li>24/7 monitoring</li>
-                  <li>Email support</li>
-                  <li>99.9% uptime guarantee</li>
-                </ul>
-              </div>
-              <div className="pricing-detail-card">
-                <h3>Annual Plan</h3>
-                <div className="pricing-amount">$240<span className="pricing-period">/year</span></div>
-                <div className="savings-badge">Save 20%</div>
-                <ul className="pricing-features-list">
-                  <li>Everything in Monthly</li>
-                  <li>Priority support</li>
-                  <li>Free domain renewal</li>
-                  <li>Extended backup retention</li>
-                  <li>Performance optimization</li>
-                  <li>Security updates</li>
-                  <li>Monthly reports</li>
-                </ul>
-              </div>
-            </div>
-            <div className="hosting-note">
-              <p>
-                All hosting plans include automatic updates, security patches, and performance monitoring.
-                No setup fees or hidden charges.
-              </p>
             </div>
           </div>
         </section>

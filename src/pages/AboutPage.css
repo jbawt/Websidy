@@ -1120,8 +1120,8 @@
   }
 
   .feedback-bubble-timeline {
-    top: auto;
-    bottom: -60px;
+    top: -72px;
+    bottom: auto;
     left: 0;
     right: 0;
     transform: none;

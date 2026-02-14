@@ -6,20 +6,11 @@ const services = [
   {
     title: 'Website Design & Branding',
     description:
-      'Custom, responsive websites that showcase your brand, built with modern design systems and attention to detail.',
-    features: ['Brand strategy workshops', 'High-converting landing pages', 'Design systems & component libraries'],
+      'Website packages start at $1,200 for 3 pages, with additional pages at $200 each and optional hosting for $50/month.',
+    features: ['Strategic website branding and visual identity', 'Custom website building with responsive, modern layouts', 'Reliable managed hosting with ongoing support'],
     icon: 'design',
-    badge: 'Experience',
-    cta: 'Explore design process',
-  },
-  {
-    title: 'Web Hosting & Maintenance',
-    description:
-      'Reliable hosting solutions with ongoing maintenance, security updates, and performance monitoring to keep your site running smoothly.',
-    features: ['Secure hosting infrastructure', 'Regular backups & updates', '24/7 monitoring & support for your website'],
-    icon: 'hosting',
-    badge: 'Reliability',
-    cta: 'View hosting options',
+    badge: 'Pricing',
+    cta: 'See website pricing',
   },
   {
     title: 'Social Media Setup & Training',
@@ -106,60 +97,6 @@ const IconSocial = () => (
   </svg>
 )
 
-const IconHosting = () => (
-  <svg
-    className="service-icon-svg"
-    viewBox="0 0 64 64"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <linearGradient id="hostingGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#3b82f6" />
-        <stop offset="55%" stopColor="#ff6f61" />
-        <stop offset="100%" stopColor="#1e40af" />
-      </linearGradient>
-    </defs>
-    {/* Server/Cloud structure */}
-    <rect x="12" y="16" width="40" height="32" rx="3" stroke="url(#hostingGradient1)" strokeWidth="2.5" fill="none" />
-    <line x1="12" y1="28" x2="52" y2="28" stroke="url(#hostingGradient1)" strokeWidth="2" />
-    <line x1="12" y1="40" x2="52" y2="40" stroke="url(#hostingGradient1)" strokeWidth="2" />
-    {/* Server indicators */}
-    <circle cx="20" cy="22" r="2" fill="url(#hostingGradient1)" />
-    <circle cx="20" cy="34" r="2" fill="url(#hostingGradient1)" opacity="0.8" />
-    <circle cx="20" cy="46" r="2" fill="url(#hostingGradient1)" opacity="0.6" />
-    {/* Data flow lines */}
-    <path
-      d="M 28 22 L 44 22"
-      stroke="url(#hostingGradient1)"
-      strokeWidth="1.5"
-      opacity="0.6"
-    />
-    <path
-      d="M 28 34 L 44 34"
-      stroke="url(#hostingGradient1)"
-      strokeWidth="1.5"
-      opacity="0.5"
-    />
-    <path
-      d="M 28 46 L 44 46"
-      stroke="url(#hostingGradient1)"
-      strokeWidth="1.5"
-      opacity="0.4"
-    />
-    {/* Cloud/Network symbol */}
-    <path
-      d="M 32 8 Q 38 4 44 8 Q 48 6 52 10 Q 56 8 60 12 L 60 14 Q 58 12 56 12 Q 54 10 52 10 Q 48 8 44 10 Q 40 6 32 10 Q 24 6 20 10 Q 16 8 12 12 L 12 14 Q 14 12 16 12 Q 18 10 20 10 Q 24 8 28 10 Q 30 6 32 8 Z"
-      fill="url(#hostingGradient1)"
-      opacity="0.4"
-    />
-    {/* Connection dots */}
-    <circle cx="48" cy="22" r="1.5" fill="url(#hostingGradient1)" opacity="0.7" />
-    <circle cx="48" cy="34" r="1.5" fill="url(#hostingGradient1)" opacity="0.6" />
-    <circle cx="48" cy="46" r="1.5" fill="url(#hostingGradient1)" opacity="0.5" />
-  </svg>
-)
-
 function ServicesSection() {
   return (
     <section className="services-section" id="services">
@@ -179,13 +116,7 @@ function ServicesSection() {
             <div className="card-content">
               <span className="service-badge">{service.badge}</span>
               <div className="service-icon">
-                {service.icon === 'design' ? (
-                  <IconDesign />
-                ) : service.icon === 'social' ? (
-                  <IconSocial />
-                ) : (
-                  <IconHosting />
-                )}
+                {service.icon === 'design' ? <IconDesign /> : <IconSocial />}
               </div>
               <h3>{service.title}</h3>
               <p className="service-description">{service.description}</p>
@@ -198,9 +129,7 @@ function ServicesSection() {
                 to={
                   service.icon === 'design'
                     ? '/services#website-design'
-                    : service.icon === 'social'
-                    ? '/services#social-media'
-                    : '/services#web-hosting'
+                    : '/services#social-media'
                 } 
                 className="service-cta"
               >

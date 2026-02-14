@@ -8,14 +8,12 @@ function PricingCalculator({ isOpen, onClose }) {
   const [selections, setSelections] = useState({
     website: false,
     pages: 3,
-    hosting: 'none', // 'none', 'monthly', 'annual'
+    hostingOnServers: false,
     socialSetup: false,
     socialManagement: false,
     addons: {
-      ecommerce: false,
-      blog: false,
-      animations: false,
-      forms: false,
+      widgets: 0,
+      forms: 0,
     },
   })
 
@@ -26,18 +24,15 @@ function PricingCalculator({ isOpen, onClose }) {
       additionalPage: 200,
     },
     hosting: {
-      monthly: 25,
-      annual: 240,
+      monthly: 50,
     },
     social: {
       setup: 400,
       management: 150,
     },
     addons: {
-      ecommerce: 500,
-      blog: 300,
-      animations: 400,
-      forms: 200,
+      widgets: 100,
+      forms: 100,
     },
   }
 
@@ -53,11 +48,9 @@ function PricingCalculator({ isOpen, onClose }) {
       }
     }
 
-    // Hosting cost
-    if (selections.hosting === 'monthly') {
+    // Hosting cost (available when website service is selected)
+    if (selections.website && selections.hostingOnServers) {
       total += PRICING.hosting.monthly
-    } else if (selections.hosting === 'annual') {
-      total += PRICING.hosting.annual
     }
 
     // Social media cost
@@ -69,21 +62,89 @@ function PricingCalculator({ isOpen, onClose }) {
     }
 
     // Add-ons
-    if (selections.addons.ecommerce) total += PRICING.addons.ecommerce
-    if (selections.addons.blog) total += PRICING.addons.blog
-    if (selections.addons.animations) total += PRICING.addons.animations
-    if (selections.addons.forms) total += PRICING.addons.forms
+    total += selections.addons.widgets * PRICING.addons.widgets
+    total += selections.addons.forms * PRICING.addons.forms
 
     return total
   }
 
   const total = calculateTotal()
+  const recurringMonthly =
+    (selections.website && selections.hostingOnServers ? PRICING.hosting.monthly : 0) +
+    (selections.socialManagement ? PRICING.social.management : 0)
+  const additionalPages = selections.website ? Math.max(0, selections.pages - 3) : 0
+
+  const buildQuotePrefill = () => {
+    const lines = [
+      'Hi Websidy team,',
+      '',
+      'I would like a quote for the following selections:',
+      '',
+    ]
+
+    if (selections.website) {
+      lines.push('- Website Design & Development (3-page base): $1,200')
+      if (additionalPages > 0) {
+        lines.push(
+          `- Additional Pages: ${additionalPages} x $${PRICING.website.additionalPage.toLocaleString()} = $${(
+            additionalPages * PRICING.website.additionalPage
+          ).toLocaleString()}`
+        )
+      }
+      if (selections.hostingOnServers) {
+        lines.push(`- Hosting on your servers: $${PRICING.hosting.monthly.toLocaleString()}/month`)
+      }
+    }
+
+    if (selections.addons.widgets > 0) {
+      lines.push(
+        `- Custom Widgets: ${selections.addons.widgets} x $${PRICING.addons.widgets.toLocaleString()} = $${(
+          selections.addons.widgets * PRICING.addons.widgets
+        ).toLocaleString()}`
+      )
+    }
+
+    if (selections.addons.forms > 0) {
+      lines.push(
+        `- Custom Forms: ${selections.addons.forms} x $${PRICING.addons.forms.toLocaleString()} = $${(
+          selections.addons.forms * PRICING.addons.forms
+        ).toLocaleString()}`
+      )
+    }
+
+    if (selections.socialSetup) {
+      lines.push(`- Social Media Setup & Training: $${PRICING.social.setup.toLocaleString()} (one-time)`)
+    }
+
+    if (selections.socialManagement) {
+      lines.push(`- Social Media Monthly Management: $${PRICING.social.management.toLocaleString()}/month`)
+    }
+
+    lines.push('')
+    lines.push(`Estimated total from calculator: $${total.toLocaleString()}`)
+    if (recurringMonthly > 0) {
+      lines.push(`Estimated recurring monthly total: $${recurringMonthly.toLocaleString()}/month`)
+    }
+    lines.push('')
+    lines.push('Please contact me with next steps.')
+
+    return lines.join('\n')
+  }
 
   const handleChange = (field, value) => {
-    setSelections((prev) => ({
-      ...prev,
-      [field]: value,
-    }))
+    setSelections((prev) => {
+      if (field === 'website') {
+        return {
+          ...prev,
+          website: value,
+          hostingOnServers: value ? prev.hostingOnServers : false,
+        }
+      }
+      return {
+        ...prev,
+        [field]: value,
+      }
+    })
   }
 
   const handleAddonChange = (addon, value) => {
@@ -94,6 +155,11 @@ function PricingCalculator({ isOpen, onClose }) {
         [addon]: value,
       },
     }))
+  }
+
+  const handleAddonQuantityChange = (addon, value) => {
+    const parsed = Number.isNaN(parseInt(value, 10)) ? 0 : parseInt(value, 10)
+    handleAddonChange(addon, Math.max(0, parsed))
   }
 
   const handlePagesChange = (e) => {
@@ -176,6 +242,17 @@ function PricingCalculator({ isOpen, onClose }) {
                     {selections.pages - 3} additional page{selections.pages - 3 > 1 ? 's' : ''}
                   </div>
                 )}
+                <label className="calculator-checkbox">
+                  <input
+                    type="checkbox"
+                    checked={selections.hostingOnServers}
+                    onChange={(e) => handleChange('hostingOnServers', e.target.checked)}
+                  />
+                  <span className="checkbox-label">
+                    <span className="service-name">Host on our servers</span>
+                    <span className="service-price">+$50/month</span>
+                  </span>
+                </label>
               </div>
             )}
           </div>
@@ -185,98 +262,59 @@ function PricingCalculator({ isOpen, onClose }) {
             <div className="calculator-section">
               <h3 className="section-subtitle">Website Add-ons</h3>
               <div className="addons-grid">
-                <label className="calculator-checkbox">
-                  <input
-                    type="checkbox"
-                    checked={selections.addons.ecommerce}
-                    onChange={(e) => handleAddonChange('ecommerce', e.target.checked)}
-                  />
-                  <span className="checkbox-label">
-                    <span className="service-name">E-commerce Integration</span>
-                    <span className="service-price">+$500</span>
-                  </span>
-                </label>
-                <label className="calculator-checkbox">
-                  <input
-                    type="checkbox"
-                    checked={selections.addons.blog}
-                    onChange={(e) => handleAddonChange('blog', e.target.checked)}
-                  />
-                  <span className="checkbox-label">
-                    <span className="service-name">Blog Setup</span>
-                    <span className="service-price">+$300</span>
-                  </span>
-                </label>
-                <label className="calculator-checkbox">
-                  <input
-                    type="checkbox"
-                    checked={selections.addons.animations}
-                    onChange={(e) => handleAddonChange('animations', e.target.checked)}
-                  />
-                  <span className="checkbox-label">
-                    <span className="service-name">Advanced Animations</span>
-                    <span className="service-price">+$400</span>
-                  </span>
-                </label>
-                <label className="calculator-checkbox">
-                  <input
-                    type="checkbox"
-                    checked={selections.addons.forms}
-                    onChange={(e) => handleAddonChange('forms', e.target.checked)}
-                  />
-                  <span className="checkbox-label">
-                    <span className="service-name">Custom Forms</span>
-                    <span className="service-price">+$200</span>
-                  </span>
-                </label>
+                <div className="addon-quantity-item">
+                  <div className="addon-meta">
+                    <span className="service-name">
+                      Custom Widgets
+                      <span
+                        className="addon-tooltip"
+                        title="A custom widget is a tailored interactive component built for your workflow. The pricing calculator on this page is a great example."
+                      >
+                        i
+                      </span>
+                    </span>
+                    <span className="service-price">${PRICING.addons.widgets.toLocaleString()} each</span>
+                  </div>
+                  <label className="addon-qty-control">
+                    Qty
+                    <input
+                      type="number"
+                      min="0"
+                      step="1"
+                      value={selections.addons.widgets}
+                      onChange={(e) => handleAddonQuantityChange('widgets', e.target.value)}
+                      className="addon-qty-input"
+                    />
+                  </label>
+                </div>
+                <div className="addon-quantity-item">
+                  <div className="addon-meta">
+                    <span className="service-name">
+                      Custom Forms
+                      <span
+                        className="addon-tooltip"
+                        title="A custom form includes tailored fields, questions, and submission logic for your process (for example, a custom contact form with specific intake questions)."
+                      >
+                        i
+                      </span>
+                    </span>
+                    <span className="service-price">${PRICING.addons.forms.toLocaleString()} each</span>
+                  </div>
+                  <label className="addon-qty-control">
+                    Qty
+                    <input
+                      type="number"
+                      min="0"
+                      step="1"
+                      value={selections.addons.forms}
+                      onChange={(e) => handleAddonQuantityChange('forms', e.target.value)}
+                      className="addon-qty-input"
+                    />
+                  </label>
+                </div>
               </div>
             </div>
           )}
-
-          {/* Hosting */}
-          <div className="calculator-section">
-            <h3 className="section-subtitle">Web Hosting & Maintenance</h3>
-            <div className="radio-group">
-              <label className="calculator-radio">
-                <input
-                  type="radio"
-                  name="hosting"
-                  value="none"
-                  checked={selections.hosting === 'none'}
-                  onChange={(e) => handleChange('hosting', e.target.value)}
-                />
-                <span className="radio-label">
-                  <span className="service-name">No hosting</span>
-                </span>
-              </label>
-              <label className="calculator-radio">
-                <input
-                  type="radio"
-                  name="hosting"
-                  value="monthly"
-                  checked={selections.hosting === 'monthly'}
-                  onChange={(e) => handleChange('hosting', e.target.value)}
-                />
-                <span className="radio-label">
-                  <span className="service-name">Monthly Plan</span>
-                  <span className="service-price">$25/month</span>
-                </span>
-              </label>
-              <label className="calculator-radio">
-                <input
-                  type="radio"
-                  name="hosting"
-                  value="annual"
-                  checked={selections.hosting === 'annual'}
-                  onChange={(e) => handleChange('hosting', e.target.value)}
-                />
-                <span className="radio-label">
-                  <span className="service-name">Annual Plan</span>
-                  <span className="service-price">$240/year (Save 20%)</span>
-                </span>
-              </label>
-            </div>
-          </div>
 
           {/* Social Media */}
           <div className="calculator-section">
@@ -311,25 +349,14 @@ function PricingCalculator({ isOpen, onClose }) {
           <div className="total-content">
             <span className="total-label">Estimated Total</span>
             <span className="total-amount">${total.toLocaleString()}</span>
-            {selections.hosting === 'monthly' && selections.socialManagement && (
-              <span className="total-note">+ $175/month recurring</span>
-            )}
-            {selections.hosting === 'monthly' && !selections.socialManagement && (
-              <span className="total-note">+ $25/month recurring</span>
-            )}
-            {selections.hosting === 'annual' && selections.socialManagement && (
-              <span className="total-note">+ $150/month recurring (hosting paid annually)</span>
-            )}
-            {selections.hosting === 'annual' && !selections.socialManagement && (
-              <span className="total-note">Hosting paid annually</span>
-            )}
-            {selections.hosting === 'none' && selections.socialManagement && (
-              <span className="total-note">+ $150/month recurring</span>
+            {recurringMonthly > 0 && (
+              <span className="total-note">+ ${recurringMonthly.toLocaleString()}/month recurring</span>
             )}
           </div>
           <div className="calculator-actions">
             <Link
               to="/contact"
+              state={{ quotePrefill: buildQuotePrefill(), quoteSubject: 'Quote Request' }}
               className="calculator-button calculator-button-primary"
               onClick={onClose}
             >

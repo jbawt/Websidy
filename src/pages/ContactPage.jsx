@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import './ContactPage.css'
+import contactPageGraphic from '../assets/contact_page_transparent.png'
 
 function ContactPage() {
   const theme = useSelector((state) => state.theme.mode)
+  const location = useLocation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,6 +15,17 @@ function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null)
+
+  useEffect(() => {
+    const quotePrefill = location.state?.quotePrefill
+    if (!quotePrefill) return
+
+    setFormData((prev) => ({
+      ...prev,
+      subject: prev.subject || location.state?.quoteSubject || 'Quote Request',
+      message: quotePrefill,
+    }))
+  }, [location.state])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -49,38 +63,11 @@ function ContactPage() {
             </p>
           </div>
           <div className="contact-hero-visual">
-            <svg viewBox="0 0 500 400" className="contact-hero-svg">
-              <defs>
-                <linearGradient id="contactHeroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" />
-                  <stop offset="50%" stopColor="#1e40af" />
-                  <stop offset="75%" stopColor="#ff6f61" />
-                  <stop offset="100%" stopColor="#0ea5e9" />
-                </linearGradient>
-                <filter id="contactGlow">
-                  <feGaussianBlur stdDeviation="4" result="coloredBlur" />
-                  <feMerge>
-                    <feMergeNode in="coloredBlur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-              {/* Envelope/mail design */}
-              <rect x="150" y="100" width="200" height="150" rx="8" fill="none" stroke="url(#contactHeroGradient)" strokeWidth="4" className="envelope-base" />
-              <path d="M 150 100 L 250 180 L 350 100" fill="none" stroke="url(#contactHeroGradient)" strokeWidth="4" strokeLinecap="round" className="envelope-flap" />
-              {/* Message lines */}
-              <line x1="180" y1="140" x2="320" y2="140" stroke="url(#contactHeroGradient)" strokeWidth="3" opacity="0.6" className="message-line" />
-              <line x1="180" y1="170" x2="280" y2="170" stroke="url(#contactHeroGradient)" strokeWidth="3" opacity="0.5" className="message-line" style={{ animationDelay: '0.2s' }} />
-              <line x1="180" y1="200" x2="300" y2="200" stroke="url(#contactHeroGradient)" strokeWidth="3" opacity="0.4" className="message-line" style={{ animationDelay: '0.4s' }} />
-              {/* Floating particles */}
-              <circle cx="100" cy="80" r="6" fill="url(#contactHeroGradient)" className="float-particle" />
-              <circle cx="400" cy="120" r="5" fill="url(#contactHeroGradient)" className="float-particle" style={{ animationDelay: '0.3s' }} />
-              <circle cx="80" cy="280" r="7" fill="url(#contactHeroGradient)" className="float-particle" style={{ animationDelay: '0.6s' }} />
-              <circle cx="420" cy="300" r="5" fill="url(#contactHeroGradient)" className="float-particle" style={{ animationDelay: '0.9s' }} />
-              {/* Connection lines */}
-              <path d="M 100 80 Q 150 50 200 100" stroke="url(#contactHeroGradient)" strokeWidth="2" opacity="0.3" fill="none" className="connection-line" />
-              <path d="M 400 120 Q 350 90 300 100" stroke="url(#contactHeroGradient)" strokeWidth="2" opacity="0.3" fill="none" className="connection-line" style={{ animationDelay: '0.5s' }} />
-            </svg>
+            <img
+              src={contactPageGraphic}
+              alt="Contact illustration"
+              className="contact-hero-svg"
+            />
           </div>
         </section>
 

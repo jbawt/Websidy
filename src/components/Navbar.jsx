@@ -121,13 +121,6 @@ function Navbar() {
                 </svg>
                 <span>Social Media</span>
               </Link>
-              <Link to="/services#web-hosting" className="dropdown-item" onClick={handleLinkClick}>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 9L12 2L21 9V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9Z" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M9 21V12H15V21" stroke="currentColor" strokeWidth="2"/>
-                </svg>
-                <span>Web Hosting</span>
-              </Link>
               <Link to="/services" className="dropdown-item dropdown-item-all" onClick={handleLinkClick}>
                 <span>View All Services</span>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

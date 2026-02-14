@@ -36,40 +36,7 @@ function StickySidebar() {
           onClick={handlePricingClick}
           aria-label="View Pricing"
         >
-          <svg
-            className="sidebar-icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="sidebarPricingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3b82f6" />
-                <stop offset="100%" stopColor="#1e40af" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M12 2L2 7L12 12L22 7L12 2Z"
-              stroke="url(#sidebarPricingGradient)"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M2 17L12 22L22 17"
-              stroke="url(#sidebarPricingGradient)"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M2 12L12 17L22 12"
-              stroke="url(#sidebarPricingGradient)"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <span className="sidebar-icon sidebar-icon-dollar" aria-hidden="true">$</span>
           <span className="sidebar-button-text">View Pricing</span>
         </button>
         <button
@@ -99,6 +66,38 @@ function StickySidebar() {
           </svg>
           <span className="sidebar-button-text">Get in Touch</span>
         </button>
+      </div>
+      <div className="sidebar-social-links">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sidebar-social-link"
+          aria-label="Facebook"
+        >
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sidebar-social-link"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" strokeWidth="2" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" strokeWidth="2" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+        </a>
       </div>
     </aside>
   )

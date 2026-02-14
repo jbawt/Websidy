@@ -155,6 +155,33 @@ function AboutPage() {
                 <h3>Client Focused</h3>
                 <p>Your success is our success. We're here to support you every step of the way.</p>
               </div>
+              <div className="value-item">
+                <div className="value-icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <defs>
+                      <linearGradient id="valueGradient4Mission" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#3b82f6" />
+                        <stop offset="55%" stopColor="#ff6f61" />
+                        <stop offset="100%" stopColor="#1e40af" />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M3 6C3 4.89543 3.89543 4 5 4H19C20.1046 4 21 4.89543 21 6V18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V6Z"
+                      stroke="url(#valueGradient4Mission)"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M7 9L12 13L17 9"
+                      stroke="url(#valueGradient4Mission)"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <h3>Clear Communication</h3>
+                <p>We keep timelines, updates, and next steps transparent so you always know exactly where your project stands.</p>
+              </div>
             </div>
           </div>
         </section>

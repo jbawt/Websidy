@@ -58,7 +58,7 @@ function ServicesPage() {
             <div className="service-detail-title">
               <h2>Website Design & Branding</h2>
               <p className="service-detail-subtitle">
-                Custom websites that reflect your brand and drive results
+                Strategic, conversion-focused websites built around your brand
               </p>
             </div>
           </div>
@@ -66,33 +66,32 @@ function ServicesPage() {
           <div className="service-detail-content">
             <div className="service-detail-description">
               <p>
-                We create beautiful, responsive websites that not only look great but also perform
-                exceptionally. Our design process focuses on understanding your brand, your audience,
-                and your goals to deliver a website that truly represents your business.
+                We design and build modern websites that communicate your brand clearly, load quickly,
+                and guide visitors toward action. Every build is structured for long-term scalability,
+                usability, and consistent presentation across devices.
               </p>
             </div>
 
             <div className="service-features-grid">
               <div className="service-feature-card">
-                <h3>Brand Strategy Workshops</h3>
+                <h3>Brand-First Direction</h3>
                 <p>
-                  We start with in-depth workshops to understand your brand identity, target audience,
-                  and business objectives. This foundation ensures every design decision aligns with
-                  your goals.
+                  We align layout, tone, typography, and visuals with your brand identity so your site
+                  feels cohesive, credible, and unmistakably yours.
                 </p>
               </div>
               <div className="service-feature-card">
-                <h3>High-Converting Landing Pages</h3>
+                <h3>Custom Page Development</h3>
                 <p>
-                  Our landing pages are designed with conversion in mind. We use proven design
-                  principles and A/B testing to maximize your conversion rates and ROI.
+                  From landing pages to deeper service pages, we build each page with intentional
+                  structure, clear content hierarchy, and conversion-oriented UX.
                 </p>
               </div>
               <div className="service-feature-card">
-                <h3>Design Systems & Component Libraries</h3>
+                <h3>Performance & Reliability</h3>
                 <p>
-                  We build scalable design systems that ensure consistency across your entire website.
-                  This makes future updates and additions seamless and cost-effective.
+                  Your site is built for fast load times, responsive behavior, and dependable uptime
+                  so visitors get a smooth experience every time.
                 </p>
               </div>
               <div className="service-feature-card">
@@ -115,122 +114,6 @@ function ServicesPage() {
                 <p>
                   We handle all content integration, ensuring your text, images, and media are
                   properly formatted and optimized for the web.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Web Hosting & Maintenance Section */}
-        <section id="web-hosting" className="service-detail-section">
-          <div className="service-detail-header">
-            <div className="service-detail-icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="hostingDetailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#3b82f6" />
-                    <stop offset="55%" stopColor="#ff6f61" />
-                    <stop offset="100%" stopColor="#1e40af" />
-                  </linearGradient>
-                </defs>
-                <rect x="12" y="16" width="40" height="32" rx="3" stroke="url(#hostingDetailGradient)" strokeWidth="2.5" fill="none" />
-                <line x1="12" y1="28" x2="52" y2="28" stroke="url(#hostingDetailGradient)" strokeWidth="2" />
-                <line x1="12" y1="40" x2="52" y2="40" stroke="url(#hostingDetailGradient)" strokeWidth="2" />
-                <circle cx="20" cy="22" r="2" fill="url(#hostingDetailGradient)" />
-                <circle cx="20" cy="34" r="2" fill="url(#hostingDetailGradient)" opacity="0.8" />
-                <circle cx="20" cy="46" r="2" fill="url(#hostingDetailGradient)" opacity="0.6" />
-                <path
-                  d="M 28 22 L 44 22"
-                  stroke="url(#hostingDetailGradient)"
-                  strokeWidth="1.5"
-                  opacity="0.6"
-                />
-                <path
-                  d="M 28 34 L 44 34"
-                  stroke="url(#hostingDetailGradient)"
-                  strokeWidth="1.5"
-                  opacity="0.5"
-                />
-                <path
-                  d="M 28 46 L 44 46"
-                  stroke="url(#hostingDetailGradient)"
-                  strokeWidth="1.5"
-                  opacity="0.4"
-                />
-                <path
-                  d="M 32 8 Q 38 4 44 8 Q 48 6 52 10 Q 56 8 60 12 L 60 14 Q 58 12 56 12 Q 54 10 52 10 Q 48 8 44 10 Q 40 6 32 10 Q 24 6 20 10 Q 16 8 12 12 L 12 14 Q 14 12 16 12 Q 18 10 20 10 Q 24 8 28 10 Q 30 6 32 8 Z"
-                  fill="url(#hostingDetailGradient)"
-                  opacity="0.4"
-                />
-                <circle cx="48" cy="22" r="1.5" fill="url(#hostingDetailGradient)" opacity="0.7" />
-                <circle cx="48" cy="34" r="1.5" fill="url(#hostingDetailGradient)" opacity="0.6" />
-                <circle cx="48" cy="46" r="1.5" fill="url(#hostingDetailGradient)" opacity="0.5" />
-              </svg>
-            </div>
-            <div className="service-detail-title">
-              <h2>Web Hosting & Maintenance</h2>
-              <p className="service-detail-subtitle">
-                Reliable hosting with ongoing maintenance to keep your site running smoothly
-              </p>
-            </div>
-          </div>
-
-          <div className="service-detail-content">
-            <div className="service-detail-description">
-              <p>
-                We provide secure, high-performance hosting solutions backed by comprehensive maintenance
-                services. Your website will be fast, secure, and always up-to-date, so you can focus
-                on growing your business instead of managing technical infrastructure.
-              </p>
-            </div>
-
-            <div className="service-features-grid">
-              <div className="service-feature-card">
-                <h3>Secure Hosting Infrastructure</h3>
-                <p>
-                  We use enterprise-grade hosting infrastructure with SSL certificates, DDoS protection,
-                  and regular security audits. Your site and your visitors' data are protected with
-                  industry-standard security measures.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Regular Backups & Updates</h3>
-                <p>
-                  Automated daily backups ensure your data is always safe. We handle all software
-                  updates, security patches, and maintenance tasks so your site stays current and
-                  secure without any effort on your part.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>24/7 Monitoring & Support</h3>
-                <p>
-                  Our monitoring systems watch your site around the clock, alerting us to any issues
-                  before they become problems. We provide 24/7 support to address any concerns
-                  immediately.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Performance Optimization</h3>
-                <p>
-                  We continuously optimize your site's performance with caching, image optimization,
-                  and CDN integration. Your visitors will experience fast load times and smooth
-                  browsing experiences.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Scalable Resources</h3>
-                <p>
-                  As your business grows, your hosting can grow with you. We provide scalable hosting
-                  solutions that can handle traffic spikes and increased demand without performance
-                  degradation.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Domain & Email Management</h3>
-                <p>
-                  We handle domain registration, renewal, and configuration. We also set up and manage
-                  professional email accounts that match your domain, giving you a complete online
-                  presence.
                 </p>
               </div>
             </div>

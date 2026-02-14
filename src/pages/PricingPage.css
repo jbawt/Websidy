@@ -237,7 +237,15 @@
 .pricing-period {
   font-size: 1.5rem;
   font-weight: 400;
-  opacity: 0.7;
+  opacity: 1;
+  color: #1e40af;
+  background: none;
+  -webkit-text-fill-color: #1e40af;
+}
+
+.app.dark .pricing-period {
+  color: #60a5fa;
+  -webkit-text-fill-color: #60a5fa;
 }
 
 .savings-badge {
@@ -287,8 +295,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6, #1e40af);
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-color-strong));
+  box-shadow: 0 0 8px var(--accent-color-soft);
 }
 
 .app.dark .pricing-features-list li {

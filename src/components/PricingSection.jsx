@@ -49,47 +49,13 @@ function PricingSection() {
                   <span className="pricing-label">Additional Pages</span>
                   <span className="pricing-value">$200/page</span>
                 </div>
-              </div>
-              <div className="pricing-features">
-                <p className="pricing-note">Includes responsive design, SEO optimization, and content integration</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Hosting Pricing */}
-          <div className="pricing-card">
-            <div className="pricing-card-header">
-              <div className="pricing-icon">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="hostGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="55%" stopColor="#ff6f61" />
-                      <stop offset="100%" stopColor="#1e40af" />
-                    </linearGradient>
-                  </defs>
-                  <rect x="12" y="20" width="40" height="32" rx="3" stroke="url(#hostGradient)" strokeWidth="2.5" />
-                  <line x1="12" y1="32" x2="52" y2="32" stroke="url(#hostGradient)" strokeWidth="2" />
-                  <line x1="12" y1="44" x2="52" y2="44" stroke="url(#hostGradient)" strokeWidth="2" />
-                  <circle cx="32" cy="14" r="4" fill="url(#hostGradient)" />
-                  <path d="M 28 14 L 32 10 L 36 14" stroke="url(#hostGradient)" strokeWidth="2" fill="none" />
-                </svg>
-              </div>
-              <h3>Hosting</h3>
-            </div>
-            <div className="pricing-content">
-              <div className="pricing-base">
                 <div className="pricing-item">
-                  <span className="pricing-label">Monthly Hosting</span>
-                  <span className="pricing-value">$25/month</span>
-                </div>
-                <div className="pricing-item">
-                  <span className="pricing-label">Annual (Save 20%)</span>
-                  <span className="pricing-value">$240/year</span>
+                  <span className="pricing-label">Hosting on Our Servers</span>
+                  <span className="pricing-value">$50/month</span>
                 </div>
               </div>
               <div className="pricing-features">
-                <p className="pricing-note">Includes SSL certificate, CDN, backups, and 24/7 support</p>
+                <p className="pricing-note">Includes responsive design, SEO optimization, content integration, and optional managed hosting.</p>
               </div>
             </div>
           </div>
