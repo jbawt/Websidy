@@ -15,7 +15,7 @@ function AboutSection() {
           In addition to web design, we handle social media setup and run personalized training so your team feels confident managing
           and growing every channel we launch. Our goal: make digital presence simple, accessible, and unmistakably professional.
         </p>
-        <div className="about-metrics">
+        {/* <div className="about-metrics">
           <div className="metric">
             <span className="metric-value">50+</span>
             <span className="metric-label">Sites launched</span>
@@ -28,7 +28,7 @@ function AboutSection() {
             <span className="metric-value">7 day</span>
             <span className="metric-label">Typical turnaround</span>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="about-visual">
         <div className="orb orb-one" />

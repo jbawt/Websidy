@@ -26,6 +26,7 @@ function PricingSection() {
                   <defs>
                     <linearGradient id="webGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="55%" stopColor="#ff6f61" />
                       <stop offset="100%" stopColor="#1e40af" />
                     </linearGradient>
                   </defs>
@@ -63,6 +64,7 @@ function PricingSection() {
                   <defs>
                     <linearGradient id="hostGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="55%" stopColor="#ff6f61" />
                       <stop offset="100%" stopColor="#1e40af" />
                     </linearGradient>
                   </defs>
@@ -100,6 +102,7 @@ function PricingSection() {
                   <defs>
                     <linearGradient id="socialGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="55%" stopColor="#ff6f61" />
                       <stop offset="100%" stopColor="#1e40af" />
                     </linearGradient>
                   </defs>

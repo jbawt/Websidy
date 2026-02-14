@@ -1,4 +1,6 @@
 .section-divider {
+  --process-accent: var(--accent-color);
+  --process-accent-soft: var(--accent-color-soft);
   width: 100%;
   margin: 4rem 0;
   padding: clamp(3rem, 4vw, 4.5rem) clamp(1.5rem, 8vw, 5rem);
@@ -90,7 +92,7 @@
 .process-step-card.active {
   transform: translateY(-12px) scale(1.05);
   border-color: rgba(59, 130, 246, 0.6);
-  box-shadow: 0 20px 45px rgba(59, 130, 246, 0.35);
+  box-shadow: 0 20px 45px rgba(59, 130, 246, 0.35), 0 0 0 1px var(--process-accent-soft);
   background: rgba(255, 255, 255, 0.95);
 }
 
@@ -124,6 +126,11 @@
   backdrop-filter: blur(10px);
 }
 
+.process-step-card.active .step-number {
+  color: var(--process-accent);
+  border-color: var(--process-accent-soft);
+}
+
 .app.dark .step-number {
   color: #60a5fa;
   background: rgba(14, 14, 14, 0.95);
@@ -147,6 +154,10 @@
   transform: scale(1.1);
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(14, 165, 233, 0.25));
   box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.process-step-card.active .step-icon-wrapper {
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3), 0 0 0 1px var(--process-accent-soft);
 }
 
 .app.dark .step-icon-wrapper {
@@ -259,6 +270,7 @@
 
 .process-connector.active .connector-dot {
   animation: pulseDotActive 1.5s ease infinite;
+  filter: drop-shadow(0 0 8px var(--process-accent-soft));
 }
 
 .app.dark .section-divider {

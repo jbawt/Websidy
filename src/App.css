@@ -9,10 +9,96 @@
 .app.light {
   background-color: #fafafa;
   color: #000000;
+  --accent-color: #ff6f61;
+  --accent-color-soft: rgba(255, 111, 97, 0.14);
+  --accent-color-strong: #e55347;
 }
 
 .app.dark {
   background-color: #0f0f0f;
   color: #fafafa;
+  --accent-color: #ff9a90;
+  --accent-color-soft: rgba(255, 154, 144, 0.2);
+  --accent-color-strong: #ff7f73;
+}
+
+/* 60-30-10 accent usage: lightweight, high-impact micro elements only */
+.app [class*='eyebrow'] {
+  color: var(--accent-color) !important;
+}
+
+.app.light .footer .footer-link::after,
+.app.dark .footer .footer-link::after {
+  background-color: var(--accent-color);
+}
+
+.app.light .footer .social-link:hover .social-icon,
+.app.dark .footer .social-link:hover .social-icon {
+  filter: drop-shadow(0 0 8px var(--accent-color-soft));
+}
+
+/* Additional restrained accent placements */
+.app .pricing-view-details,
+.app .pricing-cta-button-secondary,
+.app .faq-cta-button-secondary {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.app .pricing-view-details:hover,
+.app .pricing-cta-button-secondary:hover,
+.app .faq-cta-button-secondary:hover {
+  background: var(--accent-color-soft);
+  box-shadow: 0 10px 25px var(--accent-color-soft);
+}
+
+.app .testimonials-carousel .carousel-dot.active {
+  background: var(--accent-color);
+  box-shadow: 0 0 12px var(--accent-color-soft);
+}
+
+.app .testimonials-carousel .carousel-button:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.app .navbar .dropdown-item-all:hover span,
+.app .navbar .dropdown-item-all:hover svg {
+  color: var(--accent-color);
+}
+
+/* Navbar underline accent */
+.app .navbar .nav-link::after {
+  background: linear-gradient(135deg, var(--accent-color), #3b82f6);
+}
+
+.app .navbar .nav-link:hover::after,
+.app .navbar .nav-link-dropdown.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Additional coral accents across other pages */
+.app .featured-badge {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-color-strong));
+  box-shadow: 0 4px 12px var(--accent-color-soft);
+}
+
+.app .project-tag {
+  background: var(--accent-color-soft);
+  color: var(--accent-color-strong);
+  border-color: var(--accent-color-soft);
+}
+
+.app .coming-soon-link {
+  color: var(--accent-color);
+}
+
+.app .coming-soon-link:hover {
+  color: var(--accent-color-strong);
+  border-bottom-color: var(--accent-color-strong);
+}
+
+.app .carousel-dot:hover {
+  background: var(--accent-color-soft);
 }
 

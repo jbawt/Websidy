@@ -141,7 +141,8 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-color-strong));
+  box-shadow: 0 0 8px var(--accent-color-soft);
 }
 
 .card-footer {

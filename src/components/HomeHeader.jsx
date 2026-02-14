@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import './HomeHeader.css'
+import websidyLogo from '../assets/websidy_logo_transparent.png'
 
 function HomeHeader() {
   const theme = useSelector((state) => state.theme.mode)
@@ -9,7 +10,9 @@ function HomeHeader() {
     <header className={`home-header ${theme}`}>
       <div className="header-content">
         <div className="header-text">
-          <h1 className="header-title">Welcome to Websidy</h1>
+          <h1 className="header-title">
+            Welcome to <span className="header-title-accent">Websidy</span>
+          </h1>
           <p className="header-subtitle">
             Building amazing web experiences with modern technology
           </p>
@@ -45,19 +48,19 @@ function HomeHeader() {
               fill="none"
               strokeWidth="2"
             />
+
+            {/* White center background */}
+            <circle cx="200" cy="200" r="76" className="svg-center-fill" />
             
-            {/* Geometric shapes */}
-            <polygon
-              points="200,120 240,200 200,280 160,200"
-              className="svg-polygon polygon-1"
-              fill="none"
-              strokeWidth="3"
-            />
-            <polygon
-              points="200,140 220,200 200,260 180,200"
-              className="svg-polygon polygon-2"
-              fill="none"
-              strokeWidth="2"
+            {/* Center logo mark */}
+            <image
+              href={websidyLogo}
+              x="138"
+              y="141"
+              width="124"
+              height="124"
+              preserveAspectRatio="xMidYMid meet"
+              className="svg-center-logo"
             />
             
             {/* Decorative lines */}
@@ -66,7 +69,7 @@ function HomeHeader() {
               y1="40"
               x2="200"
               y2="120"
-              className="svg-line line-1"
+              className="svg-line line-1 accent-line"
               strokeWidth="2"
             />
             <line
@@ -74,7 +77,7 @@ function HomeHeader() {
               y1="280"
               x2="200"
               y2="360"
-              className="svg-line line-2"
+              className="svg-line line-2 accent-line"
               strokeWidth="2"
             />
             <line
@@ -82,7 +85,7 @@ function HomeHeader() {
               y1="200"
               x2="120"
               y2="200"
-              className="svg-line line-3"
+              className="svg-line line-3 accent-line"
               strokeWidth="2"
             />
             <line
@@ -90,7 +93,7 @@ function HomeHeader() {
               y1="200"
               x2="360"
               y2="200"
-              className="svg-line line-4"
+              className="svg-line line-4 accent-line"
               strokeWidth="2"
             />
             

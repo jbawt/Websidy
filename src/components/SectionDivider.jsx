@@ -17,6 +17,7 @@ function SectionDivider() {
           <defs>
             <linearGradient id="dividerProcessGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#3b82f6" />
+              <stop offset="55%" stopColor="#ff6f61" />
               <stop offset="100%" stopColor="#1e40af" />
             </linearGradient>
           </defs>
@@ -35,6 +36,7 @@ function SectionDivider() {
           <defs>
             <linearGradient id="dividerProcessGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#3b82f6" />
+              <stop offset="55%" stopColor="#ff6f61" />
               <stop offset="100%" stopColor="#1e40af" />
             </linearGradient>
           </defs>
@@ -55,6 +57,7 @@ function SectionDivider() {
           <defs>
             <linearGradient id="dividerProcessGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#3b82f6" />
+              <stop offset="55%" stopColor="#ff6f61" />
               <stop offset="100%" stopColor="#1e40af" />
             </linearGradient>
           </defs>
@@ -74,6 +77,7 @@ function SectionDivider() {
           <defs>
             <linearGradient id="dividerProcessGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#3b82f6" />
+              <stop offset="55%" stopColor="#ff6f61" />
               <stop offset="100%" stopColor="#1e40af" />
             </linearGradient>
           </defs>
@@ -120,7 +124,7 @@ function SectionDivider() {
                     <defs>
                       <linearGradient id={`connectorGradient${index}`} x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="#3b82f6" />
-                        <stop offset="50%" stopColor="#1e40af" />
+                        <stop offset="50%" stopColor="#ff6f61" />
                         <stop offset="100%" stopColor="#0ea5e9" />
                       </linearGradient>
                     </defs>

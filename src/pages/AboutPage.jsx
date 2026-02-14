@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import './AboutPage.css'
 
 function AboutPage() {
   const theme = useSelector((state) => state.theme.mode)
+  const [feedbackStage, setFeedbackStage] = useState(0)
+  const [isAnimating, setIsAnimating] = useState(false)
+
+  const handleFeedbackDemo = () => {
+    if (isAnimating) return
+    
+    setIsAnimating(true)
+    setFeedbackStage(1)
+    
+    setTimeout(() => {
+      setFeedbackStage(2)
+      setTimeout(() => {
+        setFeedbackStage(3)
+        setTimeout(() => {
+          setFeedbackStage(0)
+          setIsAnimating(false)
+        }, 3000)
+      }, 2500)
+    }, 3000)
+  }
 
   return (
     <div className={`about-page ${theme}`}>
@@ -25,6 +45,7 @@ function AboutPage() {
                 <linearGradient id="aboutHeroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#3b82f6" />
                   <stop offset="50%" stopColor="#1e40af" />
+                  <stop offset="75%" stopColor="#ff6f61" />
                   <stop offset="100%" stopColor="#0ea5e9" />
                 </linearGradient>
                 <filter id="glow">
@@ -86,6 +107,7 @@ function AboutPage() {
                   <defs>
                     <linearGradient id="valueGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="55%" stopColor="#ff6f61" />
                       <stop offset="100%" stopColor="#1e40af" />
                     </linearGradient>
                   </defs>
@@ -103,6 +125,7 @@ function AboutPage() {
                     <defs>
                       <linearGradient id="valueGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stopColor="#3b82f6" />
+                        <stop offset="55%" stopColor="#ff6f61" />
                         <stop offset="100%" stopColor="#1e40af" />
                       </linearGradient>
                     </defs>
@@ -119,6 +142,7 @@ function AboutPage() {
                     <defs>
                       <linearGradient id="valueGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stopColor="#3b82f6" />
+                        <stop offset="55%" stopColor="#ff6f61" />
                         <stop offset="100%" stopColor="#1e40af" />
                       </linearGradient>
                     </defs>
@@ -135,209 +159,213 @@ function AboutPage() {
           </div>
         </section>
 
-        {/* Process Section */}
+        {/* Interactive Feedback Section */}
       </div>
-      <section className="about-process-section">
-        <div className="about-process-container">
-          <div className="about-process-header">
-            <span className="process-eyebrow">How We Work</span>
-            <h2>Our Process</h2>
-            <p>From initial concept to launch, we follow a proven process that ensures quality results. Each phase is designed to bring you closer to your digital goals with clarity and confidence.</p>
+      <section className="about-feedback-section">
+        <div className="about-feedback-container">
+          <div className="feedback-demo-header">
+            <span className="feedback-demo-eyebrow">Our Approach</span>
+            <h2>Your Feedback Shapes Our Work</h2>
+            <p className="feedback-demo-description">
+              We believe the best results come from collaboration. Click the design below to see how we
+              incorporate your feedback into every project.
+            </p>
           </div>
-          <div className="process-flow-wrapper">
-            <div className="process-steps-flow">
-              <div className="process-step-card">
-                <div className="step-number-badge">01</div>
-                <div className="step-icon-container">
-                  <div className="step-icon-wrapper">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="aboutStepGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#3b82f6" />
-                          <stop offset="100%" stopColor="#1e40af" />
-                        </linearGradient>
-                      </defs>
-                      <circle cx="50" cy="50" r="40" fill="none" stroke="url(#aboutStepGradient1)" strokeWidth="3" />
-                      <path d="M 30 50 L 45 65 L 70 35" stroke="url(#aboutStepGradient1)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                    </svg>
+
+          <div 
+            className={`feedback-demo-interactive ${feedbackStage > 0 ? `stage-${feedbackStage}` : ''}`}
+            onClick={handleFeedbackDemo}
+          >
+            {/* Design Mockup */}
+            <div className="design-mockup">
+              <div className="mockup-browser">
+                <div className="browser-header">
+                  <div className="browser-dots">
+                    <span className="dot red"></span>
+                    <span className="dot yellow"></span>
+                    <span className="dot green"></span>
                   </div>
+                  <div className="browser-url">yourwebsite.com</div>
                 </div>
-                <div className="step-content-wrapper">
-                  <h3>Discovery & Strategy</h3>
-                  <p className="step-description">
-                    We start by understanding your vision, goals, and target audience to craft a tailored strategy. This foundational phase includes in-depth workshops, competitive analysis, and stakeholder interviews.
-                  </p>
-                  <ul className="step-features">
-                    <li>Brand strategy workshops</li>
-                    <li>Target audience research</li>
-                    <li>Competitive analysis</li>
-                    <li>Project roadmap creation</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="process-connector-line">
-                <svg viewBox="0 0 100 40" className="connector-svg">
-                  <defs>
-                    <linearGradient id="aboutConnectorGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="50%" stopColor="#1e40af" />
-                      <stop offset="100%" stopColor="#0ea5e9" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M 0 20 Q 25 10 50 20 T 100 20"
-                    fill="none"
-                    stroke="url(#aboutConnectorGradient1)"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    className="connector-path"
-                  />
-                  <circle cx="50" cy="20" r="4" fill="url(#aboutConnectorGradient1)" className="connector-dot" />
-                </svg>
-              </div>
-
-              <div className="process-step-card">
-                <div className="step-number-badge">02</div>
-                <div className="step-icon-container">
-                  <div className="step-icon-wrapper">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="aboutStepGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#3b82f6" />
-                          <stop offset="100%" stopColor="#1e40af" />
-                        </linearGradient>
-                      </defs>
-                      <rect x="20" y="20" width="60" height="60" rx="5" fill="none" stroke="url(#aboutStepGradient2)" strokeWidth="3" />
-                      <rect x="30" y="30" width="20" height="15" fill="url(#aboutStepGradient2)" opacity="0.5" />
-                      <rect x="55" y="30" width="15" height="15" fill="url(#aboutStepGradient2)" opacity="0.3" />
-                      <rect x="30" y="50" width="40" height="8" fill="url(#aboutStepGradient2)" opacity="0.4" />
-                    </svg>
+                <div className="browser-content">
+                  {/* Initial Design */}
+                  <div className={`design-version design-initial ${feedbackStage === 0 ? 'active' : ''}`}>
+                    <div className="design-header">
+                      <div className="design-logo-placeholder"></div>
+                      <nav className="design-nav">
+                        <div className="nav-item"></div>
+                        <div className="nav-item"></div>
+                        <div className="nav-item"></div>
+                      </nav>
+                    </div>
+                    <div className="design-hero">
+                      <div className="hero-text-line"></div>
+                      <div className="hero-text-line short"></div>
+                    </div>
+                    <div className="design-content">
+                      <div className="content-card"></div>
+                      <div className="content-card"></div>
+                      <div className="content-card"></div>
+                    </div>
                   </div>
-                </div>
-                <div className="step-content-wrapper">
-                  <h3>Design & Prototyping</h3>
-                  <p className="step-description">
-                    We bring your ideas to life with wireframes, mockups, and interactive prototypes for your feedback. Our design process focuses on user experience, brand consistency, and conversion optimization.
-                  </p>
-                  <ul className="step-features">
-                    <li>Wireframe creation</li>
-                    <li>High-fidelity mockups</li>
-                    <li>Interactive prototypes</li>
-                    <li>Design system development</li>
-                  </ul>
-                </div>
-              </div>
 
-              <div className="process-connector-line">
-                <svg viewBox="0 0 100 40" className="connector-svg">
-                  <defs>
-                    <linearGradient id="aboutConnectorGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="50%" stopColor="#1e40af" />
-                      <stop offset="100%" stopColor="#0ea5e9" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M 0 20 Q 25 10 50 20 T 100 20"
-                    fill="none"
-                    stroke="url(#aboutConnectorGradient2)"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    className="connector-path"
-                  />
-                  <circle cx="50" cy="20" r="4" fill="url(#aboutConnectorGradient2)" className="connector-dot" />
-                </svg>
-              </div>
-
-              <div className="process-step-card">
-                <div className="step-number-badge">03</div>
-                <div className="step-icon-container">
-                  <div className="step-icon-wrapper">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="aboutStepGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#3b82f6" />
-                          <stop offset="100%" stopColor="#1e40af" />
-                        </linearGradient>
-                      </defs>
-                      <path d="M 50 20 L 70 40 L 50 60 L 30 40 Z" fill="url(#aboutStepGradient3)" opacity="0.6" />
-                      <circle cx="50" cy="50" r="8" fill="url(#aboutStepGradient3)" />
-                      <path d="M 50 60 L 50 80" stroke="url(#aboutStepGradient3)" strokeWidth="3" strokeLinecap="round" />
-                    </svg>
+                  {/* Broken/Feedback Design */}
+                  <div className={`design-version design-broken ${feedbackStage === 1 ? 'active' : ''}`}>
+                    <div className="design-header broken">
+                      <div className="design-logo-placeholder broken"></div>
+                      <nav className="design-nav broken">
+                        <div className="nav-item broken"></div>
+                        <div className="nav-item broken"></div>
+                        <div className="nav-item broken"></div>
+                      </nav>
+                    </div>
+                    <div className="design-hero broken">
+                      <div className="hero-text-line broken"></div>
+                      <div className="hero-text-line short broken"></div>
+                    </div>
+                    <div className="design-content broken">
+                      <div className="content-card broken"></div>
+                      <div className="content-card broken"></div>
+                      <div className="content-card broken"></div>
+                    </div>
                   </div>
-                </div>
-                <div className="step-content-wrapper">
-                  <h3>Development & Testing</h3>
-                  <p className="step-description">
-                    Our developers build a robust, responsive, and SEO-friendly website, rigorously tested for performance. We use modern technologies and follow best practices to ensure your site is fast, secure, and scalable.
-                  </p>
-                  <ul className="step-features">
-                    <li>Responsive development</li>
-                    <li>Performance optimization</li>
-                    <li>Cross-browser testing</li>
-                    <li>SEO implementation</li>
-                  </ul>
-                </div>
-              </div>
 
-              <div className="process-connector-line">
-                <svg viewBox="0 0 100 40" className="connector-svg">
-                  <defs>
-                    <linearGradient id="aboutConnectorGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="50%" stopColor="#1e40af" />
-                      <stop offset="100%" stopColor="#0ea5e9" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M 0 20 Q 25 10 50 20 T 100 20"
-                    fill="none"
-                    stroke="url(#aboutConnectorGradient3)"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    className="connector-path"
-                  />
-                  <circle cx="50" cy="20" r="4" fill="url(#aboutConnectorGradient3)" className="connector-dot" />
-                </svg>
-              </div>
-
-              <div className="process-step-card">
-                <div className="step-number-badge">04</div>
-                <div className="step-icon-container">
-                  <div className="step-icon-wrapper">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="aboutStepGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#3b82f6" />
-                          <stop offset="100%" stopColor="#1e40af" />
-                        </linearGradient>
-                      </defs>
-                      <circle cx="50" cy="50" r="35" fill="none" stroke="url(#aboutStepGradient4)" strokeWidth="3" />
-                      <path d="M 50 20 L 50 50 L 70 70" stroke="url(#aboutStepGradient4)" strokeWidth="3" strokeLinecap="round" />
-                      <circle cx="50" cy="50" r="5" fill="url(#aboutStepGradient4)" />
-                    </svg>
+                  {/* Revising Design */}
+                  <div className={`design-version design-revising ${feedbackStage === 2 ? 'active' : ''}`}>
+                    <div className="design-header revising">
+                      <div className="design-logo-placeholder revising"></div>
+                      <nav className="design-nav revising">
+                        <div className="nav-item revising"></div>
+                        <div className="nav-item revising"></div>
+                        <div className="nav-item revising"></div>
+                      </nav>
+                    </div>
+                    <div className="design-hero revising">
+                      <div className="hero-text-line revising"></div>
+                      <div className="hero-text-line short revising"></div>
+                    </div>
+                    <div className="design-content revising">
+                      <div className="content-card revising"></div>
+                      <div className="content-card revising"></div>
+                      <div className="content-card revising"></div>
+                    </div>
+                    <div className="revising-indicator">
+                      <div className="pulse-ring"></div>
+                      <div className="pulse-ring"></div>
+                      <div className="pulse-ring"></div>
+                    </div>
                   </div>
-                </div>
-                <div className="step-content-wrapper">
-                  <h3>Launch & Support</h3>
-                  <p className="step-description">
-                    We deploy your site, provide comprehensive training, and offer ongoing support to ensure long-term success. Our handoff process includes documentation, training sessions, and access to maintenance plans.
-                  </p>
-                  <ul className="step-features">
-                    <li>Site deployment</li>
-                    <li>Team training sessions</li>
-                    <li>Documentation & handoff</li>
-                    <li>Ongoing maintenance options</li>
-                  </ul>
+
+                  {/* Improved Design */}
+                  <div className={`design-version design-improved ${feedbackStage === 3 ? 'active' : ''}`}>
+                    <div className="design-header improved">
+                      <div className="design-logo-placeholder improved"></div>
+                      <nav className="design-nav improved">
+                        <div className="nav-item improved"></div>
+                        <div className="nav-item improved"></div>
+                        <div className="nav-item improved"></div>
+                      </nav>
+                    </div>
+                    <div className="design-hero improved">
+                      <div className="hero-text-line improved"></div>
+                      <div className="hero-text-line short improved"></div>
+                    </div>
+                    <div className="design-content improved">
+                      <div className="content-card improved"></div>
+                      <div className="content-card improved"></div>
+                      <div className="content-card improved"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            {/* Feedback Timeline */}
+            <div className="feedback-timeline">
+              <div className={`timeline-step ${feedbackStage >= 0 ? 'active' : ''} ${feedbackStage === 0 ? 'current' : ''}`}>
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h4>Initial Design</h4>
+                  <p>We create the first version</p>
+                </div>
+              </div>
+
+              <div className={`timeline-step ${feedbackStage >= 1 ? 'active' : ''} ${feedbackStage === 1 ? 'current' : ''}`}>
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h4>Your Feedback</h4>
+                  <p>You share your thoughts</p>
+                </div>
+                {feedbackStage === 1 && (
+                  <div className="feedback-bubble-timeline">
+                    <div className="feedback-avatar-small">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="2"/>
+                        <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21" stroke="currentColor" strokeWidth="2"/>
+                      </svg>
+                    </div>
+                    <div className="feedback-message">
+                      "Could we adjust the spacing and alignment? The layout feels a bit off."
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div className={`timeline-step ${feedbackStage >= 2 ? 'active' : ''} ${feedbackStage === 2 ? 'current' : ''}`}>
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h4>We Revise</h4>
+                  <p>We implement your feedback</p>
+                </div>
+                {feedbackStage === 2 && (
+                  <div className="revising-animation">
+                    <div className="sparkle"></div>
+                    <div className="sparkle"></div>
+                    <div className="sparkle"></div>
+                  </div>
+                )}
+              </div>
+
+              <div className={`timeline-step ${feedbackStage >= 3 ? 'active' : ''} ${feedbackStage === 3 ? 'current' : ''}`}>
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h4>Improved Result</h4>
+                  <p>Refined design ready for review</p>
+                </div>
+                {feedbackStage === 3 && (
+                  <div className="success-indicator">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Click Hint */}
+            {feedbackStage === 0 && !isAnimating && (
+              <div className="click-hint">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2"/>
+                </svg>
+                <span>Click to see the feedback process</span>
+              </div>
+            )}
+          </div>
+
+          <div className="feedback-demo-message">
+            <p>
+              <strong>We listen. We adapt. We deliver.</strong> Your input is invaluable, and we're
+              committed to making revisions until you're completely satisfied with the result.
+            </p>
           </div>
         </div>
       </section>
       {/* Stats Section */}
-      <section className="about-stats-section">
+      {/* <section className="about-stats-section">
         <div className="about-stats-container">
           <div className="stats-grid">
             <div className="stat-card">
@@ -346,6 +374,7 @@ function AboutPage() {
                   <defs>
                     <linearGradient id="statGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="55%" stopColor="#ff6f61" />
                       <stop offset="100%" stopColor="#1e40af" />
                     </linearGradient>
                   </defs>
@@ -363,6 +392,7 @@ function AboutPage() {
                   <defs>
                     <linearGradient id="statGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="55%" stopColor="#ff6f61" />
                       <stop offset="100%" stopColor="#1e40af" />
                     </linearGradient>
                   </defs>
@@ -378,6 +408,7 @@ function AboutPage() {
                   <defs>
                     <linearGradient id="statGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="55%" stopColor="#ff6f61" />
                       <stop offset="100%" stopColor="#1e40af" />
                     </linearGradient>
                   </defs>
@@ -394,6 +425,7 @@ function AboutPage() {
                   <defs>
                     <linearGradient id="statGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="55%" stopColor="#ff6f61" />
                       <stop offset="100%" stopColor="#1e40af" />
                     </linearGradient>
                   </defs>
@@ -409,7 +441,7 @@ function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

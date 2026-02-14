@@ -42,6 +42,7 @@ const IconDesign = () => (
     <defs>
       <linearGradient id="designGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="#3b82f6" />
+        <stop offset="55%" stopColor="#ff6f61" />
         <stop offset="100%" stopColor="#1e40af" />
       </linearGradient>
     </defs>
@@ -73,6 +74,7 @@ const IconSocial = () => (
     <defs>
       <linearGradient id="socialGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="#3b82f6" />
+        <stop offset="55%" stopColor="#ff6f61" />
         <stop offset="100%" stopColor="#1e40af" />
       </linearGradient>
     </defs>
@@ -114,6 +116,7 @@ const IconHosting = () => (
     <defs>
       <linearGradient id="hostingGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="#3b82f6" />
+        <stop offset="55%" stopColor="#ff6f61" />
         <stop offset="100%" stopColor="#1e40af" />
       </linearGradient>
     </defs>
