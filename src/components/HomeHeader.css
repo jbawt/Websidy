@@ -61,6 +61,7 @@
   justify-content: center;
   align-items: center;
   animation: fadeIn 1s ease-out 0.4s both;
+  transform: translateY(-40px);
 }
 
 .header-svg {
