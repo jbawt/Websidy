@@ -23,6 +23,12 @@ function HomeHeader() {
             className="header-svg"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <defs>
+              <linearGradient id="darkModeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#0f172a" />
+                <stop offset="100%" stopColor="#000000" />
+              </linearGradient>
+            </defs>
             {/* Animated circles */}
             <circle
               cx="200"
@@ -99,10 +105,10 @@ function HomeHeader() {
             
             {/* Floating particles */}
             <circle cx="100" cy="100" r="4" className="svg-particle particle-1" />
-            <circle cx="300" cy="100" r="4" className="svg-particle particle-2" />
+            <circle cx="285" cy="115" r="4" className="svg-particle particle-2" />
             <circle cx="100" cy="300" r="4" className="svg-particle particle-3" />
             <circle cx="300" cy="300" r="4" className="svg-particle particle-4" />
-            <circle cx="150" cy="150" r="3" className="svg-particle particle-5" />
+            <circle cx="165" cy="165" r="3" className="svg-particle particle-5" />
             <circle cx="250" cy="250" r="3" className="svg-particle particle-6" />
           </svg>
         </div>

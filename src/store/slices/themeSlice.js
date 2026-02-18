@@ -1,7 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+// Detect system preference
+const getSystemPreference = () => {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    return 'dark'
+  }
+  return 'light'
+}
+
 const initialState = {
-  mode: 'light',
+  mode: getSystemPreference(),
 }
 
 const themeSlice = createSlice({
