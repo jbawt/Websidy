@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import './ContactPage.css'
-import contactPageGraphic from '../assets/contact_page_transparent.png'
+import websidyLogo from '../assets/websidy_logo_transparent.png'
 
 function ContactPage() {
   const theme = useSelector((state) => state.theme.mode)
@@ -63,11 +63,13 @@ function ContactPage() {
             </p>
           </div>
           <div className="contact-hero-visual">
-            <img
-              src={contactPageGraphic}
-              alt="Contact illustration"
-              className="contact-hero-svg"
-            />
+            <div className="logo-animation-container">
+              <img
+                src={websidyLogo}
+                alt="Websidy logo"
+                className="logo-w-to-m"
+              />
+            </div>
           </div>
         </section>
 
