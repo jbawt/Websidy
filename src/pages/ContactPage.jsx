@@ -56,20 +56,33 @@ function ContactPage() {
         <section className="contact-hero">
           <div className="contact-hero-content">
             <span className="contact-hero-eyebrow">Get in Touch</span>
-            <h1>Let's Build Something Amazing Together</h1>
+            <h1 className="message-us-title">
+              <div className="message-us-container">
+                <div className="logo-m-container">
+                  <img
+                    src={websidyLogo}
+                    alt="M"
+                    className="logo-w-to-m"
+                  />
+                </div>
+                <div className="message-us-text">
+                  <span className="message-letter" data-letter="e">e</span>
+                  <span className="message-letter" data-letter="s">s</span>
+                  <span className="message-letter" data-letter="s">s</span>
+                  <span className="message-letter" data-letter="a">a</span>
+                  <span className="message-letter" data-letter="g">g</span>
+                  <span className="message-letter" data-letter="e">e</span>
+                  <span className="message-space"> </span>
+                  <span className="message-letter" data-letter="u">u</span>
+                  <span className="message-letter" data-letter="s">s</span>
+                </div>
+              </div>
+            </h1>
+            <h2 className="contact-hero-subheader">Let's Build Something Amazing Together</h2>
             <p className="contact-hero-description">
               Have a project in mind? Want to learn more about our services? We'd love to hear from you.
               Fill out the form below and we'll get back to you as soon as possible.
             </p>
-          </div>
-          <div className="contact-hero-visual">
-            <div className="logo-animation-container">
-              <img
-                src={websidyLogo}
-                alt="Websidy logo"
-                className="logo-w-to-m"
-              />
-            </div>
           </div>
         </section>
 
