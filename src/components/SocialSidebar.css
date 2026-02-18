@@ -48,12 +48,27 @@
   transition: all 0.3s ease;
 }
 
+.social-sidebar-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+}
+
 .app.light .social-sidebar-icon {
   color: #1e40af;
 }
 
+.app.light .social-sidebar-icon svg {
+  fill: #1e40af;
+}
+
 .app.dark .social-sidebar-icon {
   color: #fafafa;
+}
+
+.app.dark .social-sidebar-icon svg {
+  fill: #fafafa;
 }
 
 .social-sidebar-link:hover {
@@ -153,6 +168,11 @@
     height: 18px;
   }
 
+  .social-sidebar-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
   .social-sidebar-tooltip {
     display: none;
   }
@@ -172,5 +192,10 @@
   .social-sidebar-icon {
     width: 16px;
     height: 16px;
+  }
+
+  .social-sidebar-icon svg {
+    width: 100%;
+    height: 100%;
   }
 }
