@@ -17,8 +17,8 @@
 .app.dark {
   background-color: #0f0f0f;
   color: #fafafa;
-  --accent-color: #ff9a90;
-  --accent-color-soft: rgba(255, 154, 144, 0.2);
+  --accent-color: #ff6f61;
+  --accent-color-soft: rgba(255, 111, 97, 0.2);
   --accent-color-strong: #ff7f73;
 }
 

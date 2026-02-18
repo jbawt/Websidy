@@ -179,19 +179,22 @@ function Navbar() {
           <Link to="/contact" className="nav-link nav-link-cta" onClick={handleLinkClick}>
             <span>Contact</span>
           </Link>
-          <button
-            onClick={handleToggleTheme}
-            className={`theme-toggle ${theme === 'dark' ? 'is-dark' : 'is-light'}`}
-            aria-label="Toggle theme"
-          >
-            <span className="theme-switch-track">
-              <span className="theme-switch-thumb">
-                <span className="theme-switch-icon" aria-hidden="true">
-                  {theme === 'dark' ? '🌙' : '☀'}
+          <div className="theme-toggle-wrapper">
+            <button
+              onClick={handleToggleTheme}
+              className={`theme-toggle ${theme === 'dark' ? 'is-dark' : 'is-light'}`}
+              aria-label="Toggle theme"
+            >
+              <span className="theme-switch-track">
+                <span className="theme-switch-thumb">
+                  <span className="theme-switch-icon" aria-hidden="true">
+                    {theme === 'dark' ? '🌙' : '☀'}
+                  </span>
                 </span>
               </span>
-            </span>
-          </button>
+            </button>
+            <span className="theme-label">{theme === 'dark' ? 'Dark' : 'Light'}</span>
+          </div>
         </div>
       </div>
     </nav>
