@@ -41,10 +41,10 @@ function SectionDividerReversed() {
       </div>
 
       <div className="divider-content-reversed">
-        <div className="divider-eyebrow-reversed">Transparent Pricing</div>
-        <h3>Clear costs, no surprises</h3>
+        <div className="divider-eyebrow-reversed">After Launch</div>
+        <h3>We’re here beyond go-live</h3>
         <p>
-          We believe in straightforward pricing that makes it easy to plan and budget. Every project is customized to your needs with transparent costs from the start.
+          Your project doesn’t end at launch. We offer ongoing support, content updates, and training so you can grow your site with confidence—and we’re just a message away when you need a hand.
         </p>
       </div>
     </section>

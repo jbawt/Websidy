@@ -58,10 +58,102 @@
   position: relative;
 }
 
-.gallery-hero-svg {
+.gallery-hero-image-wrap {
+  position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-hero-svg-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.gallery-hero-image {
+  position: relative;
+  z-index: 2;
+  width: 65%;
   height: auto;
+  object-fit: contain;
+  animation: gallery-hero-float 5s ease-in-out infinite;
+}
+
+/* Hero SVG animations */
+.hero-ring {
+  transform-origin: 50% 50%;
+  animation: hero-ring-pulse 3s ease-in-out infinite;
+}
+
+.hero-ring-2 {
+  animation-delay: 0.4s;
+}
+
+.hero-ring-3 {
+  animation-delay: 0.8s;
+}
+
+.hero-orbit {
+  transform-origin: 50% 50%;
+  animation: hero-orbit-spin 12s linear infinite;
+}
+
+.hero-particle {
+  animation: hero-particle-float 4s ease-in-out infinite;
+}
+
+@keyframes gallery-hero-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes hero-ring-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes hero-orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hero-particle-float {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate(6px, -10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-4px, -6px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translate(8px, 4px);
+    opacity: 0.9;
+  }
 }
 
 /* Projects Section */
@@ -317,19 +409,7 @@
   border-bottom-color: #3b82f6;
 }
 
-/* Animations */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-.float-element {
-  animation: float 4s ease-in-out infinite;
-}
+/* Hero orbit uses transform-origin in viewBox coords via CSS variable not needed; SVG viewBox center is 200,200 */
 
 /* Responsive Design */
 @media (max-width: 968px) {

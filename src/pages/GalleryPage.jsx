@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import GalleryModal from '../components/GalleryModal'
+import portfolioHero from '../assets/portfolio_hero_transparent.png'
 import './GalleryPage.css'
 
 function GalleryPage() {
@@ -33,36 +34,40 @@ function GalleryPage() {
             </p>
           </div>
           <div className="gallery-hero-visual">
-            <svg viewBox="0 0 400 300" className="gallery-hero-svg">
-              <defs>
-                <linearGradient id="galleryHeroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" />
-                  <stop offset="50%" stopColor="#1e40af" />
-                  <stop offset="75%" stopColor="#ff6f61" />
-                  <stop offset="100%" stopColor="#0ea5e9" />
-                </linearGradient>
-              </defs>
-              {/* Multiple browser windows */}
-              <rect x="20" y="20" width="160" height="120" rx="6" stroke="url(#galleryHeroGradient)" strokeWidth="2.5" fill="none" />
-              <line x1="20" y1="50" x2="180" y2="50" stroke="url(#galleryHeroGradient)" strokeWidth="2" />
-              <circle cx="35" cy="35" r="3" fill="url(#galleryHeroGradient)" />
-              <rect x="30" y="70" width="40" height="30" rx="3" fill="url(#galleryHeroGradient)" opacity="0.3" />
-              <rect x="80" y="70" width="50" height="30" rx="3" fill="url(#galleryHeroGradient)" opacity="0.2" />
-              
-              <rect x="220" y="40" width="160" height="120" rx="6" stroke="url(#galleryHeroGradient)" strokeWidth="2.5" fill="none" />
-              <line x1="220" y1="70" x2="380" y2="70" stroke="url(#galleryHeroGradient)" strokeWidth="2" />
-              <circle cx="235" cy="55" r="3" fill="url(#galleryHeroGradient)" />
-              <rect x="230" y="90" width="50" height="30" rx="3" fill="url(#galleryHeroGradient)" opacity="0.3" />
-              <rect x="290" y="90" width="40" height="30" rx="3" fill="url(#galleryHeroGradient)" opacity="0.2" />
-              
-              {/* Connecting lines */}
-              <path d="M 100 140 Q 200 160 300 160" stroke="url(#galleryHeroGradient)" strokeWidth="2" fill="none" opacity="0.4" strokeDasharray="5,5" />
-              
-              {/* Floating elements */}
-              <circle cx="50" cy="200" r="4" fill="url(#galleryHeroGradient)" opacity="0.6" className="float-element" />
-              <circle cx="350" cy="220" r="3" fill="url(#galleryHeroGradient)" opacity="0.5" className="float-element" style={{ animationDelay: '0.3s' }} />
-              <circle cx="200" cy="250" r="5" fill="url(#galleryHeroGradient)" opacity="0.4" className="float-element" style={{ animationDelay: '0.6s' }} />
-            </svg>
+            <div className="gallery-hero-image-wrap">
+              <svg viewBox="0 0 400 400" className="gallery-hero-svg-bg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="galleryHeroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#3b82f6" />
+                    <stop offset="50%" stopColor="#1e40af" />
+                    <stop offset="75%" stopColor="#ff6f61" />
+                    <stop offset="100%" stopColor="#0ea5e9" />
+                  </linearGradient>
+                  <linearGradient id="galleryHeroRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.6" />
+                    <stop offset="50%" stopColor="#ff6f61" stopOpacity="0.4" />
+                    <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0.6" />
+                  </linearGradient>
+                </defs>
+                {/* Pulsing rings behind the camera */}
+                <circle cx="200" cy="200" r="140" fill="none" stroke="url(#galleryHeroRing)" strokeWidth="2" opacity="0.5" className="hero-ring hero-ring-1" />
+                <circle cx="200" cy="200" r="165" fill="none" stroke="url(#galleryHeroRing)" strokeWidth="1.5" opacity="0.35" className="hero-ring hero-ring-2" />
+                <circle cx="200" cy="200" r="190" fill="none" stroke="url(#galleryHeroRing)" strokeWidth="1" opacity="0.2" className="hero-ring hero-ring-3" />
+                {/* Rotating dashed orbit */}
+                <circle cx="200" cy="200" r="155" fill="none" stroke="url(#galleryHeroGradient)" strokeWidth="2" strokeDasharray="8 12" opacity="0.6" className="hero-orbit" />
+                {/* Floating particles */}
+                <circle cx="120" cy="160" r="4" fill="url(#galleryHeroGradient)" opacity="0.7" className="hero-particle" style={{ animationDelay: '0s' }} />
+                <circle cx="280" cy="140" r="3" fill="#ff6f61" opacity="0.6" className="hero-particle" style={{ animationDelay: '0.8s' }} />
+                <circle cx="130" cy="260" r="5" fill="url(#galleryHeroGradient)" opacity="0.5" className="hero-particle" style={{ animationDelay: '1.6s' }} />
+                <circle cx="270" cy="250" r="3.5" fill="#ff6f61" opacity="0.5" className="hero-particle" style={{ animationDelay: '2.4s' }} />
+                <circle cx="200" cy="100" r="4" fill="url(#galleryHeroGradient)" opacity="0.4" className="hero-particle" style={{ animationDelay: '3.2s' }} />
+              </svg>
+              <img
+                src={portfolioHero}
+                alt=""
+                className="gallery-hero-image"
+              />
+            </div>
           </div>
         </section>
 
