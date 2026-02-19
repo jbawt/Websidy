@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import arrowsUpLogo from '../assets/arrows_up_logo.png'
+import userProfileIcon from '../assets/user_profile_icon.png'
 import './AboutPage.css'
 
 function AboutPage() {
@@ -40,67 +42,53 @@ function AboutPage() {
             </p>
           </div>
           <div className="about-hero-visual">
-            <svg viewBox="0 0 400 400" className="about-hero-svg">
-              <defs>
-                <linearGradient id="aboutHeroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" />
-                  <stop offset="50%" stopColor="#1e40af" />
-                  <stop offset="75%" stopColor="#ff6f61" />
-                  <stop offset="100%" stopColor="#0ea5e9" />
-                </linearGradient>
-                <filter id="glow">
-                  <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-                  <feMerge>
-                    <feMergeNode in="coloredBlur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-              {/* Central design element */}
-              <circle cx="200" cy="200" r="80" fill="none" stroke="url(#aboutHeroGradient)" strokeWidth="3" opacity="0.6" className="pulse-circle" />
-              <circle cx="200" cy="200" r="60" fill="none" stroke="url(#aboutHeroGradient)" strokeWidth="2" opacity="0.4" className="pulse-circle" style={{ animationDelay: '0.5s' }} />
-              {/* Geometric shapes */}
-              <polygon points="200,120 240,180 200,240 160,180" fill="url(#aboutHeroGradient)" opacity="0.3" className="rotate-shape" />
-              <polygon points="200,160 260,200 200,240 140,200" fill="none" stroke="url(#aboutHeroGradient)" strokeWidth="2" opacity="0.5" className="rotate-shape-reverse" />
-              {/* Floating particles */}
-              <circle cx="120" cy="120" r="4" fill="url(#aboutHeroGradient)" className="float-particle" />
-              <circle cx="280" cy="150" r="3" fill="url(#aboutHeroGradient)" className="float-particle" style={{ animationDelay: '0.3s' }} />
-              <circle cx="150" cy="280" r="5" fill="url(#aboutHeroGradient)" className="float-particle" style={{ animationDelay: '0.6s' }} />
-              <circle cx="300" cy="280" r="4" fill="url(#aboutHeroGradient)" className="float-particle" style={{ animationDelay: '0.9s' }} />
-              {/* Connecting lines */}
-              <line x1="200" y1="120" x2="200" y2="280" stroke="url(#aboutHeroGradient)" strokeWidth="1" opacity="0.2" />
-              <line x1="120" y1="200" x2="280" y2="200" stroke="url(#aboutHeroGradient)" strokeWidth="1" opacity="0.2" />
-            </svg>
+            <div className="about-hero-image-wrap">
+              <svg viewBox="0 0 300 300" className="about-hero-svg-bg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="aboutHeroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#3b82f6" />
+                    <stop offset="50%" stopColor="#1e40af" />
+                    <stop offset="75%" stopColor="#ff6f61" />
+                    <stop offset="100%" stopColor="#0ea5e9" />
+                  </linearGradient>
+                </defs>
+                {/* Rounded square frame - same as mission section */}
+                <path d="M 55 150 Q 55 55 150 55 Q 245 55 245 150 Q 245 245 150 245 Q 55 245 55 150 Z" fill="none" stroke="url(#aboutHeroGradient)" strokeWidth="2" opacity="0.35" className="about-mission-square about-mission-square-1" />
+                <path d="M 70 150 Q 70 70 150 70 Q 230 70 230 150 Q 230 230 150 230 Q 70 230 70 150 Z" fill="none" stroke="url(#aboutHeroGradient)" strokeWidth="1.5" strokeDasharray="6 12" opacity="0.5" className="about-mission-square about-mission-square-2" />
+              </svg>
+              <img src={userProfileIcon} alt="" className="about-hero-image" />
+            </div>
           </div>
         </section>
 
         {/* Mission Section */}
         <section className="about-mission-section">
-          <div className="about-mission-visual">
-            <svg viewBox="0 0 300 300" className="mission-svg">
-              <defs>
-                <linearGradient id="missionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" />
-                  <stop offset="100%" stopColor="#1e40af" />
-                </linearGradient>
-              </defs>
-              {/* Target/bullseye design */}
-              <circle cx="150" cy="150" r="120" fill="none" stroke="url(#missionGradient)" strokeWidth="2" opacity="0.3" />
-              <circle cx="150" cy="150" r="90" fill="none" stroke="url(#missionGradient)" strokeWidth="2" opacity="0.4" />
-              <circle cx="150" cy="150" r="60" fill="url(#missionGradient)" opacity="0.2" />
-              <circle cx="150" cy="150" r="30" fill="url(#missionGradient)" opacity="0.5" />
-              {/* Arrow pointing to center */}
-              <path d="M 150 20 L 150 60 L 145 55 L 150 60 L 155 55 Z" fill="url(#missionGradient)" className="pulse-arrow" />
-            </svg>
-          </div>
-          <div className="about-mission-content">
+          <div className="about-mission-intro">
             <h2>Our Mission</h2>
             <p>
               To empower small and medium-sized businesses with professional digital presence that
               doesn't require a technical team. We believe every business deserves a website that
               reflects their brand and drives results.
             </p>
-            <div className="mission-values">
+          </div>
+          <div className="about-mission-visual">
+            <div className="about-mission-image-wrap">
+              <svg viewBox="0 0 300 300" className="about-mission-svg-bg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="missionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#3b82f6" />
+                    <stop offset="50%" stopColor="#ff6f61" />
+                    <stop offset="100%" stopColor="#1e40af" />
+                  </linearGradient>
+                </defs>
+                {/* Rounded square frame */}
+                <path d="M 55 150 Q 55 55 150 55 Q 245 55 245 150 Q 245 245 150 245 Q 55 245 55 150 Z" fill="none" stroke="url(#missionGradient)" strokeWidth="2" opacity="0.35" className="about-mission-square about-mission-square-1" />
+                <path d="M 70 150 Q 70 70 150 70 Q 230 70 230 150 Q 230 230 150 230 Q 70 230 70 150 Z" fill="none" stroke="url(#missionGradient)" strokeWidth="1.5" strokeDasharray="6 12" opacity="0.5" className="about-mission-square about-mission-square-2" />
+              </svg>
+              <img src={arrowsUpLogo} alt="" className="about-mission-image" />
+            </div>
+          </div>
+          <div className="mission-values">
               <div className="value-item">
                 <div className="value-icon">
                 <svg viewBox="0 0 24 24" fill="none">
@@ -183,7 +171,6 @@ function AboutPage() {
                 <p>We keep timelines, updates, and next steps transparent so you always know exactly where your project stands.</p>
               </div>
             </div>
-          </div>
         </section>
 
         {/* Interactive Feedback Section */}

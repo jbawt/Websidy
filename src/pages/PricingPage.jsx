@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import PricingCalculator from '../components/PricingCalculator'
+import pricingHero from '../assets/pricing_hero.png'
 import './PricingPage.css'
 
 function PricingPage() {
@@ -28,26 +29,7 @@ function PricingPage() {
             </button>
           </div>
           <div className="pricing-hero-visual">
-            <svg viewBox="0 0 400 400" className="pricing-hero-svg">
-              <defs>
-                <linearGradient id="pricingHeroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" />
-                  <stop offset="50%" stopColor="#1e40af" />
-                  <stop offset="75%" stopColor="#ff6f61" />
-                  <stop offset="100%" stopColor="#0ea5e9" />
-                </linearGradient>
-              </defs>
-              {/* Price tag design */}
-              <rect x="120" y="100" width="160" height="200" rx="8" fill="none" stroke="url(#pricingHeroGradient)" strokeWidth="4" className="price-tag" />
-              <path d="M 200 100 L 200 60 L 180 60 L 200 40 L 220 60 L 200 60" fill="url(#pricingHeroGradient)" opacity="0.6" />
-              {/* Dollar sign */}
-              <text x="200" y="200" fontSize="80" fill="url(#pricingHeroGradient)" textAnchor="middle" className="dollar-sign">$</text>
-              {/* Floating coins */}
-              <circle cx="80" cy="120" r="20" fill="url(#pricingHeroGradient)" opacity="0.3" className="float-coin" />
-              <circle cx="320" cy="150" r="18" fill="url(#pricingHeroGradient)" opacity="0.3" className="float-coin" style={{ animationDelay: '0.3s' }} />
-              <circle cx="90" cy="280" r="15" fill="url(#pricingHeroGradient)" opacity="0.3" className="float-coin" style={{ animationDelay: '0.6s' }} />
-              <circle cx="310" cy="300" r="22" fill="url(#pricingHeroGradient)" opacity="0.3" className="float-coin" style={{ animationDelay: '0.9s' }} />
-            </svg>
+            <img src={pricingHero} alt="" className="pricing-hero-image" />
           </div>
         </section>
 
