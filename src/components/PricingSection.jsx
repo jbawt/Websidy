@@ -13,7 +13,7 @@ function PricingSection() {
           <span className="pricing-eyebrow">Pricing</span>
           <h2>Transparent pricing for every project</h2>
           <p>
-            Simple, straightforward pricing with no hidden fees. Choose the services you need and build your perfect package.
+            Competitive, market-aligned pricing for Central Alberta businesses with clear scope and no hidden fees.
           </p>
         </div>
 
@@ -37,25 +37,25 @@ function PricingSection() {
                   <rect x="32" y="32" width="12" height="8" rx="2" fill="url(#webGradient)" opacity="0.4" />
                 </svg>
               </div>
-              <h3>Website Design</h3>
+              <h3>Website Design & Development</h3>
             </div>
             <div className="pricing-content">
               <div className="pricing-base">
                 <div className="pricing-item">
-                  <span className="pricing-label">Base Package (3 pages)</span>
-                  <span className="pricing-value">$1,200</span>
+                  <span className="pricing-label">Custom Static Website (up to 5 pages)</span>
+                  <span className="pricing-value">$1,900</span>
                 </div>
                 <div className="pricing-item">
                   <span className="pricing-label">Additional Pages</span>
-                  <span className="pricing-value">$200/page</span>
+                  <span className="pricing-value">$225/page</span>
                 </div>
                 <div className="pricing-item">
-                  <span className="pricing-label">Hosting on Our Servers</span>
-                  <span className="pricing-value">$50/month</span>
+                  <span className="pricing-label">Hosting & Maintenance</span>
+                  <span className="pricing-value">$60/month</span>
                 </div>
               </div>
               <div className="pricing-features">
-                <p className="pricing-note">Includes responsive design, SEO optimization, content integration, and optional managed hosting.</p>
+                <p className="pricing-note">Custom developed code with fast, reliable, secure static deployment and optional managed hosting.</p>
               </div>
             </div>
           </div>
@@ -84,16 +84,16 @@ function PricingSection() {
             <div className="pricing-content">
               <div className="pricing-base">
                 <div className="pricing-item">
-                  <span className="pricing-label">Setup & Training</span>
-                  <span className="pricing-value">$400</span>
+                  <span className="pricing-label">Social Launch Setup</span>
+                  <span className="pricing-value">$650</span>
                 </div>
                 <div className="pricing-item">
-                  <span className="pricing-label">Monthly Management</span>
-                  <span className="pricing-value">$150/month</span>
+                  <span className="pricing-label">Monthly Management (Lite)</span>
+                  <span className="pricing-value">$250/month</span>
                 </div>
               </div>
               <div className="pricing-features">
-                <p className="pricing-note">Includes account setup, content templates, and training sessions</p>
+                <p className="pricing-note">Includes setup, branded templates, and lean monthly support for consistent posting.</p>
               </div>
             </div>
           </div>

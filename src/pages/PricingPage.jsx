@@ -18,8 +18,9 @@ function PricingPage() {
             <span className="pricing-hero-eyebrow">Pricing</span>
             <h1>Simple, Transparent Pricing</h1>
             <p className="pricing-hero-description">
-              No hidden fees, no surprises. Our pricing is straightforward and designed to scale with
-              your business needs. Choose the services that work for you.
+              Competitive, market-aligned pricing for Central Alberta businesses. Every project is
+              custom developed code with clear scope, and our static websites are extremely fast,
+              reliable, and secure.
             </p>
             <button
               className="pricing-calculator-button"
@@ -55,7 +56,7 @@ function PricingPage() {
             <div className="pricing-detail-title">
               <h2>Website Design & Development</h2>
               <p className="pricing-detail-subtitle">
-                Custom websites built to your specifications
+                Custom-coded websites and web app foundations
               </p>
             </div>
           </div>
@@ -63,22 +64,25 @@ function PricingPage() {
           <div className="pricing-detail-content">
             <div className="pricing-detail-grid">
               <div className="pricing-detail-card">
-                <h3>Base Package</h3>
-                <div className="pricing-amount">$1,200</div>
-                <p className="pricing-includes">Includes 3 pages:</p>
+                <h3>Custom Static Website</h3>
+                <div className="pricing-amount">$1,900</div>
+                <p className="pricing-includes">Includes up to 5 pages:</p>
                 <ul className="pricing-features-list">
                   <li>Home page</li>
                   <li>About page</li>
                   <li>Contact page</li>
+                  <li>Services and portfolio pages</li>
                   <li>Responsive design</li>
-                  <li>SEO optimization</li>
+                  <li>Custom developed code (no page builders)</li>
+                  <li>Static architecture for speed and uptime</li>
+                  <li>Smaller attack surface for better security</li>
+                  <li>On-page SEO setup</li>
                   <li>Content integration</li>
-                  <li>Basic animations</li>
                 </ul>
               </div>
               <div className="pricing-detail-card">
                 <h3>Additional Pages</h3>
-                <div className="pricing-amount">$200<span className="pricing-period">/page</span></div>
+                <div className="pricing-amount">$225<span className="pricing-period">/page</span></div>
                 <p className="pricing-includes">Each additional page includes:</p>
                 <ul className="pricing-features-list">
                   <li>Custom design</li>
@@ -89,12 +93,13 @@ function PricingPage() {
                 </ul>
               </div>
               <div className="pricing-detail-card featured">
-                <h3>Hosting</h3>
-                <div className="pricing-amount">$50<span className="pricing-period">/month</span></div>
+                <h3>Hosting & Maintenance</h3>
+                <div className="pricing-amount">$60<span className="pricing-period">/month</span></div>
                 <ul className="pricing-features-list">
-                  <li>Managed hosting environment</li>
-                  <li>Secure deployment and uptime monitoring</li>
-                  <li>Single-team support for site + hosting</li>
+                  <li>Managed hosting for static and custom projects</li>
+                  <li>Secure deployment and uptime checks</li>
+                  <li>Routine dependency and security updates</li>
+                  <li>Single-team support for web + hosting</li>
                 </ul>
               </div>
             </div>
@@ -102,20 +107,16 @@ function PricingPage() {
               <h3>Optional Add-ons</h3>
               <div className="addon-grid">
                 <div className="addon-item">
-                  <span className="addon-name">E-commerce Integration</span>
-                  <span className="addon-price">+$500</span>
-                </div>
-                <div className="addon-item">
                   <span className="addon-name">Blog Setup</span>
-                  <span className="addon-price">+$300</span>
+                  <span className="addon-price">+$350</span>
                 </div>
                 <div className="addon-item">
-                  <span className="addon-name">Advanced Animations</span>
-                  <span className="addon-price">+$400</span>
+                  <span className="addon-name">Custom Feature Block / Widget</span>
+                  <span className="addon-price">+$200</span>
                 </div>
                 <div className="addon-item">
                   <span className="addon-name">Custom Forms</span>
-                  <span className="addon-price">+$200</span>
+                  <span className="addon-price">+$150</span>
                 </div>
               </div>
             </div>
@@ -144,7 +145,7 @@ function PricingPage() {
             <div className="pricing-detail-title">
               <h2>Social Media Setup & Management</h2>
               <p className="pricing-detail-subtitle">
-                Get your social presence up and running
+                Lean monthly plans for local business consistency
               </p>
             </div>
           </div>
@@ -152,31 +153,25 @@ function PricingPage() {
           <div className="pricing-detail-content">
             <div className="pricing-detail-grid">
               <div className="pricing-detail-card">
-                <h3>Setup & Training</h3>
-                <div className="pricing-amount">$400</div>
+                <h3>Social Launch Setup</h3>
+                <div className="pricing-amount">$650</div>
                 <p className="pricing-includes">One-time setup includes:</p>
                 <ul className="pricing-features-list">
-                  <li>Account setup & optimization</li>
-                  <li>Brand profile creation</li>
-                  <li>Content templates (10+)</li>
-                  <li>2-hour training session</li>
-                  <li>Content playbook</li>
-                  <li>Best practices guide</li>
-                  <li>30 days of support</li>
+                  <li>Account setup and profile optimization</li>
+                  <li>Branded bio and highlights template</li>
+                  <li>10 post templates and caption framework</li>
+                  <li>90-minute training session</li>
+                  <li>30 days of launch support</li>
                 </ul>
               </div>
               <div className="pricing-detail-card">
-                <h3>Monthly Management</h3>
-                <div className="pricing-amount">$150<span className="pricing-period">/month</span></div>
+                <h3>Monthly Management (Lite)</h3>
+                <div className="pricing-amount">$250<span className="pricing-period">/month</span></div>
                 <p className="pricing-includes">Ongoing management includes:</p>
                 <ul className="pricing-features-list">
-                  <li>8 posts per month</li>
-                  <li>Content creation</li>
-                  <li>Engagement monitoring</li>
-                  <li>Analytics reporting</li>
-                  <li>Strategy adjustments</li>
-                  <li>Community management</li>
-                  <li>Monthly strategy call</li>
+                  <li>8-10 posts per month</li>
+                  <li>Caption writing and scheduling</li>
+                  <li>Community response guidance</li>
                 </ul>
               </div>
             </div>
