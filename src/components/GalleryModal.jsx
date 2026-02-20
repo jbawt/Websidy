@@ -98,7 +98,7 @@ function GalleryModal({ isOpen, onClose, project }) {
                       src={project.url}
                       title={`${project.name} - Desktop`}
                       className="device-iframe"
-                      style={{ width: '100%', height: '100%', border: 'none' }}
+                      // style={{ width: '100%', height: '100%', border: 'none' }}
                       sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                     />
                   </div>
