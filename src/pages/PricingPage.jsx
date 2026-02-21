@@ -186,9 +186,6 @@ function PricingPage() {
             <Link to="/contact" className="pricing-cta-button">
               Get in Touch
             </Link>
-            <Link to="/faq" className="pricing-cta-button pricing-cta-button-secondary">
-              View FAQ
-            </Link>
           </div>
         </section>
       </div>
