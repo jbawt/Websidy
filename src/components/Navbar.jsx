@@ -142,43 +142,10 @@ function Navbar() {
             <span>About</span>
           </Link>
 
-          {/* Resources Dropdown
-          <div 
-            className="nav-dropdown"
-            onMouseEnter={() => handleDropdownMouseEnter('resources')}
-            onMouseLeave={handleDropdownMouseLeave}
-          >
-            <button 
-              className={`nav-link nav-link-dropdown ${activeDropdown === 'resources' ? 'active' : ''}`}
-              onClick={() => handleDropdownToggle('resources')}
-            >
-              <span>Resources</span>
-              <svg className="dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-            <div className={`dropdown-menu ${activeDropdown === 'resources' ? 'active' : ''}`}>
-              <Link to="/faq" className="dropdown-item" onClick={handleLinkClick}>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M12 17H12.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-                <span>FAQ</span>
-              </Link>
-              <Link to="/about" className="dropdown-item" onClick={handleLinkClick}>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="8" r="3" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21" stroke="currentColor" strokeWidth="2"/>
-                </svg>
-                <span>About</span>
-              </Link>
-            </div>
-          </div> */}
-
           <Link to="/contact" className="nav-link nav-link-cta" onClick={handleLinkClick}>
             <span>Contact</span>
           </Link>
+
           <div className="theme-toggle-wrapper">
             <button
               onClick={handleToggleTheme}
