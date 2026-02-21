@@ -1,46 +1,15 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React from 'react'
 import './SectionDividerReversed.css'
-import afterLaunchIcon from '../assets/after-launch-icon.png'
-import rocketIcon from '../assets/Rocket-Icon.png'
+import rocketLaunchFull from '../assets/rocket-launch-full.png'
 
 function SectionDividerReversed() {
-  const sectionRef = useRef(null)
-  const [inView, setInView] = useState(false)
-
-  useEffect(() => {
-    const section = sectionRef.current
-    if (!section) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setInView(true)
-      },
-      { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }
-    )
-    observer.observe(section)
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <section
-      ref={sectionRef}
-      className={`section-divider-reversed ${inView ? 'in-view' : ''}`}
-      aria-hidden="true"
-    >
+    <section className="section-divider-reversed" aria-hidden="true">
       <div className="divider-visual-reversed">
         <img
-          src={afterLaunchIcon}
+          src={rocketLaunchFull}
           alt=""
-          className="divider-after-launch-icon"
-        />
-      </div>
-
-      <div className="divider-rocket-wrapper">
-        <img
-          src={rocketIcon}
-          alt=""
-          className="divider-rocket-icon"
-          aria-hidden="true"
+          className="divider-rocket-launch-icon"
         />
       </div>
 

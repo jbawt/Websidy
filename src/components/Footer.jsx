@@ -1,25 +1,10 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import './Footer.css'
 
 function Footer() {
   const theme = useSelector((state) => state.theme.mode)
-  const location = useLocation()
-
-  const handleLinkClick = (e) => {
-    e.preventDefault()
-    const targetId = e.currentTarget.getAttribute('href')?.substring(1)
-    if (location.pathname !== '/') {
-      // Navigate to home page first, then scroll to section
-      window.location.href = `/${targetId}`
-    } else {
-      const element = document.getElementById(targetId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-  }
 
   return (
     <footer className={`footer ${theme}`}>

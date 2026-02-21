@@ -979,91 +979,6 @@
   }
 }
 
-/* Stats Section */
-.about-stats-section {
-  width: 100%;
-  padding: 6rem 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(14, 165, 233, 0.12));
-  border-radius: 2rem;
-  margin: 4rem 0;
-}
-
-.app.dark .about-stats-section {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7));
-}
-
-.about-stats-container {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  padding: 0;
-}
-
-.stat-card {
-  text-align: center;
-  padding: 2.5rem 2rem;
-  border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  backdrop-filter: blur(8px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.25);
-}
-
-.app.dark .stat-card {
-  background: rgba(14, 14, 14, 0.9);
-  border-color: rgba(96, 165, 250, 0.2);
-}
-
-.stat-icon {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 1.5rem;
-}
-
-.stat-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.stat-value {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #1e40af;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #3b82f6, #1e40af);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.app.dark .stat-value {
-  background: linear-gradient(135deg, #60a5fa, #3b82f6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.stat-label {
-  font-size: 1.1rem;
-  color: rgba(0, 0, 0, 0.7);
-  font-weight: 500;
-}
-
-.app.dark .stat-label {
-  color: rgba(250, 250, 250, 0.8);
-}
-
 /* About hero: image + non-circle SVG animations */
 @keyframes about-hero-image-float {
   0%, 100% {
@@ -1240,15 +1155,6 @@
   .content-card {
     height: 80px;
   }
-
-  .about-stats-container {
-    padding: 0 1.5rem;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
 }
 
 @media (max-width: 640px) {
@@ -1266,10 +1172,6 @@
 
   .feedback-demo-description {
     font-size: 1rem;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr;
   }
 }
 

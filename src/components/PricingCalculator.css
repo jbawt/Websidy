@@ -276,6 +276,27 @@
   border-color: #60a5fa;
 }
 
+.pages-input[aria-invalid="true"],
+.addon-qty-input[aria-invalid="true"] {
+  border-color: #dc2626;
+}
+
+.app.dark .pages-input[aria-invalid="true"],
+.app.dark .addon-qty-input[aria-invalid="true"] {
+  border-color: #f87171;
+}
+
+.calculator-input-error {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.875rem;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.app.dark .calculator-input-error {
+  color: #f87171;
+}
+
 .additional-cost {
   margin-top: 0.5rem;
   font-size: 0.9rem;

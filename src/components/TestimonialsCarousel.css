@@ -307,8 +307,7 @@
   }
 
   .carousel-button {
-    width: 42px;
-    height: 42px;
+    display: none;
   }
 
   .carousel-button-prev {
@@ -343,16 +342,7 @@
   }
 
   .carousel-button {
-    width: 40px;
-    height: 40px;
-  }
-
-  .carousel-button-prev {
-    left: 0.5rem;
-  }
-
-  .carousel-button-next {
-    right: 0.5rem;
+    display: none;
   }
 }
 

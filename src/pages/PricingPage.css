@@ -187,19 +187,6 @@
   border-color: rgba(96, 165, 250, 0.4);
 }
 
-.featured-badge {
-  position: absolute;
-  top: -12px;
-  right: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #3b82f6, #1e40af);
-  color: #fafafa;
-  font-size: 0.85rem;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-}
-
 .pricing-detail-card h3 {
   font-size: 1.5rem;
   margin: 0 0 1rem;
@@ -247,17 +234,6 @@
 .app.dark .pricing-period {
   color: #60a5fa;
   -webkit-text-fill-color: #60a5fa;
-}
-
-.savings-badge {
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  background: rgba(34, 197, 94, 0.15);
-  color: #22c55e;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
 }
 
 .pricing-includes {
@@ -388,29 +364,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.hosting-note {
-  padding: 1.5rem;
-  border-radius: 1rem;
-  background: rgba(59, 130, 246, 0.05);
-  border-left: 4px solid #3b82f6;
-}
-
-.app.dark .hosting-note {
-  background: rgba(96, 165, 250, 0.08);
-  border-left-color: #60a5fa;
-}
-
-.hosting-note p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.app.dark .hosting-note p {
-  color: rgba(250, 250, 250, 0.8);
 }
 
 /* CTA Section */

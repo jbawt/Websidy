@@ -59,7 +59,6 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/portfolio" element={<GalleryPage />} />
-          {/* <Route path="/faq" element={<FAQPage />} /> */}
         </Routes>
         <Footer />
       </div>

@@ -38,16 +38,12 @@
 }
 
 /* Additional restrained accent placements */
-.app .pricing-view-details,
-.app .pricing-cta-button-secondary,
-.app .faq-cta-button-secondary {
+.app .pricing-cta-button-secondary {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
 
-.app .pricing-view-details:hover,
-.app .pricing-cta-button-secondary:hover,
-.app .faq-cta-button-secondary:hover {
+.app .pricing-cta-button-secondary:hover {
   background: var(--accent-color-soft);
   box-shadow: 0 10px 25px var(--accent-color-soft);
 }

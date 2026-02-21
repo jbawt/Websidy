@@ -17,6 +17,12 @@ function PricingCalculator({ isOpen, onClose }) {
     },
   })
 
+  // Text input values (parsed to numbers on blur/valid change)
+  const [pagesStr, setPagesStr] = useState('5')
+  const [widgetsStr, setWidgetsStr] = useState('0')
+  const [formsStr, setFormsStr] = useState('0')
+  const [errors, setErrors] = useState({ pages: '', widgets: '', forms: '' })
+
   // Pricing constants
   const PRICING = {
     website: {
@@ -157,14 +163,114 @@ function PricingCalculator({ isOpen, onClose }) {
     }))
   }
 
-  const handleAddonQuantityChange = (addon, value) => {
-    const parsed = Number.isNaN(parseInt(value, 10)) ? 0 : parseInt(value, 10)
-    handleAddonChange(addon, Math.max(0, parsed))
+  const VALIDATION_MSG = 'Please enter a valid number'
+
+  const parsePages = (str) => {
+    const trimmed = String(str).trim()
+    if (trimmed === '') return { valid: false, value: null }
+    const num = parseInt(trimmed, 10)
+    if (Number.isNaN(num) || num < 5) return { valid: false, value: null }
+    return { valid: true, value: num }
+  }
+
+  const parseAddon = (str) => {
+    const trimmed = String(str).trim()
+    if (trimmed === '') return { valid: false, value: null }
+    const num = parseInt(trimmed, 10)
+    if (Number.isNaN(num) || num < 0) return { valid: false, value: null }
+    return { valid: true, value: num }
   }
 
   const handlePagesChange = (e) => {
-    const pages = parseInt(e.target.value) || 5
-    handleChange('pages', Math.max(5, pages))
+    const raw = e.target.value
+    setPagesStr(raw)
+    const { valid, value } = parsePages(raw)
+    if (valid) {
+      handleChange('pages', value)
+      setErrors((prev) => ({ ...prev, pages: '' }))
+    }
+  }
+
+  const handlePagesBlur = () => {
+    const { valid, value } = parsePages(pagesStr)
+    if (valid) {
+      handleChange('pages', value)
+      setPagesStr(String(value))
+      setErrors((prev) => ({ ...prev, pages: '' }))
+    } else {
+      setErrors((prev) => ({ ...prev, pages: VALIDATION_MSG }))
+      const trimmed = pagesStr.trim()
+      const num = parseInt(trimmed, 10)
+      if (trimmed === '' || (!Number.isNaN(num) && num < 5)) {
+        handleChange('pages', 5)
+        setPagesStr('5')
+      }
+    }
+  }
+
+  const handlePagesFocus = (e) => {
+    e.target.select()
+    setErrors((prev) => ({ ...prev, pages: '' }))
+  }
+
+  const handleWidgetsChange = (e) => {
+    const raw = e.target.value
+    setWidgetsStr(raw)
+    const { valid, value } = parseAddon(raw)
+    if (valid) {
+      handleAddonChange('widgets', value)
+      setErrors((prev) => ({ ...prev, widgets: '' }))
+    }
+  }
+
+  const handleWidgetsBlur = () => {
+    const { valid, value } = parseAddon(widgetsStr)
+    if (valid) {
+      handleAddonChange('widgets', value)
+      setWidgetsStr(String(value))
+      setErrors((prev) => ({ ...prev, widgets: '' }))
+    } else {
+      setErrors((prev) => ({ ...prev, widgets: VALIDATION_MSG }))
+      if (widgetsStr.trim() === '') {
+        handleAddonChange('widgets', 0)
+        setWidgetsStr('0')
+      }
+    }
+  }
+
+  const handleWidgetsFocus = (e) => {
+    e.target.select()
+    setErrors((prev) => ({ ...prev, widgets: '' }))
+  }
+
+  const handleFormsChange = (e) => {
+    const raw = e.target.value
+    setFormsStr(raw)
+    const { valid, value } = parseAddon(raw)
+    if (valid) {
+      handleAddonChange('forms', value)
+      setErrors((prev) => ({ ...prev, forms: '' }))
+    }
+  }
+
+  const handleFormsBlur = () => {
+    const { valid, value } = parseAddon(formsStr)
+    if (valid) {
+      handleAddonChange('forms', value)
+      setFormsStr(String(value))
+      setErrors((prev) => ({ ...prev, forms: '' }))
+    } else {
+      setErrors((prev) => ({ ...prev, forms: VALIDATION_MSG }))
+      if (formsStr.trim() === '') {
+        handleAddonChange('forms', 0)
+        setFormsStr('0')
+      }
+    }
+  }
+
+  const handleFormsFocus = (e) => {
+    e.target.select()
+    setErrors((prev) => ({ ...prev, forms: '' }))
   }
 
   // Close on Escape key
@@ -229,13 +335,22 @@ function PricingCalculator({ isOpen, onClose }) {
                 <label>
                   Number of pages:
                   <input
-                    type="number"
-                    min="5"
-                    value={selections.pages}
+                    type="text"
+                    inputMode="numeric"
+                    value={pagesStr}
                     onChange={handlePagesChange}
+                    onFocus={handlePagesFocus}
+                    onBlur={handlePagesBlur}
                     className="pages-input"
+                    aria-invalid={!!errors.pages}
+                    aria-describedby={errors.pages ? 'pages-error' : undefined}
                   />
                 </label>
+                {errors.pages && (
+                  <p id="pages-error" className="calculator-input-error" role="alert">
+                    {errors.pages}
+                  </p>
+                )}
                 {selections.pages > 5 && (
                   <div className="additional-cost">
                     +${((selections.pages - 5) * PRICING.website.additionalPage).toLocaleString()} for{' '}
@@ -278,14 +393,22 @@ function PricingCalculator({ isOpen, onClose }) {
                   <label className="addon-qty-control">
                     Qty
                     <input
-                      type="number"
-                      min="0"
-                      step="1"
-                      value={selections.addons.widgets}
-                      onChange={(e) => handleAddonQuantityChange('widgets', e.target.value)}
+                      type="text"
+                      inputMode="numeric"
+                      value={widgetsStr}
+                      onChange={handleWidgetsChange}
+                      onFocus={handleWidgetsFocus}
+                      onBlur={handleWidgetsBlur}
                       className="addon-qty-input"
+                      aria-invalid={!!errors.widgets}
+                      aria-describedby={errors.widgets ? 'widgets-error' : undefined}
                     />
                   </label>
+                  {errors.widgets && (
+                    <p id="widgets-error" className="calculator-input-error" role="alert">
+                      {errors.widgets}
+                    </p>
+                  )}
                 </div>
                 <div className="addon-quantity-item">
                   <div className="addon-meta">
@@ -303,14 +426,22 @@ function PricingCalculator({ isOpen, onClose }) {
                   <label className="addon-qty-control">
                     Qty
                     <input
-                      type="number"
-                      min="0"
-                      step="1"
-                      value={selections.addons.forms}
-                      onChange={(e) => handleAddonQuantityChange('forms', e.target.value)}
+                      type="text"
+                      inputMode="numeric"
+                      value={formsStr}
+                      onChange={handleFormsChange}
+                      onFocus={handleFormsFocus}
+                      onBlur={handleFormsBlur}
                       className="addon-qty-input"
+                      aria-invalid={!!errors.forms}
+                      aria-describedby={errors.forms ? 'forms-error' : undefined}
                     />
                   </label>
+                  {errors.forms && (
+                    <p id="forms-error" className="calculator-input-error" role="alert">
+                      {errors.forms}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
