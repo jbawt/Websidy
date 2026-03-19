@@ -35,6 +35,7 @@
   text-transform: uppercase;
   color: #3b82f6;
   font-weight: 600;
+  width: fit-content;
 }
 
 .divider-content h3 {

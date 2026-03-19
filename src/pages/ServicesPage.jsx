@@ -24,7 +24,7 @@ function ServicesPage() {
   }, [location.hash])
 
   return (
-    <div className={`services-page ${theme}`}>
+    <main className={`services-page ${theme}`}>
       <div className="services-page-container">
         {/* Hero Section */}
         <section className="services-hero">
@@ -211,7 +211,7 @@ function ServicesPage() {
           </div>
         </section>
       </div>
-    </div>
+    </main>
   )
 }
 

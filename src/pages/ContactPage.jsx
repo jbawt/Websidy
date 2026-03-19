@@ -50,7 +50,7 @@ function ContactPage() {
   }
 
   return (
-    <div className={`contact-page ${theme}`} id="contact">
+    <main className={`contact-page ${theme}`} id="contact">
       <div className="contact-page-container">
         {/* Hero Section */}
         <section className="contact-hero">
@@ -168,7 +168,7 @@ function ContactPage() {
           </div>
         </section>
       </div>
-    </div>
+    </main>
   )
 }
 

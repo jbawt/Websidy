@@ -10,7 +10,7 @@ function PricingPage() {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false)
 
   return (
-    <div className={`pricing-page ${theme}`}>
+    <main className={`pricing-page ${theme}`}>
       <div className="pricing-page-container">
         {/* Hero Section */}
         <section className="pricing-hero">
@@ -186,7 +186,7 @@ function PricingPage() {
         isOpen={isCalculatorOpen}
         onClose={() => setIsCalculatorOpen(false)}
       />
-    </div>
+    </main>
   )
 }
 

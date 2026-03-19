@@ -21,7 +21,7 @@ function GalleryPage() {
   ]
 
   return (
-    <div className={`gallery-page ${theme}`}>
+    <main className={`gallery-page ${theme}`}>
       <div className="gallery-page-container">
         {/* Hero Section */}
         <section className="gallery-hero">
@@ -164,7 +164,7 @@ function GalleryPage() {
         }}
         project={selectedProject}
       />
-    </div>
+    </main>
   )
 }
 

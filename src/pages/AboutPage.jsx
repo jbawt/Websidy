@@ -28,7 +28,7 @@ function AboutPage() {
   }
 
   return (
-    <div className={`about-page ${theme}`}>
+    <main className={`about-page ${theme}`}>
       <div className="about-page-container">
         {/* Hero Section */}
         <section className="about-hero">
@@ -452,7 +452,7 @@ function AboutPage() {
           </div>
         </div>
       </section> */}
-    </div>
+    </main>
   )
 }
 

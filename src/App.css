@@ -22,9 +22,29 @@
   --accent-color-strong: #ff7f73;
 }
 
-/* 60-30-10 accent usage: lightweight, high-impact micro elements only */
+/* Eyebrow: orange text in a faded light blue wrapper (matches service badges) */
 .app [class*='eyebrow'] {
   color: var(--accent-color) !important;
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  z-index: 0;
+}
+
+.app [class*='eyebrow']::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 999px;
+  z-index: -1;
+}
+
+.app.light [class*='eyebrow']::before {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(14, 165, 233, 0.25));
+}
+
+.app.dark [class*='eyebrow']::before {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(59, 130, 246, 0.3));
 }
 
 .app.light .footer .footer-link::after,

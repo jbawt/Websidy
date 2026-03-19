@@ -14,7 +14,7 @@ function HomePage() {
   const theme = useSelector((state) => state.theme.mode)
 
   return (
-    <div className="home-page">
+    <main className="home-page">
       <HomeHeader />
       <ServicesSection />
       <SectionDivider />
@@ -23,7 +23,7 @@ function HomePage() {
       <PricingSection />
       <SimpleDivider />
       <TestimonialsCarousel />
-    </div>
+    </main>
   )
 }
 
