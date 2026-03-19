@@ -7,7 +7,7 @@ function PricingCalculator({ isOpen, onClose }) {
   const theme = useSelector((state) => state.theme.mode)
   const [selections, setSelections] = useState({
     website: false,
-    pages: 5,
+    pages: 3,
     hostingOnServers: false,
     socialSetup: false,
     socialManagement: false,
@@ -18,7 +18,7 @@ function PricingCalculator({ isOpen, onClose }) {
   })
 
   // Text input values (parsed to numbers on blur/valid change)
-  const [pagesStr, setPagesStr] = useState('5')
+  const [pagesStr, setPagesStr] = useState('3')
   const [widgetsStr, setWidgetsStr] = useState('0')
   const [formsStr, setFormsStr] = useState('0')
   const [errors, setErrors] = useState({ pages: '', widgets: '', forms: '' })
@@ -26,15 +26,15 @@ function PricingCalculator({ isOpen, onClose }) {
   // Pricing constants
   const PRICING = {
     website: {
-      base: 1900,
-      additionalPage: 225,
+      base: 1200,
+      additionalPage: 200,
     },
     hosting: {
-      monthly: 60,
+      monthly: 50,
     },
     social: {
-      setup: 650,
-      management: 250,
+      setup: 400,
+      management: 150,
     },
     addons: {
       widgets: 200,
@@ -49,8 +49,8 @@ function PricingCalculator({ isOpen, onClose }) {
     // Website cost
     if (selections.website) {
       total += PRICING.website.base
-      if (selections.pages > 5) {
-        total += (selections.pages - 5) * PRICING.website.additionalPage
+      if (selections.pages > 3) {
+        total += (selections.pages - 3) * PRICING.website.additionalPage
       }
     }
 
@@ -78,7 +78,7 @@ function PricingCalculator({ isOpen, onClose }) {
   const recurringMonthly =
     (selections.website && selections.hostingOnServers ? PRICING.hosting.monthly : 0) +
     (selections.socialManagement ? PRICING.social.management : 0)
-  const additionalPages = selections.website ? Math.max(0, selections.pages - 5) : 0
+  const additionalPages = selections.website ? Math.max(0, selections.pages - 3) : 0
 
   const buildQuotePrefill = () => {
     const lines = [
@@ -89,7 +89,7 @@ function PricingCalculator({ isOpen, onClose }) {
     ]
 
     if (selections.website) {
-      lines.push('- Website Design & Development (5-page base): $1,900')
+      lines.push('- Website Design & Development (3-page base): $1,200')
       if (additionalPages > 0) {
         lines.push(
           `- Additional Pages: ${additionalPages} x $${PRICING.website.additionalPage.toLocaleString()} = $${(
@@ -169,7 +169,7 @@ function PricingCalculator({ isOpen, onClose }) {
     const trimmed = String(str).trim()
     if (trimmed === '') return { valid: false, value: null }
     const num = parseInt(trimmed, 10)
-    if (Number.isNaN(num) || num < 5) return { valid: false, value: null }
+    if (Number.isNaN(num) || num < 3) return { valid: false, value: null }
     return { valid: true, value: num }
   }
 
@@ -201,9 +201,9 @@ function PricingCalculator({ isOpen, onClose }) {
       setErrors((prev) => ({ ...prev, pages: VALIDATION_MSG }))
       const trimmed = pagesStr.trim()
       const num = parseInt(trimmed, 10)
-      if (trimmed === '' || (!Number.isNaN(num) && num < 5)) {
-        handleChange('pages', 5)
-        setPagesStr('5')
+      if (trimmed === '' || (!Number.isNaN(num) && num < 3)) {
+        handleChange('pages', 3)
+        setPagesStr('3')
       }
     }
   }
@@ -327,7 +327,7 @@ function PricingCalculator({ isOpen, onClose }) {
               />
               <span className="checkbox-label">
                 <span className="service-name">Website Design & Development</span>
-                <span className="service-price">$1,900 base (5 pages value)</span>
+                <span className="service-price">$1,200 base (3 pages)</span>
               </span>
             </label>
             {selections.website && (
@@ -351,10 +351,10 @@ function PricingCalculator({ isOpen, onClose }) {
                     {errors.pages}
                   </p>
                 )}
-                {selections.pages > 5 && (
+                {selections.pages > 3 && (
                   <div className="additional-cost">
-                    +${((selections.pages - 5) * PRICING.website.additionalPage).toLocaleString()} for{' '}
-                    {selections.pages - 5} additional page{selections.pages - 5 > 1 ? 's' : ''}
+                    +${((selections.pages - 3) * PRICING.website.additionalPage).toLocaleString()} for{' '}
+                    {selections.pages - 3} additional page{selections.pages - 3 > 1 ? 's' : ''}
                   </div>
                 )}
                 <label className="calculator-checkbox">
@@ -365,7 +365,7 @@ function PricingCalculator({ isOpen, onClose }) {
                   />
                   <span className="checkbox-label">
                     <span className="service-name">Host on our servers</span>
-                    <span className="service-price">+$60/month</span>
+                    <span className="service-price">+$50/month</span>
                   </span>
                 </label>
               </div>
@@ -458,7 +458,7 @@ function PricingCalculator({ isOpen, onClose }) {
               />
               <span className="checkbox-label">
                 <span className="service-name">Social Launch Setup</span>
-                <span className="service-price">$650 (one-time)</span>
+                <span className="service-price">$400 (one-time)</span>
               </span>
             </label>
             <label className="calculator-checkbox">
@@ -469,7 +469,7 @@ function PricingCalculator({ isOpen, onClose }) {
               />
               <span className="checkbox-label">
                 <span className="service-name">Monthly Management (Lite)</span>
-                <span className="service-price">$250/month</span>
+                <span className="service-price">$150/month</span>
               </span>
             </label>
           </div>

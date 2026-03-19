@@ -42,16 +42,16 @@ function PricingSection() {
             <div className="pricing-content">
               <div className="pricing-base">
                 <div className="pricing-item">
-                  <span className="pricing-label">Custom Static Website (up to 5 pages)</span>
-                  <span className="pricing-value">$1,900</span>
+                  <span className="pricing-label">Custom Static Website (3 pages)</span>
+                  <span className="pricing-value">$1,200</span>
                 </div>
                 <div className="pricing-item">
                   <span className="pricing-label">Additional Pages</span>
-                  <span className="pricing-value">$225/page</span>
+                  <span className="pricing-value">$200/page</span>
                 </div>
                 <div className="pricing-item">
                   <span className="pricing-label">Hosting & Maintenance</span>
-                  <span className="pricing-value">$60/month</span>
+                  <span className="pricing-value">$50/month</span>
                 </div>
               </div>
               <div className="pricing-features">
@@ -85,11 +85,11 @@ function PricingSection() {
               <div className="pricing-base">
                 <div className="pricing-item">
                   <span className="pricing-label">Social Launch Setup</span>
-                  <span className="pricing-value">$650</span>
+                  <span className="pricing-value">$400</span>
                 </div>
                 <div className="pricing-item">
                   <span className="pricing-label">Monthly Management (Lite)</span>
-                  <span className="pricing-value">$250/month</span>
+                  <span className="pricing-value">$150/month</span>
                 </div>
               </div>
               <div className="pricing-features">

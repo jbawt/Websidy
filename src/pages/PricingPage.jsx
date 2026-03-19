@@ -63,13 +63,12 @@ function PricingPage() {
             <div className="pricing-detail-grid">
               <div className="pricing-detail-card">
                 <h3>Custom Static Website</h3>
-                <div className="pricing-amount">$1,900</div>
-                <p className="pricing-includes">Includes up to 5 pages:</p>
+                <div className="pricing-amount">$1,200</div>
+                <p className="pricing-includes">Includes 3 pages:</p>
                 <ul className="pricing-features-list">
                   <li>Home page</li>
-                  <li>About page</li>
-                  <li>Contact page</li>
-                  <li>Services and portfolio pages</li>
+                  <li>Services page</li>
+                  <li>About / Contact page</li>
                   <li>Responsive design</li>
                   <li>Custom developed code (no page builders)</li>
                   <li>Static architecture for speed and uptime</li>
@@ -80,7 +79,7 @@ function PricingPage() {
               </div>
               <div className="pricing-detail-card">
                 <h3>Additional Pages</h3>
-                <div className="pricing-amount">$225<span className="pricing-period">/page</span></div>
+                <div className="pricing-amount">$200<span className="pricing-period">/page</span></div>
                 <p className="pricing-includes">Each additional page includes:</p>
                 <ul className="pricing-features-list">
                   <li>Custom design</li>
@@ -92,7 +91,7 @@ function PricingPage() {
               </div>
               <div className="pricing-detail-card featured">
                 <h3>Hosting & Maintenance</h3>
-                <div className="pricing-amount">$60<span className="pricing-period">/month</span></div>
+                <div className="pricing-amount">$50<span className="pricing-period">/month</span></div>
                 <ul className="pricing-features-list">
                   <li>Managed hosting for static and custom projects</li>
                   <li>Secure deployment and uptime checks</li>
@@ -104,10 +103,6 @@ function PricingPage() {
             <div className="pricing-addons">
               <h3>Optional Add-ons</h3>
               <div className="addon-grid">
-                <div className="addon-item">
-                  <span className="addon-name">Blog Setup</span>
-                  <span className="addon-price">+$350</span>
-                </div>
                 <div className="addon-item">
                   <span className="addon-name">Custom Feature Block / Widget</span>
                   <span className="addon-price">+$200</span>
@@ -152,7 +147,7 @@ function PricingPage() {
             <div className="pricing-detail-grid">
               <div className="pricing-detail-card">
                 <h3>Social Launch Setup</h3>
-                <div className="pricing-amount">$650</div>
+                <div className="pricing-amount">$400</div>
                 <p className="pricing-includes">One-time setup includes:</p>
                 <ul className="pricing-features-list">
                   <li>Account setup and profile optimization</li>
@@ -164,7 +159,7 @@ function PricingPage() {
               </div>
               <div className="pricing-detail-card">
                 <h3>Monthly Management (Lite)</h3>
-                <div className="pricing-amount">$250<span className="pricing-period">/month</span></div>
+                <div className="pricing-amount">$150<span className="pricing-period">/month</span></div>
                 <p className="pricing-includes">Ongoing management includes:</p>
                 <ul className="pricing-features-list">
                   <li>8-10 posts per month</li>
