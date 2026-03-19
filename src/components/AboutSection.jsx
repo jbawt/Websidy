@@ -6,14 +6,12 @@ function AboutSection() {
     <section className="about-section" id="about">
       <div className="about-content">
         <span className="about-eyebrow">Why Websidy</span>
-        <h2>We combine polished visuals with practical systems</h2>
+        <h2>Professional web design and digital services for Central Alberta</h2>
         <p>
-          Websidy is a modern digital services company specializing in clean, effective website design for small and
-          medium-sized businesses. We build fast, reliable static websites that help brands establish a strong online presence with ease.
+          Based in Sylvan Lake, Websidy helps small and medium-sized businesses across Central Alberta build a strong online presence. We create fast, reliable websites and handle social media setup and training so your brand stands out—without needing a technical team.
         </p>
         <p>
-          In addition to web design, we handle social media setup and run personalized training so your team feels confident managing
-          and growing every channel we launch. Our goal: make digital presence simple, accessible, and unmistakably professional.
+          From website design and development to social media launch and ongoing support, we focus on clear, results-driven solutions. Our goal is simple: make professional digital presence accessible so local businesses can compete and grow with confidence.
         </p>
         {/* <div className="about-metrics">
           <div className="metric">

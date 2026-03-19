@@ -18,9 +18,7 @@ function PricingPage() {
             <span className="pricing-hero-eyebrow">Pricing</span>
             <h1>Simple, Transparent Pricing</h1>
             <p className="pricing-hero-description">
-              Competitive, market-aligned pricing for Central Alberta businesses. Every project is
-              custom developed code with clear scope, and our static websites are extremely fast,
-              reliable, and secure.
+              Clear, competitive pricing for website design and digital services in Sylvan Lake and across Central Alberta. Every project is custom-built for speed, security, and reliability—with no hidden fees.
             </p>
             <button
               className="pricing-calculator-button"
@@ -181,7 +179,7 @@ function PricingPage() {
         {/* CTA Section */}
         <section className="pricing-cta-section">
           <h2>Ready to Get Started?</h2>
-          <p>Let's discuss your project and find the perfect package for your needs.</p>
+          <p>Let's discuss your project and find the right package for your Central Alberta business.</p>
           <div className="pricing-cta-buttons">
             <Link to="/contact" className="pricing-cta-button">
               Get in Touch

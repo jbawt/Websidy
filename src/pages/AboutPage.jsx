@@ -34,11 +34,9 @@ function AboutPage() {
         <section className="about-hero">
           <div className="about-hero-content">
             <span className="about-hero-eyebrow">About Websidy</span>
-            <h1>Building Digital Excellence, One Site at a Time</h1>
+            <h1>Web Design & Digital Marketing for Central Alberta</h1>
             <p className="about-hero-description">
-              We're a team of designers and developers passionate about creating beautiful, functional
-              websites that help businesses thrive online. Our approach combines modern design with
-              practical solutions.
+              Based in Sylvan Lake, we help businesses across Central Alberta build professional websites and grow their online presence. We combine modern design with practical, results-focused solutions—so you get a site that looks great and works for your goals.
             </p>
           </div>
           <div className="about-hero-visual">
@@ -66,9 +64,7 @@ function AboutPage() {
           <div className="about-mission-intro">
             <h2>Our Mission</h2>
             <p>
-              To empower small and medium-sized businesses with professional digital presence that
-              doesn't require a technical team. We believe every business deserves a website that
-              reflects their brand and drives results.
+              To give small and medium-sized businesses in Sylvan Lake and Central Alberta a professional digital presence—without needing a technical team. We believe every local business deserves a website that reflects their brand, ranks well in search, and helps them grow.
             </p>
           </div>
           <div className="about-mission-visual">
@@ -141,7 +137,7 @@ function AboutPage() {
                   </svg>
                 </div>
                 <h3>Client Focused</h3>
-                <p>Your success is our success. We're here to support you every step of the way.</p>
+                <p>Your success is our success. We work with businesses across Central Alberta and are here to support you every step of the way.</p>
               </div>
               <div className="value-item">
                 <div className="value-icon">

@@ -29,10 +29,9 @@ function ServicesPage() {
         {/* Hero Section */}
         <section className="services-hero">
           <span className="services-hero-eyebrow">Our Services</span>
-          <h1>Comprehensive Digital Solutions</h1>
+          <h1>Web Design & Digital Services for Central Alberta</h1>
           <p className="services-hero-description">
-            From website design to social media management, we provide end-to-end digital services
-            that help your business thrive online.
+            From custom website design to social media setup and training, we help Sylvan Lake and Central Alberta businesses build and grow their online presence with clear, professional solutions.
           </p>
         </section>
 
@@ -56,9 +55,9 @@ function ServicesPage() {
               </svg>
             </div>
             <div className="service-detail-title">
-              <h2>Website Design & Branding</h2>
+              <h2>Website Design & Development</h2>
               <p className="service-detail-subtitle">
-                Strategic, conversion-focused websites built around your brand
+                Custom, conversion-focused websites built for Central Alberta businesses
               </p>
             </div>
           </div>
@@ -66,9 +65,7 @@ function ServicesPage() {
           <div className="service-detail-content">
             <div className="service-detail-description">
               <p>
-                We design and build modern websites that communicate your brand clearly, load quickly,
-                and guide visitors toward action. Every build is structured for long-term scalability,
-                usability, and consistent presentation across devices.
+                We design and build modern websites that communicate your brand clearly, load quickly, and guide visitors toward action. Every site is built for speed, SEO, and consistent performance across devices—so you rank better and convert more.
               </p>
             </div>
 
@@ -142,7 +139,7 @@ function ServicesPage() {
             <div className="service-detail-title">
               <h2>Social Media Setup & Training</h2>
               <p className="service-detail-subtitle">
-                Get your social media presence up and running with expert guidance
+                Launch and manage your social presence with expert setup and training for Central Alberta businesses
               </p>
             </div>
           </div>
@@ -150,9 +147,7 @@ function ServicesPage() {
           <div className="service-detail-content">
             <div className="service-detail-description">
               <p>
-                We don't just set up your social media accounts—we empower you to manage them
-                confidently. Our comprehensive training ensures you understand how to create
-                engaging content, interact with your audience, and grow your online presence.
+                We don't just set up your social accounts—we train you to run them with confidence. From account creation to content strategy, we help Central Alberta businesses build an engaging, on-brand presence that grows with you.
               </p>
             </div>
 
@@ -209,7 +204,7 @@ function ServicesPage() {
         {/* CTA Section */}
         <section className="services-cta-section">
           <h2>Ready to Get Started?</h2>
-          <p>Let's discuss how we can help bring your digital vision to life.</p>
+          <p>Let's discuss your project and how we can help your Central Alberta business grow online.</p>
           <div className="services-cta-buttons">
             <Link to="/pricing" className="services-cta-button">View Full Pricing</Link>
             <Link to="/contact" className="services-cta-button">Get in Touch</Link>

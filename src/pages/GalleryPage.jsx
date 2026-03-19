@@ -27,10 +27,10 @@ function GalleryPage() {
         <section className="gallery-hero">
           <div className="gallery-hero-content">
             <span className="gallery-hero-eyebrow">Our Work</span>
-            <h1>Portfolio Gallery</h1>
+            <h1>Web Design Portfolio</h1>
+            <h2>Central Alberta Businesses</h2>
             <p className="gallery-hero-description">
-              Explore the websites we've built for our clients. Each project is crafted with attention
-              to detail, performance, and user experience.
+              See the websites we've built for businesses like yours. Each project is designed for performance, search visibility, and a great user experience.
             </p>
           </div>
           <div className="gallery-hero-visual">

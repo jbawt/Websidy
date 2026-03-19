@@ -78,10 +78,9 @@ function ContactPage() {
                 </div>
               </div>
             </h1>
-            <h2 className="contact-hero-subheader">Let's Build Something Amazing Together</h2>
+            <h2 className="contact-hero-subheader">Let's Build Something Great Together</h2>
             <p className="contact-hero-description">
-              Have a project in mind? Want to learn more about our services? We'd love to hear from you.
-              Fill out the form below and we'll get back to you as soon as possible.
+              Have a project in mind? Serving Sylvan Lake and Central Alberta—we'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.
             </p>
           </div>
         </section>

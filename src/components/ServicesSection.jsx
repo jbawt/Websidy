@@ -4,10 +4,10 @@ import './ServicesSection.css'
 
 const services = [
   {
-    title: 'Website Design & Branding',
+    title: 'Website Design & Development',
     description:
-      'Website packages start at $1,200 for 3 pages, with additional pages at $200 each and optional hosting for $50/month.',
-    features: ['Strategic website branding and visual identity', 'Custom website building with responsive, modern layouts', 'Reliable managed hosting with ongoing support'],
+      'Custom websites for Central Alberta businesses—responsive, fast, and SEO-friendly. Packages from 3 pages with optional hosting and ongoing support.',
+    features: ['Strategic branding and visual identity for your business', 'Custom-built responsive websites (no generic templates)', 'Managed hosting and ongoing support for peace of mind'],
     icon: 'design',
     badge: 'Pricing',
     cta: 'See website pricing',
@@ -15,8 +15,8 @@ const services = [
   {
     title: 'Social Media Setup & Training',
     description:
-      'From account creation to on-brand content templates, we equip you with everything you need to show up consistently.',
-    features: ['Channel setup & audit', 'Content playbooks & training', 'Growth and engagement coaching'],
+      'Get your social presence launched with on-brand profiles, content templates, and training so you can post and engage with confidence.',
+    features: ['Full channel setup and audit', 'Content playbooks and hands-on training', 'Growth and engagement coaching for local reach'],
     icon: 'social',
     badge: 'Engagement',
     cta: 'See training details',
@@ -102,10 +102,9 @@ function ServicesSection() {
     <section className="services-section" id="services">
       <div className="services-intro">
         <p className="eyebrow">What We Do</p>
-        <h2>Services built to launch, scale, and stand out</h2>
+        <h2>Web design and social media services for Sylvan Lake & Central Alberta</h2>
         <p>
-          We pair strategy with execution to launch websites and social channels that feel cohesive, performant, and easy
-          to maintain. Every engagement comes with thoughtful handoff, documentation, and coaching.
+          We help Central Alberta businesses launch and grow online with strategic websites and social media. Every project includes clear handoff, documentation, and training so you can maintain and scale with confidence.
         </p>
       </div>
 

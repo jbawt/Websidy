@@ -64,7 +64,7 @@ function Footer() {
         {/* Main Footer Content */}
         <div className="footer-content">
          <div className="footer-section footer-copyright">
-            <p className="copyright">© 2025 Websidy.</p>
+            <p className="copyright">© 2025 Websidy · Sylvan Lake, Alberta</p>
           </div>
 
           <nav className="footer-section footer-nav">

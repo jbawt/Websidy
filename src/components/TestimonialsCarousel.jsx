@@ -72,7 +72,7 @@ function TestimonialsCarousel() {
       <div className="testimonials-container">
         <div className="testimonials-header">
           <span className="testimonials-eyebrow">What Clients Say</span>
-          <h2>Trusted by businesses like yours</h2>
+          <h2>Trusted by businesses across Central Alberta</h2>
         </div>
 
         <div className="carousel-wrapper">
