@@ -52,11 +52,6 @@
   background-color: var(--accent-color);
 }
 
-.app.light .footer .social-link:hover .social-icon,
-.app.dark .footer .social-link:hover .social-icon {
-  filter: drop-shadow(0 0 8px var(--accent-color-soft));
-}
-
 /* Additional restrained accent placements */
 .app .pricing-cta-button-secondary {
   border-color: var(--accent-color);

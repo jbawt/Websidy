@@ -89,11 +89,6 @@ function Footer() {
                   Pricing
                 </Link>
               </li>
-              {/* <li>
-                <Link to="/faq" className="footer-link">
-                  FAQ
-                </Link>
-              </li> */}
               <li>
                 <Link to="/portfolio" className="footer-link">
                   Portfolio

@@ -13,20 +13,6 @@ function AboutSection() {
         <p>
           From website design and development to social media launch and ongoing support, we focus on clear, results-driven solutions. Our goal is simple: make professional digital presence accessible so local businesses can compete and grow with confidence.
         </p>
-        {/* <div className="about-metrics">
-          <div className="metric">
-            <span className="metric-value">50+</span>
-            <span className="metric-label">Sites launched</span>
-          </div>
-          <div className="metric">
-            <span className="metric-value">2x</span>
-            <span className="metric-label">Avg. lift in leads</span>
-          </div>
-          <div className="metric">
-            <span className="metric-value">7 day</span>
-            <span className="metric-label">Typical turnaround</span>
-          </div>
-        </div> */}
       </div>
       <div className="about-visual">
         <div className="orb orb-one" />

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import HomeHeader from '../components/HomeHeader'
 import ServicesSection from '../components/ServicesSection'
 import SectionDivider from '../components/SectionDivider'
@@ -11,8 +10,6 @@ import SimpleDivider from '../components/SimpleDivider'
 import '../pages/HomePage.css'
 
 function HomePage() {
-  const theme = useSelector((state) => state.theme.mode)
-
   return (
     <main className="home-page">
       <HomeHeader />
