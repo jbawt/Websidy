@@ -47,7 +47,7 @@ function App() {
   }, [dispatch])
 
   return (
-    <Router basename="/Websidy">
+    <Router>
       <ScrollToTop />
       <div className={`app ${theme}`}>
         <Navbar />

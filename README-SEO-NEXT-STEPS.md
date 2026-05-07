@@ -57,7 +57,7 @@ This guide outlines practical next steps to improve search visibility and rankin
 - In `<head>`, add a canonical link for each page, e.g.  
   `<link rel="canonical" href="https://jbawt.github.io/Websidy/" />` for the home page, and equivalent full URLs for `/services`, `/about`, `/pricing`, `/contact`, `/portfolio`.
 - Ensure internal links and sitemap use the same base: `https://jbawt.github.io/Websidy` (no trailing slash, or consistent trailing slash — pick one and stick to it).
-- React Router’s `basename="/Websidy"` is correct; just make sure canonical and sitemap match that base.
+- React Router should use the root path (no `basename`) for Netlify hosting; make sure canonical and sitemap match your production domain.
 
 ---
 

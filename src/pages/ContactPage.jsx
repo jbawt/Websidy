@@ -5,6 +5,7 @@ import './ContactPage.css'
 import websidyLogo from '../assets/websidy_logo_transparent.png'
 
 function ContactPage() {
+  const FORM_NAME = 'contact'
   const theme = useSelector((state) => state.theme.mode)
   const location = useLocation()
   const [formData, setFormData] = useState({
@@ -40,13 +41,30 @@ function ContactPage() {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
-    // Simulate form submission
-    setTimeout(() => {
+    const payload = new URLSearchParams({
+      'form-name': FORM_NAME,
+      ...formData,
+    }).toString()
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: payload,
+      })
+
+      if (!response.ok) {
+        throw new Error('Form submission failed')
+      }
+
       setIsSubmitting(false)
       setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
       setTimeout(() => setSubmitStatus(null), 5000)
-    }, 1500)
+    } catch (error) {
+      setIsSubmitting(false)
+      setSubmitStatus('error')
+    }
   }
 
   return (
@@ -85,7 +103,21 @@ function ContactPage() {
 
           <div className="contact-form-panel">
             <div className="contact-form-card">
-              <form className="contact-form" onSubmit={handleSubmit}>
+              <form
+                className="contact-form"
+                name={FORM_NAME}
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+              >
+                <input type="hidden" name="form-name" value={FORM_NAME} />
+                <p hidden>
+                  <label>
+                    Don’t fill this out if you’re human:
+                    <input name="bot-field" />
+                  </label>
+                </p>
                 <div className="form-group">
                   <label htmlFor="name">Name</label>
                   <input
@@ -157,6 +189,15 @@ function ContactPage() {
                       <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     <span>Message sent successfully! We'll get back to you soon.</span>
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="submit-success submit-error" role="alert">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+                      <path d="M9 9L15 15M15 9L9 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                    </svg>
+                    <span>Something went wrong. Please try again in a moment.</span>
                   </div>
                 )}
               </form>
