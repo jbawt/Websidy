@@ -94,12 +94,14 @@ function GalleryModal({ isOpen, onClose, project }) {
                     </div>
                   </div>
                   <div className="desktop-screen">
-                    <iframe
-                      src={project.url}
-                      title={`${project.name} - Desktop`}
-                      className="device-iframe"
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                    />
+                    <div className="device-iframe-clip device-iframe-clip-desktop">
+                      <iframe
+                        src={project.url}
+                        title={`${project.name} - Desktop`}
+                        className="device-iframe"
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                      />
+                    </div>
                   </div>
                 </div>
               )}
@@ -108,13 +110,15 @@ function GalleryModal({ isOpen, onClose, project }) {
               {activeDevice === 'tablet' && (
                 <div className="tablet-frame">
                   <div className="tablet-screen">
-                    <iframe
-                      src={project.url}
-                      title={`${project.name} - Tablet`}
-                      className="device-iframe"
-                      style={{ width: '100%', height: '100%', border: 'none' }}
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                    />
+                    <div className="device-iframe-clip device-iframe-clip-tablet">
+                      <iframe
+                        src={project.url}
+                        title={`${project.name} - Tablet`}
+                        className="device-iframe"
+                        style={{ width: '100%', height: '100%', border: 'none' }}
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                      />
+                    </div>
                   </div>
                 </div>
               )}
@@ -124,13 +128,15 @@ function GalleryModal({ isOpen, onClose, project }) {
                 <div className="mobile-frame">
                   <div className="mobile-notch"></div>
                   <div className="mobile-screen">
-                    <iframe
-                      src={project.url}
-                      title={`${project.name} - Mobile`}
-                      className="device-iframe"
-                      style={{ width: '100%', height: '100%', border: 'none' }}
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                    />
+                    <div className="device-iframe-clip device-iframe-clip-mobile">
+                      <iframe
+                        src={project.url}
+                        title={`${project.name} - Mobile`}
+                        className="device-iframe"
+                        style={{ width: '100%', height: '100%', border: 'none' }}
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                      />
+                    </div>
                   </div>
                   <div className="mobile-home-indicator"></div>
                 </div>

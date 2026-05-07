@@ -95,7 +95,7 @@ function SectionDivider() {
         <div className="divider-eyebrow">How We Work</div>
         <h3>Our Process</h3>
         <p>
-          From discovery to launch, we follow a clear process so every Central Alberta client gets consistent, high-quality results—on time and on scope.
+          From discovery to launch, we follow a clear process so every Central Alberta client gets consistent, high-quality results, on time and on scope.
         </p>
       </div>
 

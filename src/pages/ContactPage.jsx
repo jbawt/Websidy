@@ -52,9 +52,8 @@ function ContactPage() {
   return (
     <main className={`contact-page ${theme}`} id="contact">
       <div className="contact-page-container">
-        {/* Hero Section */}
-        <section className="contact-hero">
-          <div className="contact-hero-content">
+        <section className="contact-main">
+          <div className="contact-intro">
             <span className="contact-hero-eyebrow">Get in Touch</span>
             <h1 className="message-us-title">
               <div className="message-us-container">
@@ -80,15 +79,12 @@ function ContactPage() {
             </h1>
             <h2 className="contact-hero-subheader">Let's Build Something Great Together</h2>
             <p className="contact-hero-description">
-              Have a project in mind? Serving Sylvan Lake and Central Alberta—we'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.
+              Have a project in mind? Serving Sylvan Lake and Central Alberta, we'd love to hear from you. Fill out the form and we'll get back to you as soon as possible.
             </p>
           </div>
-        </section>
 
-        {/* Contact Form Section */}
-        <section className="contact-form-section">
-          <div className="contact-form-wrapper">
-            <div className="form-content-side">
+          <div className="contact-form-panel">
+            <div className="contact-form-card">
               <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name">Name</label>

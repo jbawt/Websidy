@@ -10,18 +10,28 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .social-sidebar-link {
   position: relative;
-  display: flex;
+  display: inline-flex;
+  flex-direction: row-reverse;
   align-items: center;
-  justify-content: center;
-  width: 48px;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  max-width: 48px;
+  min-height: 48px;
   height: 48px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
+  padding: 0 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  transition:
+    max-width 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
   text-decoration: none;
   color: inherit;
   background: rgba(255, 255, 255, 0.1);
@@ -40,12 +50,13 @@
 }
 
 .social-sidebar-icon {
+  flex-shrink: 0;
   width: 24px;
   height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, filter 0.3s ease, transform 0.3s ease;
 }
 
 .social-sidebar-icon svg {
@@ -71,59 +82,247 @@
   fill: #fafafa;
 }
 
-.social-sidebar-link:hover {
-  transform: translateY(-8px) scale(1.1);
+.social-sidebar-link:hover,
+.social-sidebar-link:focus-visible {
+  max-width: 220px;
 }
 
-.app.light .social-sidebar-link:hover {
+.app.light
+  .social-sidebar-link:not(.social-sidebar-link--facebook):not(.social-sidebar-link--instagram):not(
+    .social-sidebar-link--contact
+  ):hover,
+.app.light
+  .social-sidebar-link:not(.social-sidebar-link--facebook):not(.social-sidebar-link--instagram):not(
+    .social-sidebar-link--contact
+  ):focus-visible {
   background: rgba(30, 64, 175, 0.15);
   box-shadow: 0 6px 20px rgba(30, 64, 175, 0.2);
 }
 
-.app.dark .social-sidebar-link:hover {
+.app.dark
+  .social-sidebar-link:not(.social-sidebar-link--facebook):not(.social-sidebar-link--instagram):not(
+    .social-sidebar-link--contact
+  ):hover,
+.app.dark
+  .social-sidebar-link:not(.social-sidebar-link--facebook):not(.social-sidebar-link--instagram):not(
+    .social-sidebar-link--contact
+  ):focus-visible {
   background: rgba(250, 250, 250, 0.15);
   box-shadow: 0 6px 20px rgba(250, 250, 250, 0.1);
 }
 
-.social-sidebar-link:hover .social-sidebar-icon {
+.social-sidebar-link:not(.social-sidebar-link--facebook):not(.social-sidebar-link--instagram):not(
+    .social-sidebar-link--contact
+  ):hover
+  .social-sidebar-icon,
+.social-sidebar-link:not(.social-sidebar-link--facebook):not(.social-sidebar-link--instagram):not(
+    .social-sidebar-link--contact
+  ):focus-visible
+  .social-sidebar-icon {
   color: var(--accent-color);
   filter: drop-shadow(0 0 8px var(--accent-color-soft));
-  transform: scale(1.15);
+  transform: scale(1.08);
 }
 
-.social-sidebar-tooltip {
-  position: absolute;
-  right: 60px;
-  padding: 0.5rem 1rem;
-  background: var(--accent-color);
-  color: white;
-  border-radius: 0.5rem;
+.social-sidebar-label {
+  flex-shrink: 0;
   font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
   white-space: nowrap;
   opacity: 0;
-  pointer-events: none;
-  transform: translateX(10px);
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1001;
+  transform: translateX(6px);
+  transition:
+    opacity 0.28s ease 0.04s,
+    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-sidebar-tooltip::before {
-  content: '';
-  position: absolute;
-  right: -6px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-left: 6px solid var(--accent-color);
+.app.light .social-sidebar-label {
+  color: #1e3a8a;
 }
 
-.social-sidebar-link:hover .social-sidebar-tooltip {
+.app.dark .social-sidebar-label {
+  color: #fafafa;
+}
+
+.social-sidebar-link:hover .social-sidebar-label,
+.social-sidebar-link:focus-visible .social-sidebar-label {
   opacity: 1;
   transform: translateX(0);
+}
+
+.social-sidebar-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+/* Facebook — Meta brand blue */
+.social-sidebar-link--facebook {
+  backdrop-filter: none;
+  background: #1877f2;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(24, 119, 242, 0.4);
+}
+
+.app.light .social-sidebar-link--facebook,
+.app.dark .social-sidebar-link--facebook {
+  background: #1877f2;
+  box-shadow: 0 4px 16px rgba(24, 119, 242, 0.4);
+}
+
+.social-sidebar-link--facebook .social-sidebar-icon {
+  color: #fff;
+}
+
+.social-sidebar-link--facebook .social-sidebar-icon svg,
+.social-sidebar-link--facebook .social-sidebar-icon path {
+  fill: #ffffff;
+}
+
+.social-sidebar-link--facebook .social-sidebar-label {
+  color: #fff;
+}
+
+.app.light .social-sidebar-link--facebook .social-sidebar-label {
+  color: #ffffff;
+}
+
+.social-sidebar-link--facebook:hover,
+.social-sidebar-link--facebook:focus-visible {
+  background: #166fe5;
+  box-shadow: 0 6px 22px rgba(24, 119, 242, 0.5);
+}
+
+.social-sidebar-link--facebook:hover .social-sidebar-icon,
+.social-sidebar-link--facebook:focus-visible .social-sidebar-icon {
+  color: #fff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transform: scale(1.08);
+}
+
+.social-sidebar-link--facebook:hover .social-sidebar-icon path,
+.social-sidebar-link--facebook:focus-visible .social-sidebar-icon path {
+  fill: #ffffff;
+}
+
+/* Theme icon colors must not tint the Facebook glyph */
+.app.light .social-sidebar-link--facebook .social-sidebar-icon svg,
+.app.light .social-sidebar-link--facebook .social-sidebar-icon path,
+.app.dark .social-sidebar-link--facebook .social-sidebar-icon svg,
+.app.dark .social-sidebar-link--facebook .social-sidebar-icon path {
+  fill: #ffffff;
+}
+
+.social-sidebar-link--facebook:focus-visible {
+  outline-color: #0d5bdb;
+}
+
+/* Instagram — brand gradient */
+.social-sidebar-link--instagram {
+  backdrop-filter: none;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(220, 39, 67, 0.35);
+}
+
+.app.light .social-sidebar-link--instagram,
+.app.dark .social-sidebar-link--instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  box-shadow: 0 4px 16px rgba(220, 39, 67, 0.35);
+}
+
+.social-sidebar-link--instagram .social-sidebar-icon,
+.social-sidebar-link--instagram .social-sidebar-icon svg {
+  color: #fff;
+  fill: #fff;
+}
+
+.social-sidebar-link--instagram .social-sidebar-label {
+  color: #fff;
+}
+
+.social-sidebar-link--instagram:hover,
+.social-sidebar-link--instagram:focus-visible {
+  box-shadow: 0 6px 24px rgba(188, 24, 136, 0.45);
+  filter: brightness(1.06);
+}
+
+.social-sidebar-link--instagram:focus-visible {
+  outline-color: #dc2743;
+}
+
+/* Contact — Websidy blue (matches site headers / CTAs) */
+.social-sidebar-link--contact {
+  backdrop-filter: none;
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+}
+
+.app.light .social-sidebar-link--contact,
+.app.dark .social-sidebar-link--contact {
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+}
+
+.social-sidebar-link--contact .social-sidebar-icon {
+  color: #fff;
+}
+
+.social-sidebar-link--contact .social-sidebar-icon svg,
+.social-sidebar-link--contact .social-sidebar-icon path {
+  fill: #ffffff;
+}
+
+.social-sidebar-link--contact .social-sidebar-label {
+  color: #fff;
+}
+
+.app.light .social-sidebar-link--contact .social-sidebar-label {
+  color: #ffffff;
+}
+
+.social-sidebar-link--contact:hover,
+.social-sidebar-link--contact:focus-visible {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 6px 22px rgba(59, 130, 246, 0.5);
+}
+
+.social-sidebar-link--contact:hover .social-sidebar-icon,
+.social-sidebar-link--contact:focus-visible .social-sidebar-icon {
+  color: #fff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transform: scale(1.08);
+}
+
+.social-sidebar-link--contact:hover .social-sidebar-icon path,
+.social-sidebar-link--contact:focus-visible .social-sidebar-icon path {
+  fill: #ffffff;
+}
+
+.app.light .social-sidebar-link--contact .social-sidebar-icon svg,
+.app.light .social-sidebar-link--contact .social-sidebar-icon path,
+.app.dark .social-sidebar-link--contact .social-sidebar-icon svg,
+.app.dark .social-sidebar-link--contact .social-sidebar-icon path {
+  fill: #ffffff;
+}
+
+.social-sidebar-link--contact:focus-visible {
+  outline-color: #2563eb;
 }
 
 /* Responsive Design */
@@ -138,8 +337,15 @@
   }
 
   .social-sidebar-link {
-    width: 44px;
+    max-width: 44px;
+    min-height: 44px;
     height: 44px;
+    padding: 0 12px;
+  }
+
+  .social-sidebar-link:hover,
+  .social-sidebar-link:focus-visible {
+    max-width: 200px;
   }
 
   .social-sidebar-icon {
@@ -159,8 +365,15 @@
   }
 
   .social-sidebar-link {
-    width: 40px;
+    max-width: 40px;
+    min-height: 40px;
     height: 40px;
+    padding: 0 9px;
+  }
+
+  .social-sidebar-link:hover,
+  .social-sidebar-link:focus-visible {
+    max-width: 200px;
   }
 
   .social-sidebar-icon {
@@ -173,8 +386,8 @@
     height: 100%;
   }
 
-  .social-sidebar-tooltip {
-    display: none;
+  .social-sidebar-label {
+    font-size: 0.8125rem;
   }
 }
 
@@ -185,8 +398,15 @@
   }
 
   .social-sidebar-link {
-    width: 36px;
+    max-width: 36px;
+    min-height: 36px;
     height: 36px;
+    padding: 0 8px;
+  }
+
+  .social-sidebar-link:hover,
+  .social-sidebar-link:focus-visible {
+    max-width: 190px;
   }
 
   .social-sidebar-icon {
@@ -197,5 +417,9 @@
   .social-sidebar-icon svg {
     width: 100%;
     height: 100%;
+  }
+
+  .social-sidebar-label {
+    font-size: 0.75rem;
   }
 }

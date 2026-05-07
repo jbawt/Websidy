@@ -18,7 +18,7 @@ function PricingPage() {
             <span className="pricing-hero-eyebrow">Pricing</span>
             <h1>Simple, Transparent Pricing</h1>
             <p className="pricing-hero-description">
-              Clear, competitive pricing for website design and digital services in Sylvan Lake and across Central Alberta. Every project is custom-built for speed, security, and reliability—with no hidden fees.
+              Clear, competitive pricing for website design and digital services in Sylvan Lake and across Central Alberta. Every project is custom-built for speed, security, and reliability, with no hidden fees.
             </p>
             <button
               className="pricing-calculator-button"
@@ -98,19 +98,6 @@ function PricingPage() {
                   <li>Routine dependency and security updates</li>
                   <li>Single-team support for web + hosting</li>
                 </ul>
-              </div>
-            </div>
-            <div className="pricing-addons">
-              <h3>Optional Add-ons</h3>
-              <div className="addon-grid">
-                <div className="addon-item">
-                  <span className="addon-name">Custom Feature Block / Widget</span>
-                  <span className="addon-price">+$200</span>
-                </div>
-                <div className="addon-item">
-                  <span className="addon-name">Custom Forms</span>
-                  <span className="addon-price">+$150</span>
-                </div>
               </div>
             </div>
           </div>

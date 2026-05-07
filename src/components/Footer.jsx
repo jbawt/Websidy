@@ -9,61 +9,8 @@ function Footer() {
   return (
     <footer className={`footer ${theme}`}>
       <div className="footer-container">
-        {/* SVG Animation Section */}
-        <div className="footer-svg-section">
-          <svg
-            className="footer-animation"
-            viewBox="0 0 400 120"
-            preserveAspectRatio="xMidYMid meet"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#3b82f6" />
-                <stop offset="50%" stopColor="#1e40af" />
-                <stop offset="100%" stopColor="#3b82f6" />
-              </linearGradient>
-              <linearGradient id="footerGradientDark" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#60a5fa" />
-                <stop offset="50%" stopColor="#3b82f6" />
-                <stop offset="100%" stopColor="#60a5fa" />
-              </linearGradient>
-            </defs>
-            
-            {/* Animated waves */}
-            <path
-              d="M0,60 Q100,40 200,60 T400,60"
-              className="wave wave-1"
-              fill="none"
-              strokeWidth="2"
-            />
-            <path
-              d="M0,80 Q100,60 200,80 T400,80"
-              className="wave wave-2"
-              fill="none"
-              strokeWidth="2"
-            />
-            
-            {/* Floating particles */}
-            <circle cx="50" cy="40" r="3" className="particle particle-1" />
-            <circle cx="150" cy="30" r="2.5" className="particle particle-2" />
-            <circle cx="250" cy="45" r="2" className="particle particle-3" />
-            <circle cx="350" cy="35" r="2.5" className="particle particle-4" />
-            
-            {/* Connecting nodes */}
-            <circle cx="100" cy="60" r="4" className="node node-1" />
-            <circle cx="200" cy="60" r="4" className="node node-2" />
-            <circle cx="300" cy="60" r="4" className="node node-3" />
-            
-            {/* Connecting lines */}
-            <line x1="100" y1="60" x2="200" y2="60" className="connection connection-1" strokeWidth="1.5" />
-            <line x1="200" y1="60" x2="300" y2="60" className="connection connection-2" strokeWidth="1.5" />
-          </svg>
-        </div>
-
-        {/* Main Footer Content */}
         <div className="footer-content">
-         <div className="footer-section footer-copyright">
+          <div className="footer-section footer-copyright">
             <p className="copyright">© 2025 Websidy · Sylvan Lake, Alberta</p>
           </div>
 

@@ -18,6 +18,24 @@ function GalleryPage() {
       tags: ['Website Design', 'Branding', 'Responsive'],
       featured: true,
     },
+    {
+      id: 2,
+      name: 'North Point Foundations',
+      url: 'https://northpointfoundations.ca',
+      description:
+        'A professional site for foundation and concrete services, clear service areas, quote requests, and a trustworthy presence for homeowners and builders.',
+      tags: ['Website Design', 'Local Business', 'Responsive'],
+      featured: true,
+    },
+    {
+      id: 3,
+      name: 'The Bronzing Cove',
+      url: 'https://jbawt.github.io/TheBronzingCove',
+      description:
+        'A polished site for a tanning studio, services, atmosphere, and booking-friendly layout that fits the brand.',
+      tags: ['Website Design', 'Beauty & Wellness', 'Responsive'],
+      featured: false,
+    },
   ]
 
   return (
@@ -88,13 +106,15 @@ function GalleryPage() {
                 )}
                 <div className="project-preview">
                   <div className="project-preview-frame">
-                    <iframe
-                      src={project.url}
-                      title={project.name}
-                      className="project-iframe"
-                      loading="lazy"
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                    />
+                    <div className="project-iframe-clip">
+                      <iframe
+                        src={project.url}
+                        title={project.name}
+                        className="project-iframe"
+                        loading="lazy"
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                      />
+                    </div>
                     <div className="project-overlay">
                       <button
                         className="project-view-button"

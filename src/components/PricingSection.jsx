@@ -13,7 +13,7 @@ function PricingSection() {
           <span className="pricing-eyebrow">Pricing</span>
           <h2>Transparent pricing</h2>
           <p>
-            Clear, competitive pricing for website design and social media services in Central Alberta—no hidden fees. Get a custom quote with our calculator or reach out to discuss your project.
+            Clear, competitive pricing for website design and social media services in Central Alberta, no hidden fees. Get a custom quote with our calculator or reach out to discuss your project.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ function PricingSection() {
         </div>
 
         <div className="pricing-cta">
-          <p className="pricing-cta-text">Ready to grow your online presence? Get a custom estimate or reach out—we'd love to hear from you.</p>
+          <p className="pricing-cta-text">Ready to grow your online presence? Get a custom estimate or reach out, we'd love to hear from you.</p>
           <div className="pricing-cta-buttons">
             <Link to="/pricing" className="pricing-cta-button">View Full Pricing</Link>
             <Link to="/contact" className="pricing-cta-button">Get in Touch</Link>

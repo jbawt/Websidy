@@ -320,9 +320,21 @@
   width: 100%;
   height: 650px;
   background: #fff;
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px;
   overflow: hidden;
   position: relative;
+}
+
+/* Wrapper clips iframe paint to rounded rect (iframes do not honor parent radius). */
+.device-iframe-clip {
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.device-iframe-clip-desktop {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 
 /* Scale iframe so embedded site content fits on larger screens */
@@ -353,6 +365,12 @@
   border-radius: 16px;
   overflow: hidden;
   position: relative;
+}
+
+.device-iframe-clip-tablet {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
 }
 
 .tablet-screen .device-iframe {
@@ -393,6 +411,12 @@
   border-radius: 24px;
   overflow: hidden;
   position: relative;
+}
+
+.device-iframe-clip-mobile {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
 }
 
 /* Iframe 430×932 scaled to fill container: (320 - 24 padding) / 430 ≈ 0.69 */
@@ -574,6 +598,13 @@
     background: #fff;
   }
 
+  .desktop-screen .device-iframe-clip-desktop {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+  }
+
   .desktop-screen .device-iframe {
     position: absolute;
     left: 0;
@@ -603,6 +634,13 @@
     overflow: hidden;
     position: relative;
     background: #fff;
+  }
+
+  .tablet-screen .device-iframe-clip-tablet {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
   }
 
   .tablet-screen .device-iframe {

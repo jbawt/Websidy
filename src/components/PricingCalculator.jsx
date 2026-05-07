@@ -11,17 +11,11 @@ function PricingCalculator({ isOpen, onClose }) {
     hostingOnServers: false,
     socialSetup: false,
     socialManagement: false,
-    addons: {
-      widgets: 0,
-      forms: 0,
-    },
   })
 
   // Text input values (parsed to numbers on blur/valid change)
   const [pagesStr, setPagesStr] = useState('3')
-  const [widgetsStr, setWidgetsStr] = useState('0')
-  const [formsStr, setFormsStr] = useState('0')
-  const [errors, setErrors] = useState({ pages: '', widgets: '', forms: '' })
+  const [errors, setErrors] = useState({ pages: '' })
 
   // Pricing constants
   const PRICING = {
@@ -35,10 +29,6 @@ function PricingCalculator({ isOpen, onClose }) {
     social: {
       setup: 400,
       management: 150,
-    },
-    addons: {
-      widgets: 200,
-      forms: 150,
     },
   }
 
@@ -66,10 +56,6 @@ function PricingCalculator({ isOpen, onClose }) {
     if (selections.socialManagement) {
       total += PRICING.social.management
     }
-
-    // Add-ons
-    total += selections.addons.widgets * PRICING.addons.widgets
-    total += selections.addons.forms * PRICING.addons.forms
 
     return total
   }
@@ -100,22 +86,6 @@ function PricingCalculator({ isOpen, onClose }) {
       if (selections.hostingOnServers) {
         lines.push(`- Hosting on your servers: $${PRICING.hosting.monthly.toLocaleString()}/month`)
       }
-    }
-
-    if (selections.addons.widgets > 0) {
-      lines.push(
-        `- Custom Widgets: ${selections.addons.widgets} x $${PRICING.addons.widgets.toLocaleString()} = $${(
-          selections.addons.widgets * PRICING.addons.widgets
-        ).toLocaleString()}`
-      )
-    }
-
-    if (selections.addons.forms > 0) {
-      lines.push(
-        `- Custom Forms: ${selections.addons.forms} x $${PRICING.addons.forms.toLocaleString()} = $${(
-          selections.addons.forms * PRICING.addons.forms
-        ).toLocaleString()}`
-      )
     }
 
     if (selections.socialSetup) {
@@ -153,16 +123,6 @@ function PricingCalculator({ isOpen, onClose }) {
     })
   }
 
-  const handleAddonChange = (addon, value) => {
-    setSelections((prev) => ({
-      ...prev,
-      addons: {
-        ...prev.addons,
-        [addon]: value,
-      },
-    }))
-  }
-
   const VALIDATION_MSG = 'Please enter a valid number'
 
   const parsePages = (str) => {
@@ -170,14 +130,6 @@ function PricingCalculator({ isOpen, onClose }) {
     if (trimmed === '') return { valid: false, value: null }
     const num = parseInt(trimmed, 10)
     if (Number.isNaN(num) || num < 3) return { valid: false, value: null }
-    return { valid: true, value: num }
-  }
-
-  const parseAddon = (str) => {
-    const trimmed = String(str).trim()
-    if (trimmed === '') return { valid: false, value: null }
-    const num = parseInt(trimmed, 10)
-    if (Number.isNaN(num) || num < 0) return { valid: false, value: null }
     return { valid: true, value: num }
   }
 
@@ -211,66 +163,6 @@ function PricingCalculator({ isOpen, onClose }) {
   const handlePagesFocus = (e) => {
     e.target.select()
     setErrors((prev) => ({ ...prev, pages: '' }))
-  }
-
-  const handleWidgetsChange = (e) => {
-    const raw = e.target.value
-    setWidgetsStr(raw)
-    const { valid, value } = parseAddon(raw)
-    if (valid) {
-      handleAddonChange('widgets', value)
-      setErrors((prev) => ({ ...prev, widgets: '' }))
-    }
-  }
-
-  const handleWidgetsBlur = () => {
-    const { valid, value } = parseAddon(widgetsStr)
-    if (valid) {
-      handleAddonChange('widgets', value)
-      setWidgetsStr(String(value))
-      setErrors((prev) => ({ ...prev, widgets: '' }))
-    } else {
-      setErrors((prev) => ({ ...prev, widgets: VALIDATION_MSG }))
-      if (widgetsStr.trim() === '') {
-        handleAddonChange('widgets', 0)
-        setWidgetsStr('0')
-      }
-    }
-  }
-
-  const handleWidgetsFocus = (e) => {
-    e.target.select()
-    setErrors((prev) => ({ ...prev, widgets: '' }))
-  }
-
-  const handleFormsChange = (e) => {
-    const raw = e.target.value
-    setFormsStr(raw)
-    const { valid, value } = parseAddon(raw)
-    if (valid) {
-      handleAddonChange('forms', value)
-      setErrors((prev) => ({ ...prev, forms: '' }))
-    }
-  }
-
-  const handleFormsBlur = () => {
-    const { valid, value } = parseAddon(formsStr)
-    if (valid) {
-      handleAddonChange('forms', value)
-      setFormsStr(String(value))
-      setErrors((prev) => ({ ...prev, forms: '' }))
-    } else {
-      setErrors((prev) => ({ ...prev, forms: VALIDATION_MSG }))
-      if (formsStr.trim() === '') {
-        handleAddonChange('forms', 0)
-        setFormsStr('0')
-      }
-    }
-  }
-
-  const handleFormsFocus = (e) => {
-    e.target.select()
-    setErrors((prev) => ({ ...prev, forms: '' }))
   }
 
   // Close on Escape key
@@ -371,81 +263,6 @@ function PricingCalculator({ isOpen, onClose }) {
               </div>
             )}
           </div>
-
-          {/* Website Add-ons */}
-          {selections.website && (
-            <div className="calculator-section">
-              <h3 className="section-subtitle">Website Add-ons</h3>
-              <div className="addons-grid">
-                <div className="addon-quantity-item">
-                  <div className="addon-meta">
-                    <span className="service-name">
-                      Custom Widgets
-                      <span
-                        className="addon-tooltip"
-                        title="A custom widget is a tailored interactive component built for your workflow. The pricing calculator on this page is a great example."
-                      >
-                        i
-                      </span>
-                    </span>
-                    <span className="service-price">${PRICING.addons.widgets.toLocaleString()} each</span>
-                  </div>
-                  <label className="addon-qty-control">
-                    Qty
-                    <input
-                      type="text"
-                      inputMode="numeric"
-                      value={widgetsStr}
-                      onChange={handleWidgetsChange}
-                      onFocus={handleWidgetsFocus}
-                      onBlur={handleWidgetsBlur}
-                      className="addon-qty-input"
-                      aria-invalid={!!errors.widgets}
-                      aria-describedby={errors.widgets ? 'widgets-error' : undefined}
-                    />
-                  </label>
-                  {errors.widgets && (
-                    <p id="widgets-error" className="calculator-input-error" role="alert">
-                      {errors.widgets}
-                    </p>
-                  )}
-                </div>
-                <div className="addon-quantity-item">
-                  <div className="addon-meta">
-                    <span className="service-name">
-                      Custom Forms
-                      <span
-                        className="addon-tooltip"
-                        title="A custom form includes tailored fields, questions, and submission logic for your process (for example, a custom contact form with specific intake questions)."
-                      >
-                        i
-                      </span>
-                    </span>
-                    <span className="service-price">${PRICING.addons.forms.toLocaleString()} each</span>
-                  </div>
-                  <label className="addon-qty-control">
-                    Qty
-                    <input
-                      type="text"
-                      inputMode="numeric"
-                      value={formsStr}
-                      onChange={handleFormsChange}
-                      onFocus={handleFormsFocus}
-                      onBlur={handleFormsBlur}
-                      className="addon-qty-input"
-                      aria-invalid={!!errors.forms}
-                      aria-describedby={errors.forms ? 'forms-error' : undefined}
-                    />
-                  </label>
-                  {errors.forms && (
-                    <p id="forms-error" className="calculator-input-error" role="alert">
-                      {errors.forms}
-                    </p>
-                  )}
-                </div>
-              </div>
-            </div>
-          )}
 
           {/* Social Media */}
           <div className="calculator-section">

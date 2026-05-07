@@ -36,7 +36,7 @@ function AboutPage() {
             <span className="about-hero-eyebrow">About Websidy</span>
             <h1>Web Design & Digital Marketing for Central Alberta</h1>
             <p className="about-hero-description">
-              Based in Sylvan Lake, we help businesses across Central Alberta build professional websites and grow their online presence. We combine modern design with practical, results-focused solutions—so you get a site that looks great and works for your goals.
+              Based in Sylvan Lake, we help businesses across Central Alberta build professional websites and grow their online presence. We combine modern design with practical, results-focused solutions, so you get a site that looks great and works for your goals.
             </p>
           </div>
           <div className="about-hero-visual">
@@ -64,7 +64,7 @@ function AboutPage() {
           <div className="about-mission-intro">
             <h2>Our Mission</h2>
             <p>
-              To give small and medium-sized businesses in Sylvan Lake and Central Alberta a professional digital presence—without needing a technical team. We believe every local business deserves a website that reflects their brand, ranks well in search, and helps them grow.
+              To give small and medium-sized businesses in Sylvan Lake and Central Alberta a professional digital presence, without needing a technical team. We believe every local business deserves a website that reflects their brand, ranks well in search, and helps them grow.
             </p>
           </div>
           <div className="about-mission-visual">

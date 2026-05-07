@@ -65,7 +65,7 @@ function ServicesPage() {
           <div className="service-detail-content">
             <div className="service-detail-description">
               <p>
-                We design and build modern websites that communicate your brand clearly, load quickly, and guide visitors toward action. Every site is built for speed, SEO, and consistent performance across devices—so you rank better and convert more.
+                We design and build modern websites that communicate your brand clearly, load quickly, and guide visitors toward action. Every site is built for speed, SEO, and consistent performance across devices, so you rank better and convert more.
               </p>
             </div>
 
@@ -147,7 +147,7 @@ function ServicesPage() {
           <div className="service-detail-content">
             <div className="service-detail-description">
               <p>
-                We don't just set up your social accounts—we train you to run them with confidence. From account creation to content strategy, we help Central Alberta businesses build an engaging, on-brand presence that grows with you.
+                We don't just set up your social accounts, we train you to run them with confidence. From account creation to content strategy, we help Central Alberta businesses build an engaging, on-brand presence that grows with you.
               </p>
             </div>
 

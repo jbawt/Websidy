@@ -6,7 +6,7 @@ const services = [
   {
     title: 'Website Design & Development',
     description:
-      'Custom websites for Central Alberta businesses—responsive, fast, and SEO-friendly. Packages from 3 pages with optional hosting and ongoing support.',
+      'Custom websites for Central Alberta businesses, responsive, fast, and SEO-friendly. Packages from 3 pages with optional hosting and ongoing support.',
     features: ['Strategic branding and visual identity for your business', 'Custom-built responsive websites (no generic templates)', 'Managed hosting and ongoing support for peace of mind'],
     icon: 'design',
     badge: 'Pricing',

@@ -276,13 +276,11 @@
   border-color: #60a5fa;
 }
 
-.pages-input[aria-invalid="true"],
-.addon-qty-input[aria-invalid="true"] {
+.pages-input[aria-invalid="true"] {
   border-color: #dc2626;
 }
 
-.app.dark .pages-input[aria-invalid="true"],
-.app.dark .addon-qty-input[aria-invalid="true"] {
+.app.dark .pages-input[aria-invalid="true"] {
   border-color: #f87171;
 }
 
@@ -306,97 +304,6 @@
 
 .app.dark .additional-cost {
   color: #60a5fa;
-}
-
-.addons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.75rem;
-}
-
-.addon-quantity-item {
-  border-radius: 0.75rem;
-  background: rgba(59, 130, 246, 0.05);
-  border: 2px solid transparent;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.addon-quantity-item:hover {
-  background: rgba(59, 130, 246, 0.1);
-  border-color: rgba(59, 130, 246, 0.25);
-}
-
-.app.dark .addon-quantity-item {
-  background: rgba(96, 165, 250, 0.08);
-}
-
-.app.dark .addon-quantity-item:hover {
-  background: rgba(96, 165, 250, 0.15);
-  border-color: rgba(96, 165, 250, 0.28);
-}
-
-.addon-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-
-.addon-tooltip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  margin-left: 0.4rem;
-  border-radius: 50%;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #fafafa;
-  background: linear-gradient(135deg, #3b82f6, #1e40af);
-  cursor: help;
-  transform: translateY(-1px);
-}
-
-.app.dark .addon-tooltip {
-  background: linear-gradient(135deg, #60a5fa, #3b82f6);
-}
-
-.addon-qty-control {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.app.dark .addon-qty-control {
-  color: rgba(250, 250, 250, 0.9);
-}
-
-.addon-qty-input {
-  width: 84px;
-  padding: 0.45rem 0.75rem;
-  border: 2px solid rgba(59, 130, 246, 0.3);
-  border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.9);
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 0.95rem;
-  font-family: inherit;
-}
-
-.addon-qty-input:focus {
-  outline: none;
-  border-color: #3b82f6;
-}
-
-.app.dark .addon-qty-input {
-  background: rgba(14, 14, 14, 0.9);
-  border-color: rgba(96, 165, 250, 0.3);
-  color: rgba(250, 250, 250, 0.9);
 }
 
 .radio-group {
@@ -550,10 +457,6 @@
 
   .total-amount {
     font-size: 2.5rem;
-  }
-
-  .addons-grid {
-    grid-template-columns: 1fr;
   }
 
   .calculator-actions {

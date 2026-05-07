@@ -281,92 +281,6 @@
   color: rgba(250, 250, 250, 0.9);
 }
 
-/* Addons */
-.pricing-addons {
-  padding: 2rem;
-  border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(8px);
-}
-
-.app.dark .pricing-addons {
-  background: rgba(14, 14, 14, 0.9);
-  border-color: rgba(250, 250, 250, 0.08);
-}
-
-.pricing-addons h3 {
-  font-size: 1.5rem;
-  margin: 0 0 1.5rem;
-  color: #1e40af;
-  background: linear-gradient(135deg, #3b82f6, #1e40af);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.app.dark .pricing-addons h3 {
-  background: linear-gradient(135deg, #60a5fa, #3b82f6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.addon-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.addon-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.25rem;
-  border-radius: 0.75rem;
-  background: rgba(59, 130, 246, 0.05);
-  transition: background 0.3s ease;
-}
-
-.addon-item:hover {
-  background: rgba(59, 130, 246, 0.1);
-}
-
-.app.dark .addon-item {
-  background: rgba(96, 165, 250, 0.08);
-}
-
-.app.dark .addon-item:hover {
-  background: rgba(96, 165, 250, 0.15);
-}
-
-.addon-name {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.app.dark .addon-name {
-  color: rgba(250, 250, 250, 0.9);
-}
-
-.addon-price {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #1e40af;
-  background: linear-gradient(135deg, #3b82f6, #1e40af);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.app.dark .addon-price {
-  background: linear-gradient(135deg, #60a5fa, #3b82f6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* CTA Section */
 .pricing-cta-section {
   text-align: center;
@@ -492,10 +406,6 @@
 
   .pricing-detail-card {
     padding: 2rem;
-  }
-
-  .addon-grid {
-    grid-template-columns: 1fr;
   }
 
   .pricing-cta-section {
