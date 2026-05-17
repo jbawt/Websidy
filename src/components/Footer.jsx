@@ -27,11 +27,6 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="footer-link">
-                  About
-                </Link>
-              </li>
-              <li>
                 <Link to="/pricing" className="footer-link">
                   Pricing
                 </Link>
@@ -39,6 +34,11 @@ function Footer() {
               <li>
                 <Link to="/portfolio" className="footer-link">
                   Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="footer-link">
+                  About
                 </Link>
               </li>
               <li>
