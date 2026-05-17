@@ -119,7 +119,7 @@ function Navbar() {
                   <circle cx="12" cy="8" r="3" stroke="currentColor" strokeWidth="2"/>
                   <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21" stroke="currentColor" strokeWidth="2"/>
                 </svg>
-                <span>Social Media</span>
+                <span>Digital Presence</span>
               </Link>
               <Link to="/services" className="dropdown-item dropdown-item-all" onClick={handleLinkClick}>
                 <span>View All Services</span>

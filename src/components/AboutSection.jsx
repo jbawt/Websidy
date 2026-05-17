@@ -8,10 +8,10 @@ function AboutSection() {
         <span className="about-eyebrow">Why Websidy</span>
         <h2>Professional web design and digital services for Central Alberta</h2>
         <p>
-          Based in Sylvan Lake, Websidy helps small and medium-sized businesses across Central Alberta build a strong online presence. We create fast, reliable websites and handle social media setup and training so your brand stands out, without needing a technical team.
+          Based in Sylvan Lake, Websidy helps small and medium-sized businesses across Central Alberta build a strong online presence. We create fast, reliable websites and digital foundation packages so your brand looks professional and never closed for business, without needing a technical team.
         </p>
         <p>
-          From website design and development to social media launch and ongoing support, we focus on clear, results-driven solutions. Our goal is simple: make professional digital presence accessible so local businesses can compete and grow with confidence.
+          From website design and development to brand alignment and always-on presence, we focus on consistency and trust, not viral growth. Our goal is simple: make professional digital presence accessible so local businesses look credible and open for business.
         </p>
       </div>
       <div className="about-visual">

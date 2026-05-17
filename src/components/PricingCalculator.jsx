@@ -10,7 +10,7 @@ function PricingCalculator({ isOpen, onClose }) {
     pages: 3,
     hostingOnServers: false,
     socialSetup: false,
-    socialManagement: false,
+    socialPresenceManagement: false,
   })
 
   // Text input values (parsed to numbers on blur/valid change)
@@ -28,7 +28,7 @@ function PricingCalculator({ isOpen, onClose }) {
     },
     social: {
       setup: 400,
-      management: 150,
+      presenceManagement: 160,
     },
   }
 
@@ -53,8 +53,8 @@ function PricingCalculator({ isOpen, onClose }) {
     if (selections.socialSetup) {
       total += PRICING.social.setup
     }
-    if (selections.socialManagement) {
-      total += PRICING.social.management
+    if (selections.socialPresenceManagement) {
+      total += PRICING.social.presenceManagement
     }
 
     return total
@@ -63,7 +63,7 @@ function PricingCalculator({ isOpen, onClose }) {
   const total = calculateTotal()
   const recurringMonthly =
     (selections.website && selections.hostingOnServers ? PRICING.hosting.monthly : 0) +
-    (selections.socialManagement ? PRICING.social.management : 0)
+    (selections.socialPresenceManagement ? PRICING.presenceManagement : 0)
   const additionalPages = selections.website ? Math.max(0, selections.pages - 3) : 0
 
   const buildQuotePrefill = () => {
@@ -89,11 +89,11 @@ function PricingCalculator({ isOpen, onClose }) {
     }
 
     if (selections.socialSetup) {
-      lines.push(`- Social Media Setup & Training: $${PRICING.social.setup.toLocaleString()} (one-time)`)
+      lines.push(`- The Digital Foundation Package: $${PRICING.social.setup.toLocaleString()} (one-time)`)
     }
 
-    if (selections.socialManagement) {
-      lines.push(`- Social Media Monthly Management: $${PRICING.social.management.toLocaleString()}/month`)
+    if (selections.socialPresenceManagement) {
+      lines.push(`- The "Always On" Presence Add-On: $${PRICING.social.presenceManagement.toLocaleString()}/month`)
     }
 
     lines.push('')
@@ -266,7 +266,7 @@ function PricingCalculator({ isOpen, onClose }) {
 
           {/* Social Media */}
           <div className="calculator-section">
-            <h3 className="section-subtitle">Social Media Services</h3>
+            <h3 className="section-subtitle">Digital Presence Services</h3>
             <label className="calculator-checkbox">
               <input
                 type="checkbox"
@@ -274,19 +274,19 @@ function PricingCalculator({ isOpen, onClose }) {
                 onChange={(e) => handleChange('socialSetup', e.target.checked)}
               />
               <span className="checkbox-label">
-                <span className="service-name">Social Launch Setup</span>
+                <span className="service-name">The Digital Foundation Package</span>
                 <span className="service-price">$400 (one-time)</span>
               </span>
             </label>
             <label className="calculator-checkbox">
               <input
                 type="checkbox"
-                checked={selections.socialManagement}
-                onChange={(e) => handleChange('socialManagement', e.target.checked)}
+                checked={selections.socialPresenceManagement}
+                onChange={(e) => handleChange('socialPresenceManagement', e.target.checked)}
               />
               <span className="checkbox-label">
-                <span className="service-name">Monthly Management (Lite)</span>
-                <span className="service-price">$150/month</span>
+                <span className="service-name">The &ldquo;Always On&rdquo; Presence Add-On</span>
+                <span className="service-price">$160/month</span>
               </span>
             </label>
           </div>

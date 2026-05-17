@@ -79,21 +79,21 @@ function PricingSection() {
                   <line x1="32" y1="26" x2="42" y2="35" stroke="url(#socialGradient)" strokeWidth="2" opacity="0.5" />
                 </svg>
               </div>
-              <h3>Social Media</h3>
+              <h3>Digital Presence</h3>
             </div>
             <div className="pricing-content">
               <div className="pricing-base">
                 <div className="pricing-item">
-                  <span className="pricing-label">Social Launch Setup</span>
+                  <span className="pricing-label">The Digital Foundation Package</span>
                   <span className="pricing-value">$400</span>
                 </div>
                 <div className="pricing-item">
-                  <span className="pricing-label">Monthly Management (Lite)</span>
-                  <span className="pricing-value">$150/month</span>
+                  <span className="pricing-label">The &ldquo;Always On&rdquo; Presence Add-On</span>
+                  <span className="pricing-value">$160/month</span>
                 </div>
               </div>
               <div className="pricing-features">
-                <p className="pricing-note">Includes setup, branded templates, and lean monthly support for consistent posting.</p>
+                <p className="pricing-note">Proof of life for your brand: aligned profiles, consistent posting, and never look closed for business.</p>
               </div>
             </div>
           </div>

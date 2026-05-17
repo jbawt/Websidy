@@ -14,7 +14,7 @@ function HomeHeader() {
             Welcome to <span className="header-title-accent">Websidy</span>
           </h1>
           <p className="header-subtitle">
-            Professional websites and social media services for local businesses, fast, modern, and built to grow.
+            Professional websites and digital presence services for local businesses, fast, modern, and built to look open for business.
           </p>
         </div>
         <div className="header-graphic">

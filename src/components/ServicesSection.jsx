@@ -7,19 +7,25 @@ const services = [
     title: 'Website Design & Development',
     description:
       'Custom websites for Central Alberta businesses, responsive, fast, and SEO-friendly. Packages from 3 pages with optional hosting and ongoing support.',
-    features: ['Strategic branding and visual identity for your business', 'Custom-built responsive websites (no generic templates)', 'Managed hosting and ongoing support for peace of mind'],
+    features: ['Strategic branding and visual identity for your business', 'Custom-built responsive websites built for speed and SEO (no generic templates)', 'Managed hosting and ongoing support for peace of mind'],
     icon: 'design',
-    badge: 'Pricing',
-    cta: 'See website pricing',
+    badge: 'Web Design',
+    cta: 'See website services',
+    href: '/services#website-design',
   },
   {
-    title: 'Social Media Setup & Training',
+    title: 'Digital Presence & Brand Consistency',
     description:
-      'Get your social presence launched with on-brand profiles, content templates, and training so you can post and engage with confidence.',
-    features: ['Full channel setup and audit', 'Content playbooks and hands-on training', 'Growth and engagement coaching for local reach'],
+      'Look professional, credible, and open for business online. We align your brand across the web and keep your digital lights on, without promising leads, followers, or viral hits.',
+    features: [
+      'Digital Foundation Package: platform setup and brand alignment',
+      'Content Blueprint with industry pillars and photo checklist',
+      'Optional Always On add-on: 8 scheduled posts per month',
+    ],
     icon: 'social',
-    badge: 'Engagement',
-    cta: 'See training details',
+    badge: 'Foundation',
+    cta: 'See presence packages',
+    href: '/services#social-media',
   },
 ]
 
@@ -102,9 +108,9 @@ function ServicesSection() {
     <section className="services-section" id="services">
       <div className="services-intro">
         <p className="eyebrow">What We Do</p>
-        <h2>Web design and social media services for Sylvan Lake & Central Alberta</h2>
+        <h2>Web design and digital presence services for Sylvan Lake & Central Alberta</h2>
         <p>
-          We help Central Alberta businesses launch and grow online with strategic websites and social media. Every project includes clear handoff, documentation, and training so you can maintain and scale with confidence.
+          We help Central Alberta businesses launch and grow online with strategic websites and consistent digital presence. Every project includes clear handoff and documentation so you never look closed for business.
         </p>
       </div>
 
@@ -124,12 +130,8 @@ function ServicesSection() {
                   <li key={feature}>{feature}</li>
                 ))}
               </ul>
-              <Link 
-                to={
-                  service.icon === 'design'
-                    ? '/services#website-design'
-                    : '/services#social-media'
-                } 
+              <Link
+                to={service.href}
                 className="service-cta"
               >
                 {service.cta}

@@ -123,38 +123,41 @@ function PricingPage() {
               </svg>
             </div>
             <div className="pricing-detail-title">
-              <h2>Social Media Setup & Management</h2>
+              <h2>Digital Presence & Brand Consistency</h2>
               <p className="pricing-detail-subtitle">
-                Lean monthly plans for local business consistency
+                Foundation maintenance and proof of life for local businesses, never look closed for business
               </p>
             </div>
           </div>
 
           <div className="pricing-detail-content">
-            <div className="pricing-detail-grid">
+            <div className="pricing-detail-grid pricing-detail-grid--two">
               <div className="pricing-detail-card">
-                <h3>Social Launch Setup</h3>
+                <span className="pricing-tier-badge">One-Time Setup</span>
+                <h3>The Digital Foundation Package</h3>
                 <div className="pricing-amount">$400</div>
-                <p className="pricing-includes">One-time setup includes:</p>
+                <p className="pricing-includes">Digital health check includes:</p>
                 <ul className="pricing-features-list">
-                  <li>Account setup and profile optimization</li>
-                  <li>Branded bio and highlights template</li>
-                  <li>10 post templates and caption framework</li>
-                  <li>90-minute training session</li>
-                  <li>30 days of launch support</li>
+                  <li>Social Architecture: up to 3-4 key platforms created or optimized</li>
+                  <li>Digital Twin alignment: bios, photos, hours, and links matched everywhere</li>
+                  <li>Content Blueprint: 3-5 content pillars plus mobile photo checklist</li>
                 </ul>
               </div>
               <div className="pricing-detail-card">
-                <h3>Monthly Management (Lite)</h3>
-                <div className="pricing-amount">$150<span className="pricing-period">/month</span></div>
-                <p className="pricing-includes">Ongoing management includes:</p>
+                <span className="pricing-tier-badge pricing-tier-badge--monthly">Monthly Add-On</span>
+                <h3>The &ldquo;Always On&rdquo; Presence Add-On</h3>
+                <div className="pricing-amount">$160<span className="pricing-period">/month</span></div>
+                <p className="pricing-includes">Keeping your digital lights on includes:</p>
                 <ul className="pricing-features-list">
-                  <li>8-10 posts per month</li>
-                  <li>Caption writing and scheduling</li>
-                  <li>Community response guidance</li>
+                  <li>8 scheduled posts per month (~2 per week), cross-posted</li>
+                  <li>Professional mix: business info, reviews, and industry tips</li>
+                  <li>Zero-effort automation: batched, approved, and scheduled ahead</li>
                 </ul>
               </div>
             </div>
+            <p className="pricing-presence-note">
+              We do not promise leads, followers, or viral engagement. We promise you look professional, credible, active, and open for business.
+            </p>
           </div>
         </section>
 

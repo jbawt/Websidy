@@ -158,6 +158,62 @@
   gap: 2.5rem;
 }
 
+.pricing-detail-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .pricing-detail-grid--two {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pricing-tier-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(59, 130, 246, 0.12);
+  color: #1e40af;
+  margin-bottom: 0.75rem;
+}
+
+.pricing-tier-badge--monthly {
+  background: rgba(255, 111, 97, 0.15);
+  color: #c2410c;
+}
+
+.app.dark .pricing-tier-badge {
+  background: rgba(96, 165, 250, 0.15);
+  color: #93c5fd;
+}
+
+.app.dark .pricing-tier-badge--monthly {
+  background: rgba(255, 111, 97, 0.2);
+  color: #fdba74;
+}
+
+.pricing-presence-note {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.65);
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  border-left: 3px solid rgba(59, 130, 246, 0.5);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.app.dark .pricing-presence-note {
+  color: rgba(250, 250, 250, 0.7);
+  background: rgba(96, 165, 250, 0.08);
+  border-left-color: rgba(96, 165, 250, 0.4);
+}
+
 .pricing-detail-card {
   padding: 2.5rem;
   border-radius: 1.5rem;

@@ -31,11 +31,11 @@ function ServicesPage() {
           <span className="services-hero-eyebrow">Our Services</span>
           <h1>Web Design & Digital Services for Central Alberta</h1>
           <p className="services-hero-description">
-            From custom website design to social media setup and training, we help Sylvan Lake and Central Alberta businesses build and grow their online presence with clear, professional solutions.
+            From custom website design to digital presence and brand consistency, we help Sylvan Lake and Central Alberta businesses look professional, credible, and open for business online.
           </p>
         </section>
 
-        {/* Website Design & Branding Section */}
+        {/* Website Design & Development */}
         <section id="website-design" className="service-detail-section">
           <div className="service-detail-header">
             <div className="service-detail-icon">
@@ -65,59 +65,74 @@ function ServicesPage() {
           <div className="service-detail-content">
             <div className="service-detail-description">
               <p>
-                We design and build modern websites that communicate your brand clearly, load quickly, and guide visitors toward action. Every site is built for speed, SEO, and consistent performance across devices, so you rank better and convert more.
+                We design and build custom websites for Central Alberta businesses that look credible, load fast, and guide visitors toward action. No page builders or bloated templates, just clean code, clear structure, and a site that works as hard as you do.
+              </p>
+              <p className="service-detail-highlight">
+                Every build is brand-first, mobile-ready, and optimized for search so your business shows up looking professional from the first click.
               </p>
             </div>
 
-            <div className="service-features-grid">
-              <div className="service-feature-card">
-                <h3>Brand-First Direction</h3>
-                <p>
-                  We align layout, tone, typography, and visuals with your brand identity so your site
-                  feels cohesive, credible, and unmistakably yours.
+            <div className="service-tier-grid">
+              <article className="service-tier-card service-tier-card--onetime">
+                <span className="service-tier-badge">One-Time Project</span>
+                <h3>Custom Static Website</h3>
+                <p className="service-tier-pitch">
+                  A conversion-focused site built from scratch: your brand, your content, and a foundation you can grow on.
                 </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Custom Page Development</h3>
-                <p>
-                  From landing pages to deeper service pages, we build each page with intentional
-                  structure, clear content hierarchy, and conversion-oriented UX.
+                <ul className="service-tier-features">
+                  <li>
+                    <strong>Brand-First Design</strong>
+                    <span>Layout, typography, and visuals aligned with your identity so the site feels unmistakably yours.</span>
+                  </li>
+                  <li>
+                    <strong>Custom-Coded Static Build</strong>
+                    <span>Hand-developed pages for speed, security, and reliability, no drag-and-drop builders.</span>
+                  </li>
+                  <li>
+                    <strong>SEO & Content Integration</strong>
+                    <span>On-page SEO, semantic structure, and your text and media formatted and optimized for the web.</span>
+                  </li>
+                  <li>
+                    <strong>3-Page Starter Base</strong>
+                    <span>Home, services, and about/contact included. Additional pages available as your business grows.</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article className="service-tier-card service-tier-card--monthly">
+                <span className="service-tier-badge">Monthly Add-On</span>
+                <h3>Hosting & Maintenance</h3>
+                <p className="service-tier-pitch">
+                  Peace of mind after launch: we host, monitor, and maintain your site so it stays fast, secure, and online.
                 </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Performance & Reliability</h3>
-                <p>
-                  Your site is built for fast load times, responsive behavior, and dependable uptime
-                  so visitors get a smooth experience every time.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Responsive Design</h3>
-                <p>
-                  Every website we build is fully responsive, ensuring a perfect experience on desktop,
-                  tablet, and mobile devices. Your site will look great on any screen size.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>SEO Optimization</h3>
-                <p>
-                  We implement SEO best practices from the ground up, including proper meta tags,
-                  semantic HTML, and performance optimization to help you rank higher in search
-                  results.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Content Integration</h3>
-                <p>
-                  We handle all content integration, ensuring your text, images, and media are
-                  properly formatted and optimized for the web.
-                </p>
-              </div>
+                <ul className="service-tier-features">
+                  <li>
+                    <strong>Managed Hosting</strong>
+                    <span>Deployment and hosting for static and custom projects, handled by the same team that built your site.</span>
+                  </li>
+                  <li>
+                    <strong>Security & Uptime</strong>
+                    <span>Routine checks, dependency updates, and a smaller attack surface so visitors always reach a live site.</span>
+                  </li>
+                  <li>
+                    <strong>Ongoing Support</strong>
+                    <span>One point of contact for web and hosting questions, updates, and fixes when you need them.</span>
+                  </li>
+                </ul>
+              </article>
             </div>
+
+            <p className="service-detail-disclaimer">
+              Need more pages or a custom quote?{' '}
+              <Link to="/pricing">View full website pricing</Link>
+              {' '}or{' '}
+              <Link to="/contact">get in touch</Link>
+              {' '}to scope your project.
+            </p>
           </div>
         </section>
 
-        {/* Social Media Setup & Training Section */}
+        {/* Digital Presence & Brand Consistency */}
         <section id="social-media" className="service-detail-section">
           <div className="service-detail-header">
             <div className="service-detail-icon">
@@ -137,9 +152,9 @@ function ServicesPage() {
               </svg>
             </div>
             <div className="service-detail-title">
-              <h2>Social Media Setup & Training</h2>
+              <h2>Digital Presence & Brand Consistency</h2>
               <p className="service-detail-subtitle">
-                Launch and manage your social presence with expert setup and training for Central Alberta businesses
+                Foundation maintenance for Central Alberta businesses: professional, credible, and never closed for business
               </p>
             </div>
           </div>
@@ -147,57 +162,62 @@ function ServicesPage() {
           <div className="service-detail-content">
             <div className="service-detail-description">
               <p>
-                We don't just set up your social accounts, we train you to run them with confidence. From account creation to content strategy, we help Central Alberta businesses build an engaging, on-brand presence that grows with you.
+                We help local businesses look active, trustworthy, and open for business across the web. This is not growth hacking or viral engagement. We focus on digital presence, brand consistency, and foundation maintenance so customers see proof of life when they find you online.
+              </p>
+              <p className="service-detail-highlight">
+                Keeping your digital lights on saves you time and builds trust through consistency, so you never look closed for business.
               </p>
             </div>
 
-            <div className="service-features-grid">
-              <div className="service-feature-card">
-                <h3>Channel Setup & Audit</h3>
-                <p>
-                  We set up your social media accounts from scratch, ensuring proper branding,
-                  optimization, and security. We also audit existing accounts to identify
-                  opportunities for improvement.
+            <div className="service-tier-grid">
+              <article className="service-tier-card service-tier-card--onetime">
+                <span className="service-tier-badge">One-Time Setup</span>
+                <h3>The Digital Foundation Package</h3>
+                <p className="service-tier-pitch">
+                  A digital health check: we clean up, align, and professionalize your brand across the web so every profile tells the same story.
                 </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Content Playbooks & Training</h3>
-                <p>
-                  Receive custom content playbooks tailored to your brand and industry. Our
-                  training sessions teach you how to create engaging posts, use hashtags effectively,
-                  and maintain a consistent brand voice.
+                <ul className="service-tier-features">
+                  <li>
+                    <strong>Social Architecture</strong>
+                    <span>Creation or optimization of up to 3–4 key platforms where your customers already look.</span>
+                  </li>
+                  <li>
+                    <strong>The &ldquo;Digital Twin&rdquo; Alignment</strong>
+                    <span>Bios, profile photos, business hours, and links matched perfectly across every site, critical for local trust and SEO.</span>
+                  </li>
+                  <li>
+                    <strong>The Content Blueprint</strong>
+                    <span>A customized tip sheet with 3–5 industry-specific content pillars and a simple mobile-shooting checklist so you can capture your own photos.</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article className="service-tier-card service-tier-card--monthly">
+                <span className="service-tier-badge">Monthly Add-On</span>
+                <h3>The &ldquo;Always On&rdquo; Presence Add-On</h3>
+                <p className="service-tier-pitch">
+                  Hands-off baseline consistency. We keep your channels showing proof of life while you run the business.
                 </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Growth and Engagement Coaching</h3>
-                <p>
-                  Learn proven strategies to grow your following and increase engagement. We provide
-                  ongoing coaching to help you understand analytics, respond to comments, and build
-                  a loyal community.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Content Templates</h3>
-                <p>
-                  We provide professionally designed content templates that you can customize for
-                  your posts. These templates ensure brand consistency and save you time.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Best Practices Guide</h3>
-                <p>
-                  Get a comprehensive guide covering best practices for each platform, including
-                  optimal posting times, content types, and engagement strategies.
-                </p>
-              </div>
-              <div className="service-feature-card">
-                <h3>Ongoing Support</h3>
-                <p>
-                  Our support doesn't end after training. We're available to answer questions and
-                  provide guidance as you grow your social media presence.
-                </p>
-              </div>
+                <ul className="service-tier-features">
+                  <li>
+                    <strong>8 Scheduled Posts per Month</strong>
+                    <span>Roughly two posts per week, cross-posted across your active channels.</span>
+                  </li>
+                  <li>
+                    <strong>Professional Content Mix</strong>
+                    <span>Alternating core business info, customer reviews, and general industry tips so feeds stay credible, not salesy.</span>
+                  </li>
+                  <li>
+                    <strong>Zero-Effort Automation</strong>
+                    <span>Content is batched, approved, and scheduled ahead of time. You stay in the loop without living on social media.</span>
+                  </li>
+                </ul>
+              </article>
             </div>
+
+            <p className="service-detail-disclaimer">
+              We do not promise leads, followers, or viral engagement. We promise you look professional, credible, active, and open for business.
+            </p>
           </div>
         </section>
 
@@ -216,4 +236,3 @@ function ServicesPage() {
 }
 
 export default ServicesPage
-
