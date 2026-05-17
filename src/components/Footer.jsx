@@ -11,7 +11,7 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section footer-copyright">
-            <p className="copyright">© 2025 Websidy · Sylvan Lake, Alberta</p>
+            <p className="copyright">© {new Date().getFullYear()} Websidy · Sylvan Lake, Alberta</p>
           </div>
 
           <nav className="footer-section footer-nav">
