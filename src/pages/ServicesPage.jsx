@@ -86,7 +86,7 @@ function ServicesPage() {
                   </li>
                   <li>
                     <strong>Custom-Coded Static Build</strong>
-                    <span>Hand-developed pages for speed, security, and reliability, no drag-and-drop builders.</span>
+                    <span>Hand-developed pages for speed and reliability, no drag-and-drop builders.</span>
                   </li>
                   <li>
                     <strong>SEO & Content Integration</strong>
@@ -103,7 +103,7 @@ function ServicesPage() {
                 <span className="service-tier-badge">Monthly Add-On</span>
                 <h3>Hosting & Maintenance</h3>
                 <p className="service-tier-pitch">
-                  Peace of mind after launch: we host, monitor, and maintain your site so it stays fast, secure, and online.
+                  Peace of mind after launch: we host, monitor, and maintain your site so it stays fast and online.
                 </p>
                 <ul className="service-tier-features">
                   <li>
@@ -111,8 +111,8 @@ function ServicesPage() {
                     <span>Deployment and hosting for static and custom projects, handled by the same team that built your site.</span>
                   </li>
                   <li>
-                    <strong>Security & Uptime</strong>
-                    <span>Routine checks, dependency updates, and a smaller attack surface so visitors always reach a live site.</span>
+                    <strong>Performance & Uptime</strong>
+                    <span>Routine checks and updates so your site stays fast and visitors always reach a live page.</span>
                   </li>
                   <li>
                     <strong>Ongoing Support</strong>

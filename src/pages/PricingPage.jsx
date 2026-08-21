@@ -18,7 +18,7 @@ function PricingPage() {
             <span className="pricing-hero-eyebrow">Pricing</span>
             <h1>Simple, Transparent Pricing</h1>
             <p className="pricing-hero-description">
-              Clear, competitive pricing for website design and digital services in Sylvan Lake and across Central Alberta. Launch special: websites are 25% off at $1,500 (regularly $2,000). Every project is custom-built for speed, security, and reliability, with no hidden fees.
+              Clear, competitive pricing for website design and digital services in Sylvan Lake and across Central Alberta. Launch special: websites are 25% off at $1,500 (regularly $2,000). Every project is custom-built for speed and reliability, with no hidden fees.
             </p>
             <button
               className="pricing-calculator-button"
@@ -76,8 +76,8 @@ function PricingPage() {
                   <li>About / Contact page</li>
                   <li>Responsive design</li>
                   <li>Custom developed code (no page builders)</li>
-                  <li>Static architecture for speed and uptime</li>
-                  <li>Smaller attack surface for better security</li>
+                  <li>Static architecture built for speed</li>
+                  <li>Fast load times on every device</li>
                   <li>On-page SEO setup</li>
                   <li>Content integration</li>
                 </ul>
@@ -99,8 +99,8 @@ function PricingPage() {
                 <div className="pricing-amount">$75<span className="pricing-period">/month</span></div>
                 <ul className="pricing-features-list">
                   <li>Managed hosting for static and custom projects</li>
-                  <li>Secure deployment and uptime checks</li>
-                  <li>Routine dependency and security updates</li>
+                  <li>Fast deployment and uptime checks</li>
+                  <li>Routine updates to keep your site running smoothly</li>
                   <li>Single-team support for web + hosting</li>
                 </ul>
               </div>

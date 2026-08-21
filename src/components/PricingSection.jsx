@@ -61,7 +61,7 @@ function PricingSection() {
                 </div>
               </div>
               <div className="pricing-features">
-                <p className="pricing-note">Launch special: websites are $1,500 (25% off). Custom developed code with fast, reliable, secure static deployment and optional managed hosting.</p>
+                <p className="pricing-note">Launch special: websites are $1,500 (25% off). Custom developed code with fast, reliable static deployment and optional managed hosting.</p>
               </div>
             </div>
           </div>
