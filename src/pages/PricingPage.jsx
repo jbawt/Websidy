@@ -18,7 +18,7 @@ function PricingPage() {
             <span className="pricing-hero-eyebrow">Pricing</span>
             <h1>Simple, Transparent Pricing</h1>
             <p className="pricing-hero-description">
-              Clear, competitive pricing for website design and digital services in Sylvan Lake and across Central Alberta. Every project is custom-built for speed, security, and reliability, with no hidden fees.
+              Clear, competitive pricing for website design and digital services in Sylvan Lake and across Central Alberta. Launch special: websites are 25% off at $1,500 (regularly $2,000). Every project is custom-built for speed, security, and reliability, with no hidden fees.
             </p>
             <button
               className="pricing-calculator-button"
@@ -61,9 +61,14 @@ function PricingPage() {
 
           <div className="pricing-detail-content">
             <div className="pricing-detail-grid">
-              <div className="pricing-detail-card">
+              <div className="pricing-detail-card pricing-detail-card--sale">
+                <span className="pricing-tier-badge pricing-tier-badge--sale">25% off</span>
                 <h3>Custom Static Website</h3>
-                <div className="pricing-amount">$1,200</div>
+                <div className="pricing-amount pricing-amount--sale">
+                  <span className="pricing-amount-original">$2,000</span>
+                  <span>$1,500</span>
+                </div>
+                <p className="pricing-sale-note">Limited launch special</p>
                 <p className="pricing-includes">Includes 3 pages:</p>
                 <ul className="pricing-features-list">
                   <li>Home page</li>
@@ -91,7 +96,7 @@ function PricingPage() {
               </div>
               <div className="pricing-detail-card featured">
                 <h3>Hosting & Maintenance</h3>
-                <div className="pricing-amount">$50<span className="pricing-period">/month</span></div>
+                <div className="pricing-amount">$75<span className="pricing-period">/month</span></div>
                 <ul className="pricing-features-list">
                   <li>Managed hosting for static and custom projects</li>
                   <li>Secure deployment and uptime checks</li>

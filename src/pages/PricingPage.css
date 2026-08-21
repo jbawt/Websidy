@@ -187,13 +187,71 @@
   color: #c2410c;
 }
 
+.pricing-tier-badge--sale {
+  background: rgba(255, 111, 97, 0.15);
+  color: #c2410c;
+}
+
 .app.dark .pricing-tier-badge {
   background: rgba(96, 165, 250, 0.15);
   color: #93c5fd;
 }
 
-.app.dark .pricing-tier-badge--monthly {
+.app.dark .pricing-tier-badge--monthly,
+.app.dark .pricing-tier-badge--sale {
   background: rgba(255, 111, 97, 0.2);
+  color: #fdba74;
+}
+
+.pricing-detail-card--sale {
+  border-color: rgba(255, 111, 97, 0.35);
+}
+
+.pricing-amount--sale {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  line-height: 1.1;
+  background: none;
+  -webkit-text-fill-color: unset;
+}
+
+.pricing-amount--sale > span:last-child {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pricing-amount-original {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: line-through;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.app.dark .pricing-amount--sale > span:last-child {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app.dark .pricing-amount-original {
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.pricing-sale-note {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #c2410c;
+  margin: -0.5rem 0 1rem;
+}
+
+.app.dark .pricing-sale-note {
   color: #fdba74;
 }
 

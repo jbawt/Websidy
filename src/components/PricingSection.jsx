@@ -13,7 +13,7 @@ function PricingSection() {
           <span className="pricing-eyebrow">Pricing</span>
           <h2>Transparent pricing</h2>
           <p>
-            Clear, competitive pricing for website design and social media services in Central Alberta, no hidden fees. Get a custom quote with our calculator or reach out to discuss your project.
+            Clear, competitive pricing for website design and social media services in Central Alberta, no hidden fees. Launch special: websites are $1,500 (25% off). Get a custom quote with our calculator or reach out to discuss your project.
           </p>
         </div>
 
@@ -41,9 +41,15 @@ function PricingSection() {
             </div>
             <div className="pricing-content">
               <div className="pricing-base">
-                <div className="pricing-item">
-                  <span className="pricing-label">Custom Static Website (3 pages)</span>
-                  <span className="pricing-value">$1,200</span>
+                <div className="pricing-item pricing-item--sale">
+                  <span className="pricing-label">
+                    Custom Static Website (3 pages)
+                    <span className="pricing-sale-tag">25% off</span>
+                  </span>
+                  <span className="pricing-value pricing-value--sale">
+                    <span className="pricing-value-original">$2,000</span>
+                    <span>$1,500</span>
+                  </span>
                 </div>
                 <div className="pricing-item">
                   <span className="pricing-label">Additional Pages</span>
@@ -51,11 +57,11 @@ function PricingSection() {
                 </div>
                 <div className="pricing-item">
                   <span className="pricing-label">Hosting & Maintenance</span>
-                  <span className="pricing-value">$50/month</span>
+                  <span className="pricing-value">$75/month</span>
                 </div>
               </div>
               <div className="pricing-features">
-                <p className="pricing-note">Custom developed code with fast, reliable, secure static deployment and optional managed hosting.</p>
+                <p className="pricing-note">Launch special: websites are $1,500 (25% off). Custom developed code with fast, reliable, secure static deployment and optional managed hosting.</p>
               </div>
             </div>
           </div>

@@ -17,14 +17,15 @@ function PricingCalculator({ isOpen, onClose }) {
   const [pagesStr, setPagesStr] = useState('3')
   const [errors, setErrors] = useState({ pages: '' })
 
-  // Pricing constants
+  // Pricing constants (base uses 25% off sale price)
   const PRICING = {
     website: {
-      base: 1200,
+      base: 1500,
+      regularBase: 2000,
       additionalPage: 200,
     },
     hosting: {
-      monthly: 50,
+      monthly: 75,
     },
     social: {
       setup: 400,
@@ -75,7 +76,9 @@ function PricingCalculator({ isOpen, onClose }) {
     ]
 
     if (selections.website) {
-      lines.push('- Website Design & Development (3-page base): $1,200')
+      lines.push(
+        `- Website Design & Development (3-page base): $${PRICING.website.base.toLocaleString()} (25% off, normally $${PRICING.website.regularBase.toLocaleString()})`
+      )
       if (additionalPages > 0) {
         lines.push(
           `- Additional Pages: ${additionalPages} x $${PRICING.website.additionalPage.toLocaleString()} = $${(
@@ -218,8 +221,14 @@ function PricingCalculator({ isOpen, onClose }) {
                 onChange={(e) => handleChange('website', e.target.checked)}
               />
               <span className="checkbox-label">
-                <span className="service-name">Website Design & Development</span>
-                <span className="service-price">$1,200 base (3 pages)</span>
+                <span className="service-info">
+                  <span className="service-name">Website Design & Development</span>
+                  <span className="service-sale-note">25% off</span>
+                </span>
+                <span className="service-price service-price--sale">
+                  <span className="service-price-original">$2,000</span>
+                  <span className="service-price-sale-current">$1,500 base (3 pages)</span>
+                </span>
               </span>
             </label>
             {selections.website && (
@@ -257,7 +266,7 @@ function PricingCalculator({ isOpen, onClose }) {
                   />
                   <span className="checkbox-label">
                     <span className="service-name">Host on our servers</span>
-                    <span className="service-price">+$50/month</span>
+                    <span className="service-price">+$75/month</span>
                   </span>
                 </label>
               </div>
