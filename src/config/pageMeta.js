@@ -1,4 +1,6 @@
 export const SITE_URL = 'https://websidy.ca'
+export const SITE_NAME = 'Websidy'
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const PAGE_META = {
   home: {

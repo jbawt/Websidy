@@ -195,9 +195,9 @@ This guide outlines practical next steps to improve search visibility and rankin
 
 - [x] Per-page `<title>` and `<meta name="description">` (e.g. React Helmet).
 - [ ] Open Graph and Twitter Card meta tags + shared image (1200×630).
-- [ ] Canonical `<link>` for each page with base URL `https://websidy.ca`.
+- [x] Canonical `<link>` for each page with base URL `https://websidy.ca`.
 - [x] `sitemap.xml` and `robots.txt` in `public/` and deployed.
-- [ ] JSON-LD (LocalBusiness/Service) on home (and key pages).
+- [x] JSON-LD (LocalBusiness/Service) on home (and key pages).
 - [ ] One H1 per page; logical H2/H3; descriptive image `alt` text.
 - [ ] Image optimization (formats, sizes, lazy loading).
 - [ ] Google Search Console property for `https://websidy.ca` + sitemap submitted.
