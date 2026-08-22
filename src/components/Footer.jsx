@@ -42,11 +42,6 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="footer-link">
-                  Contact
-                </Link>
-              </li>
-              <li>
                 <a
                   href="https://itflow.websidy.ca/client/"
                   className="footer-link"
@@ -55,6 +50,11 @@ function Footer() {
                 >
                   Client Portal
                 </a>
+              </li>
+              <li>
+                <Link to="/contact" className="footer-link">
+                  Contact
+                </Link>
               </li>
             </ul>
           </nav>
