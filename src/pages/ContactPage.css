@@ -66,6 +66,31 @@
   color: rgba(250, 250, 250, 0.75);
 }
 
+.contact-portal-note {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0.75rem 0 0 0;
+}
+
+.app.dark .contact-portal-note {
+  color: rgba(250, 250, 250, 0.65);
+}
+
+.contact-portal-note a {
+  color: #1e40af;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-portal-note a:hover {
+  text-decoration: underline;
+}
+
+.app.dark .contact-portal-note a {
+  color: #93c5fd;
+}
+
 .message-us-container {
   display: flex;
   align-items: baseline;

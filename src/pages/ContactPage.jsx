@@ -99,6 +99,16 @@ function ContactPage() {
             <p className="contact-hero-description">
               Have a project in mind? Serving Sylvan Lake and Central Alberta, we'd love to hear from you. Fill out the form and we'll get back to you as soon as possible.
             </p>
+            <p className="contact-portal-note">
+              Already a client?{' '}
+              <a
+                href="https://itflow.websidy.ca/client/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open the client portal
+              </a>
+            </p>
           </div>
 
           <div className="contact-form-panel">

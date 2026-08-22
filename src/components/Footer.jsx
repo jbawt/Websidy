@@ -46,6 +46,16 @@ function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://itflow.websidy.ca/client/"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Client Portal
+                </a>
+              </li>
             </ul>
           </nav>
 

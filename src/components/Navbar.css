@@ -166,6 +166,21 @@
   box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
 }
 
+.nav-link-portal {
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.nav-link-portal::before,
+.nav-link-portal::after {
+  display: none;
+}
+
+.nav-link-portal:hover {
+  opacity: 1;
+  transform: none;
+}
+
 /* Dropdown Styles */
   .nav-dropdown {
     position: relative;

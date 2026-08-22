@@ -142,6 +142,16 @@ function Navbar() {
             <span>About</span>
           </Link>
 
+          <a
+            href="https://itflow.websidy.ca/client/"
+            className="nav-link nav-link-portal"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleLinkClick}
+          >
+            <span>Client Portal</span>
+          </a>
+
           <Link to="/contact" className="nav-link nav-link-cta" onClick={handleLinkClick}>
             <span>Contact</span>
           </Link>
