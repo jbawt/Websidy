@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import PageMeta from '../components/PageMeta'
+import { PAGE_META } from '../config/pageMeta'
 import './ContactPage.css'
 import websidyLogo from '../assets/websidy_logo_transparent.png'
 
@@ -69,6 +71,7 @@ function ContactPage() {
 
   return (
     <main className={`contact-page ${theme}`} id="contact">
+      <PageMeta {...PAGE_META.contact} />
       <div className="contact-page-container">
         <section className="contact-main">
           <div className="contact-intro">

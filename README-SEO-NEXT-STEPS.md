@@ -41,23 +41,23 @@ This guide outlines practical next steps to improve search visibility and rankin
   - `og:title`, `og:description`, `og:image`, `og:url`, `og:type` (e.g. `website`).
   - `twitter:card` (e.g. `summary_large_image`), `twitter:title`, `twitter:description`, `twitter:image`.
 
-- Use an absolute URL for `og:image` (e.g. `https://jbawt.github.io/Websidy/og-image.png`). Recommended size: **1200×630 px**.
+- Use an absolute URL for `og:image` (e.g. `https://websidy.ca/og-image.png`). Recommended size: **1200×630 px**.
 - Create one shared image (logo + tagline or hero visual) if you don’t have page-specific images yet.
 
 ---
 
 ## 3. Canonical URL and base URL
 
-**Current state:** Deployed with a base path (`/Websidy` on GitHub Pages). Duplicate “versions” of the site (with/without trailing slash or different bases) can dilute SEO.
+**Current state:** The site is live at `https://websidy.ca` on Netlify. Duplicate “versions” of the site (with/without trailing slash or old URLs) can still dilute SEO if they remain accessible.
 
 **Goal:** One canonical URL per page so search engines know which URL to index and rank.
 
 **Next steps:**
 
 - In `<head>`, add a canonical link for each page, e.g.  
-  `<link rel="canonical" href="https://jbawt.github.io/Websidy/" />` for the home page, and equivalent full URLs for `/services`, `/about`, `/pricing`, `/contact`, `/portfolio`.
-- Ensure internal links and sitemap use the same base: `https://jbawt.github.io/Websidy` (no trailing slash, or consistent trailing slash — pick one and stick to it).
-- React Router should use the root path (no `basename`) for Netlify hosting; make sure canonical and sitemap match your production domain.
+  `<link rel="canonical" href="https://websidy.ca/" />` for the home page, and equivalent full URLs for `/services`, `/about`, `/pricing`, `/contact`, `/portfolio`.
+- Ensure internal links and sitemap use the same base: `https://websidy.ca` (no trailing slash, or consistent trailing slash — pick one and stick to it).
+- React Router should use the root path (no `basename`) for Netlify hosting; make sure canonical and sitemap match `https://websidy.ca`.
 
 ---
 
@@ -71,12 +71,12 @@ This guide outlines practical next steps to improve search visibility and rankin
 
 - **Sitemap**
   - Add a `sitemap.xml` (or generate it at build time) that lists all public URLs, for example:
-    - `https://jbawt.github.io/Websidy/`
-    - `https://jbawt.github.io/Websidy/services`
-    - `https://jbawt.github.io/Websidy/about`
-    - `https://jbawt.github.io/Websidy/pricing`
-    - `https://jbawt.github.io/Websidy/contact`
-    - `https://jbawt.github.io/Websidy/portfolio`
+    - `https://websidy.ca/`
+    - `https://websidy.ca/services`
+    - `https://websidy.ca/about`
+    - `https://websidy.ca/pricing`
+    - `https://websidy.ca/contact`
+    - `https://websidy.ca/portfolio`
   - Place `sitemap.xml` in the build output (e.g. `public/sitemap.xml` so it’s copied to `dist/`) and use the same base URL as your canonical.
   - Optional: add `<lastmod>` if you update the sitemap when content changes.
 
@@ -84,8 +84,8 @@ This guide outlines practical next steps to improve search visibility and rankin
   - Add a `robots.txt` in the same place (e.g. `public/robots.txt`) with at least:
     - `User-agent: *`
     - `Allow: /`
-    - `Sitemap: https://jbawt.github.io/Websidy/sitemap.xml`
-  - Deploy it so it’s available at `https://jbawt.github.io/Websidy/robots.txt`.
+    - `Sitemap: https://websidy.ca/sitemap.xml`
+  - Deploy it so it’s available at `https://websidy.ca/robots.txt`.
 
 ---
 
@@ -152,8 +152,8 @@ This guide outlines practical next steps to improve search visibility and rankin
 **Next steps:**
 
 - **Google Search Console**
-  - Add the property for `https://jbawt.github.io/Websidy` (or your production domain if you add a custom domain).
-  - Submit the sitemap URL.
+  - Add the property for `https://websidy.ca`.
+  - Submit the sitemap URL (`https://websidy.ca/sitemap.xml`).
   - Use “URL Inspection” to request indexing for the most important pages after you add canonical, meta, and sitemap.
   - Check “Coverage” and “Enhancements” for errors (e.g. missing meta, mobile issues).
 
@@ -173,32 +173,34 @@ This guide outlines practical next steps to improve search visibility and rankin
   - Main headings and intro text on Home, Services, About, and Contact.
 - If you have a **Google Business Profile** (GMB), ensure:
   - Name, address, service area, and category are correct.
-  - Website URL points to `https://jbawt.github.io/Websidy` (or your final domain).
+  - Website URL points to `https://websidy.ca`.
   - Short description and services mention web design and social media.
 - In Schema.org (section 5), set the area served to match your real service area (e.g. Sylvan Lake, Red Deer, Lacombe, etc.).
 
 ---
 
-## 10. Optional: Custom domain and HTTPS
+## 10. Production domain and HTTPS
 
-- If you move from `jbawt.github.io/Websidy` to a custom domain (e.g. `websidy.ca`):
-  - Set the domain in GitHub Pages and add a CNAME (or A/AAAA) as per GitHub’s docs.
-  - Use HTTPS (GitHub Pages provides it for custom domains).
-  - Update canonical URLs, sitemap, robots.txt, and Search Console to the new domain.
-  - Add a 301 redirect from the old GitHub Pages URL to the new domain if you want to preserve link equity.
+**Current state:** The site is live at `https://websidy.ca` on Netlify with HTTPS.
+
+**Next steps:**
+
+- Use `https://websidy.ca` consistently in canonical URLs, sitemap, robots.txt, Open Graph tags, Search Console, and Google Business Profile.
+- If any old URLs (e.g. a previous GitHub Pages path) are still reachable, add 301 redirects to the matching page on `https://websidy.ca` so link equity and bookmarks land on the live site.
+- After major SEO changes, re-submit the sitemap in Search Console and spot-check key pages with URL Inspection.
 
 ---
 
 ## Quick checklist
 
-- [ ] Per-page `<title>` and `<meta name="description">` (e.g. React Helmet).
+- [x] Per-page `<title>` and `<meta name="description">` (e.g. React Helmet).
 - [ ] Open Graph and Twitter Card meta tags + shared image (1200×630).
-- [ ] Canonical `<link>` for each page with correct base URL.
-- [ ] `sitemap.xml` and `robots.txt` in `public/` and deployed.
+- [ ] Canonical `<link>` for each page with base URL `https://websidy.ca`.
+- [x] `sitemap.xml` and `robots.txt` in `public/` and deployed.
 - [ ] JSON-LD (LocalBusiness/Service) on home (and key pages).
 - [ ] One H1 per page; logical H2/H3; descriptive image `alt` text.
 - [ ] Image optimization (formats, sizes, lazy loading).
-- [ ] Google Search Console property + sitemap submitted.
+- [ ] Google Search Console property for `https://websidy.ca` + sitemap submitted.
 - [ ] Google Analytics (GA4) installed (optional but recommended).
 - [ ] Location keywords and (if applicable) Google Business Profile aligned with the site.
 

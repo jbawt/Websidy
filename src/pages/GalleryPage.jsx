@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import GalleryModal from '../components/GalleryModal'
+import PageMeta from '../components/PageMeta'
+import { PAGE_META } from '../config/pageMeta'
 import portfolioHero from '../assets/portfolio_hero_transparent.png'
 import './GalleryPage.css'
 
@@ -31,6 +33,7 @@ function GalleryPage() {
 
   return (
     <main className={`gallery-page ${theme}`}>
+      <PageMeta {...PAGE_META.portfolio} />
       <div className="gallery-page-container">
         {/* Hero Section */}
         <section className="gallery-hero">

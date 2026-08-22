@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import PageMeta from '../components/PageMeta'
+import { PAGE_META } from '../config/pageMeta'
 import './ServicesPage.css'
 
 function ServicesPage() {
@@ -25,6 +27,7 @@ function ServicesPage() {
 
   return (
     <main className={`services-page ${theme}`}>
+      <PageMeta {...PAGE_META.services} />
       <div className="services-page-container">
         {/* Hero Section */}
         <section className="services-hero">

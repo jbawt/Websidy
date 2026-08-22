@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import PricingCalculator from '../components/PricingCalculator'
+import PageMeta from '../components/PageMeta'
+import { PAGE_META } from '../config/pageMeta'
 import pricingHero from '../assets/pricing_hero.png'
 import './PricingPage.css'
 
@@ -11,6 +13,7 @@ function PricingPage() {
 
   return (
     <main className={`pricing-page ${theme}`}>
+      <PageMeta {...PAGE_META.pricing} />
       <div className="pricing-page-container">
         {/* Hero Section */}
         <section className="pricing-hero">

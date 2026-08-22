@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import PageMeta from '../components/PageMeta'
+import { PAGE_META } from '../config/pageMeta'
 import arrowsUpLogo from '../assets/arrows_up_logo.png'
 import userProfileIcon from '../assets/user_profile_icon.png'
 import './AboutPage.css'
@@ -29,6 +31,7 @@ function AboutPage() {
 
   return (
     <main className={`about-page ${theme}`}>
+      <PageMeta {...PAGE_META.about} />
       <div className="about-page-container">
         {/* Hero Section */}
         <section className="about-hero">
