@@ -191,17 +191,99 @@ This guide outlines practical next steps to improve search visibility and rankin
 
 ---
 
+## 11. External SEO tasks (no code required)
+
+These are actions you can take as the business owner outside the website. They support local visibility, trust, and backlinks — often as important as on-site SEO for a service business in Central Alberta.
+
+### Google Business Profile
+
+- [ ] Confirm business name, category, service area, hours, phone, and website (`https://websidy.ca`) are accurate and match your site.
+- [ ] Write a keyword-rich business description (web design, digital presence, Sylvan Lake, Central Alberta) — similar tone to your GBP description, not copy-pasted spam.
+- [ ] Add your full list of services (website design, hosting, digital presence, etc.).
+- [ ] Upload high-quality photos: logo, workspace, project screenshots, team (if applicable), and before/after examples.
+- [ ] Post updates every 2–4 weeks (new portfolio piece, pricing note, tip for local businesses, seasonal offer).
+- [ ] Enable messaging and respond promptly if you use it.
+- [ ] Add products/services with short descriptions where GBP allows.
+- [ ] Fill out the Q&A section yourself with common questions (“Do you build custom websites?”, “Do you serve Red Deer/Lacombe?”, “What does a 3-page site include?”).
+
+### Reviews and reputation
+
+- [ ] Ask satisfied clients for Google reviews — send a direct link after project completion.
+- [ ] Reply to every review (thank positive ones; address concerns professionally on negative ones).
+- [ ] Request short testimonials you can later use on the site or social (with permission).
+- [ ] Keep review language natural; don’t offer incentives in exchange for reviews (against Google policy).
+
+### Citations and local listings
+
+**Goal:** Consistent business name, address/service area, phone, and website everywhere you appear online (NAP consistency).
+
+- [ ] [Bing Places for Business](https://www.bingplaces.com/)
+- [ ] [Apple Business Connect](https://businessconnect.apple.com/) (shows in Apple Maps/Siri)
+- [ ] Facebook Business Page — link to `https://websidy.ca`, match hours/location
+- [ ] Instagram bio — link to site, location tag Sylvan Lake where relevant
+- [ ] LinkedIn Company Page — services, location, link to website
+- [ ] Local directories: Sylvan Lake & District Chamber of Commerce, Central Alberta business listings, industry directories
+- [ ] Alberta / Canada general listings only if reputable (avoid spammy “submit to 500 directories” services)
+
+Use the **exact same** business name (Websidy), phone, service area wording, and URL on every profile.
+
+### Backlinks and partnerships
+
+- [ ] Ask portfolio clients to credit “Website by Websidy” with a link when they’re happy to do so.
+- [ ] Partner with complementary local businesses (photographers, printers, accountants, marketing consultants) for referrals — ask for a mention on their “recommended vendors” page if they have one.
+- [ ] Sponsor or participate in local events (Chamber events, community fundraisers) and get listed on event/partner pages.
+- [ ] Write a short guest piece or tip for a local business blog or newsletter (e.g. “What every Sylvan Lake business needs on their website”).
+- [ ] Join relevant Facebook or LinkedIn groups for Central Alberta small business owners — be helpful, not spammy; include your site in your profile, not in every comment.
+
+### Social proof and content (off-site)
+
+- [ ] Share new portfolio launches, blog-style tips, or client wins on Facebook and Instagram with a link back to `https://websidy.ca` or the portfolio page.
+- [ ] When you finish a site, post a case study snippet: problem → solution → result (with client approval).
+- [ ] Use consistent branding and the same logo/colors as the website so the brand is recognizable everywhere.
+
+### Monitoring (free tools)
+
+- [ ] **Google Search Console** — check Performance monthly: queries, impressions, clicks, average position for “web design sylvan lake” and similar terms.
+- [ ] **Google Alerts** — set alerts for `Websidy`, `websidy.ca`, and optionally competitor names in your area.
+- [ ] **Google Business Profile Insights** — track how people find your listing (Search vs Maps) and what actions they take (website clicks, calls).
+- [ ] Search `site:websidy.ca` in Google occasionally to see which pages are indexed.
+- [ ] Search your business name in incognito — confirm GBP, website, and social profiles look correct in the first page of results.
+
+### Offline → online
+
+- [ ] Put `https://websidy.ca` on business cards, email signature, invoices, and proposals.
+- [ ] Mention the site when networking locally; QR codes on print materials can link directly to `/contact`.
+- [ ] Ensure anyone referring you uses the correct URL (not an old GitHub Pages or staging link).
+
+### What to avoid
+
+- Don’t buy backlinks or use automated directory submission bots.
+- Don’t create duplicate Google Business Profiles.
+- Don’t use a different business name or phone number on random directories — inconsistency hurts local SEO.
+- Don’t keyword-stuff your GBP description or review responses.
+
+---
+
 ## Quick checklist
 
 - [x] Per-page `<title>` and `<meta name="description">` (e.g. React Helmet).
-- [ ] Open Graph and Twitter Card meta tags + shared image (1200×630).
+- [X] Open Graph and Twitter Card meta tags + shared image (1200×630).
 - [x] Canonical `<link>` for each page with base URL `https://websidy.ca`.
 - [x] `sitemap.xml` and `robots.txt` in `public/` and deployed.
 - [x] JSON-LD (LocalBusiness/Service) on home (and key pages).
 - [ ] One H1 per page; logical H2/H3; descriptive image `alt` text.
 - [ ] Image optimization (formats, sizes, lazy loading).
-- [ ] Google Search Console property for `https://websidy.ca` + sitemap submitted.
+- [x] Google Search Console property for `https://websidy.ca` + sitemap submitted.
 - [ ] Google Analytics (GA4) installed (optional but recommended).
 - [ ] Location keywords and (if applicable) Google Business Profile aligned with the site.
+
+### External (no code)
+
+- [ ] Google Business Profile fully filled out (photos, services, posts, Q&A).
+- [ ] Request and respond to Google reviews from clients.
+- [ ] NAP consistent across Bing Places, Apple Business Connect, Facebook, LinkedIn, and local directories.
+- [ ] Portfolio clients and partners linked to `https://websidy.ca` where possible.
+- [ ] Monthly check: Search Console Performance + GBP Insights + `site:websidy.ca`.
+- [ ] Website URL on email signature, cards, and proposals.
 
 Once these are in place, re-run PageSpeed Insights and Search Console coverage to confirm everything is clean and indexed as expected.
