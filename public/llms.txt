@@ -1,0 +1,35 @@
+# Websidy
+
+> Websidy is a Sylvan Lake web design studio helping small and medium-sized businesses across Central Alberta build professional websites and consistent digital presence.
+
+## Main pages
+
+- [Home](https://websidy.ca/): Overview of web design and digital presence services for Central Alberta businesses.
+- [Services](https://websidy.ca/services): Custom website design, digital presence packages, hosting, and maintenance.
+- [Pricing](https://websidy.ca/pricing): Transparent pricing for websites, hosting, and digital presence services.
+- [Portfolio](https://websidy.ca/portfolio): Examples of websites built for Central Alberta businesses.
+- [About](https://websidy.ca/about): About Websidy and our approach to web design in Sylvan Lake and Central Alberta.
+- [Contact](https://websidy.ca/contact): Request a quote or get in touch about a project.
+
+## Services
+
+- **Website Design & Development**: Custom-coded, responsive, fast, SEO-friendly websites. No page builders or generic templates.
+- **Digital Presence & Brand Consistency**: Profile alignment, brand consistency, and optional always-on social presence.
+- **Hosting & Maintenance**: Managed hosting, performance checks, and ongoing support.
+
+## Location
+
+Based in Sylvan Lake, Alberta. Serving Central Alberta.
+
+## Client portal
+
+- [Client Portal](https://itflow.websidy.ca/client/): Existing clients can log in for support and account access.
+
+## Social
+
+- [Facebook](https://www.facebook.com/profile.php?id=61588217258258)
+- [Instagram](https://www.instagram.com/websidy/)
+
+## Optional
+
+- [Sitemap](https://websidy.ca/sitemap.xml)
