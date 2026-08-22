@@ -9,12 +9,13 @@ import PageMeta from '../components/PageMeta'
 import StructuredData from '../components/StructuredData'
 import { PAGE_META } from '../config/pageMeta'
 import { WEBSIDY_STRUCTURED_DATA } from '../config/structuredData'
+import heroLogo from '../assets/websidy-logo-hero.webp'
 import '../pages/HomePage.css'
 
 function HomePage() {
   return (
     <main className="home-page">
-      <PageMeta {...PAGE_META.home} />
+      <PageMeta {...PAGE_META.home} preloadImage={heroLogo} />
       <StructuredData data={WEBSIDY_STRUCTURED_DATA} />
       <HomeHeader />
       <ServicesSection />

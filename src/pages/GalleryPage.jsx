@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import GalleryModal from '../components/GalleryModal'
 import PageMeta from '../components/PageMeta'
 import { PAGE_META } from '../config/pageMeta'
-import portfolioHero from '../assets/portfolio_hero_transparent.png'
+import portfolioHero from '../assets/portfolio_hero_transparent.webp'
 import './GalleryPage.css'
 
 function GalleryPage() {
@@ -78,6 +78,9 @@ function GalleryPage() {
                 src={portfolioHero}
                 alt=""
                 className="gallery-hero-image"
+                width={800}
+                height={584}
+                decoding="async"
               />
             </div>
           </div>

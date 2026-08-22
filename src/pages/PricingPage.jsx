@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import PricingCalculator from '../components/PricingCalculator'
 import PageMeta from '../components/PageMeta'
 import { PAGE_META } from '../config/pageMeta'
-import pricingHero from '../assets/pricing_hero.png'
+import pricingHero from '../assets/pricing_hero.webp'
 import './PricingPage.css'
 
 function PricingPage() {
@@ -31,7 +31,7 @@ function PricingPage() {
             </button>
           </div>
           <div className="pricing-hero-visual">
-            <img src={pricingHero} alt="" className="pricing-hero-image" />
+            <img src={pricingHero} alt="" className="pricing-hero-image" width={800} height={800} decoding="async" />
           </div>
         </section>
 

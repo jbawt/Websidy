@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import PageMeta from '../components/PageMeta'
 import { PAGE_META } from '../config/pageMeta'
-import arrowsUpLogo from '../assets/arrows_up_logo.png'
-import userProfileIcon from '../assets/user_profile_icon.png'
+import arrowsUpLogo from '../assets/arrows_up_logo.webp'
+import userProfileIcon from '../assets/user_profile_icon.webp'
 import './AboutPage.css'
 
 function AboutPage() {
@@ -57,7 +57,7 @@ function AboutPage() {
                 <path d="M 55 150 Q 55 55 150 55 Q 245 55 245 150 Q 245 245 150 245 Q 55 245 55 150 Z" fill="none" stroke="url(#aboutHeroGradient)" strokeWidth="2" opacity="0.35" className="about-mission-square about-mission-square-1" />
                 <path d="M 70 150 Q 70 70 150 70 Q 230 70 230 150 Q 230 230 150 230 Q 70 230 70 150 Z" fill="none" stroke="url(#aboutHeroGradient)" strokeWidth="1.5" strokeDasharray="6 12" opacity="0.5" className="about-mission-square about-mission-square-2" />
               </svg>
-              <img src={userProfileIcon} alt="" className="about-hero-image" />
+              <img src={userProfileIcon} alt="" className="about-hero-image" width={400} height={299} loading="lazy" decoding="async" />
             </div>
           </div>
         </section>
@@ -84,7 +84,7 @@ function AboutPage() {
                 <path d="M 55 150 Q 55 55 150 55 Q 245 55 245 150 Q 245 245 150 245 Q 55 245 55 150 Z" fill="none" stroke="url(#missionGradient)" strokeWidth="2" opacity="0.35" className="about-mission-square about-mission-square-1" />
                 <path d="M 70 150 Q 70 70 150 70 Q 230 70 230 150 Q 230 230 150 230 Q 70 230 70 150 Z" fill="none" stroke="url(#missionGradient)" strokeWidth="1.5" strokeDasharray="6 12" opacity="0.5" className="about-mission-square about-mission-square-2" />
               </svg>
-              <img src={arrowsUpLogo} alt="" className="about-mission-image" />
+              <img src={arrowsUpLogo} alt="" className="about-mission-image" width={598} height={600} loading="lazy" decoding="async" />
             </div>
           </div>
           <div className="mission-values">

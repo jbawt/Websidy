@@ -306,6 +306,32 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .header-title,
+  .header-subtitle,
+  .header-graphic,
+  .svg-circle,
+  .svg-center-fill,
+  .svg-center-logo,
+  .svg-line,
+  .svg-particle {
+    animation: none !important;
+  }
+
+  .svg-circle,
+  .svg-line {
+    stroke-dashoffset: 0;
+  }
+
+  .svg-center-fill,
+  .svg-center-logo,
+  .header-title,
+  .header-subtitle,
+  .header-graphic {
+    opacity: 1;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
   .header-content {

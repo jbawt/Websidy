@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import './HomeHeader.css'
-import websidyLogo from '../assets/websidy_logo_transparent.png'
+import websidyLogo from '../assets/websidy-logo-hero.webp'
 
 function HomeHeader() {
   const theme = useSelector((state) => state.theme.mode)

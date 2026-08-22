@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import PageMeta from '../components/PageMeta'
 import { PAGE_META } from '../config/pageMeta'
 import './ContactPage.css'
-import websidyLogo from '../assets/websidy_logo_transparent.png'
+import websidyLogo from '../assets/websidy-logo-hero.webp'
 
 function ContactPage() {
   const FORM_NAME = 'contact'
@@ -83,6 +83,9 @@ function ContactPage() {
                     src={websidyLogo}
                     alt="M"
                     className="logo-w-to-m"
+                    width={248}
+                    height={180}
+                    decoding="async"
                   />
                 </div>
                 <div className="message-us-text">

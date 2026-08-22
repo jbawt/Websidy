@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from '../config/pageMeta'
 
-function PageMeta({ title, description, canonical, image = DEFAULT_OG_IMAGE }) {
+function PageMeta({ title, description, canonical, image = DEFAULT_OG_IMAGE, preloadImage }) {
   const url = canonical || SITE_URL
 
   return (
@@ -9,6 +9,7 @@ function PageMeta({ title, description, canonical, image = DEFAULT_OG_IMAGE }) {
       <title>{title}</title>
       <meta name="description" content={description} />
       {canonical && <link rel="canonical" href={canonical} />}
+      {preloadImage && <link rel="preload" as="image" href={preloadImage} type="image/webp" />}
 
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={SITE_NAME} />

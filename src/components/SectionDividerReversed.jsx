@@ -1,6 +1,6 @@
 import React from 'react'
 import './SectionDividerReversed.css'
-import rocketLaunchFull from '../assets/rocket-launch-full.png'
+import rocketLaunchFull from '../assets/rocket-launch-full.webp'
 
 function SectionDividerReversed() {
   return (
@@ -10,6 +10,10 @@ function SectionDividerReversed() {
           src={rocketLaunchFull}
           alt=""
           className="divider-rocket-launch-icon"
+          width={600}
+          height={600}
+          loading="lazy"
+          decoding="async"
         />
       </div>
 
