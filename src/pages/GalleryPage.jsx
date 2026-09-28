@@ -14,21 +14,30 @@ function GalleryPage() {
   const projects = [
     {
       id: 1,
-      name: 'Gorillaz',
-      url: 'https://gorillaz.ca',
-      description: 'A modern, responsive website showcasing the iconic virtual band with dynamic visuals and engaging content.',
-      tags: ['Website Design', 'Branding', 'Responsive'],
-      featured: true,
-    },
-    {
-      id: 2,
       name: 'North Point Foundations',
       url: 'https://northpointfoundations.ca',
       description:
         'A professional site for foundation and concrete services, clear service areas, quote requests, and a trustworthy presence for homeowners and builders.',
-      tags: ['Website Design', 'Local Business', 'Responsive'],
+      tags: ['Website Design', 'Construction', 'Responsive'],
       featured: true,
-    }
+    },
+    {
+      id: 2,
+      name: 'Sugaring by Steph',
+      url: 'https://sugaringbysteph.ca',
+      description:
+        'A warm, conversion-focused site for a Sylvan Lake sugaring studio—services, booking requests, and a calm brand presence that feels as inviting as the studio.',
+      tags: ['Website Design', 'Beauty & Wellness', 'Responsive'],
+      featured: true,
+    },
+    {
+      id: 3,
+      name: 'Gorillaz',
+      url: 'https://gorillaz.ca',
+      description: 'A modern, responsive website showcasing the iconic virtual band with dynamic visuals and engaging content.',
+      tags: ['Website Design', 'Moving Company', 'Responsive'],
+      featured: true,
+    },
   ]
 
   return (
