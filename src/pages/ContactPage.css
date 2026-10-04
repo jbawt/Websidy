@@ -131,8 +131,8 @@
   color: inherit;
   position: relative;
   z-index: 1;
-  margin-left: clamp(-100px, -18vw, -72px);
-  transform: translate(-8.25rem, clamp(-95px, -14vw, -70px));
+  margin-left: -100px;
+  transform: translate(3.2rem, -3.5rem);
 }
 
 .message-letter {
